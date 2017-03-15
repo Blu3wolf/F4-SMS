@@ -1,0 +1,10 @@
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\bin\Debug\F4-SMS.exe.config
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\bin\Debug\F4-SMS.exe
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\bin\Debug\F4-SMS.pdb
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4-SMS.csprojResolveAssemblyReference.cache
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4_SMS.MainMenu.resources
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4_SMS.Properties.Resources.resources
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4-SMS.csproj.GenerateResource.Cache
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4-SMS.exe
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4-SMS.pdb
+e:\user\blue\documents\visual studio 2015\Projects\F4-SMS\F4-SMS\obj\Debug\F4_SMS.SMSDisplay.resources
