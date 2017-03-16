@@ -52,18 +52,19 @@
             this.buttonOSB20 = new System.Windows.Forms.Button();
             this.checkBoxSMSPower = new System.Windows.Forms.CheckBox();
             this.checkBoxWOW = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMRM = new System.Windows.Forms.RadioButton();
+            this.radioButtonCancelOverride = new System.Windows.Forms.RadioButton();
+            this.radioButtonDGFT = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonAAMastermode = new System.Windows.Forms.Button();
+            this.buttonAGMastermode = new System.Windows.Forms.Button();
+            this.checkBoxMMCPower = new System.Windows.Forms.CheckBox();
+            this.buttonDTCSelect = new System.Windows.Forms.Button();
+            this.checkBoxGunArmed = new System.Windows.Forms.CheckBox();
+            this.buttonMSLSTEP = new System.Windows.Forms.Button();
+            this.buttonEJPressAndHold = new System.Windows.Forms.Button();
+            this.buttonWPNREL = new System.Windows.Forms.Button();
+            this.checkBoxMFDSPower = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,55 +281,55 @@
             // checkBoxSMSPower
             // 
             this.checkBoxSMSPower.AutoSize = true;
-            this.checkBoxSMSPower.Location = new System.Drawing.Point(547, 73);
+            this.checkBoxSMSPower.Location = new System.Drawing.Point(548, 97);
             this.checkBoxSMSPower.Name = "checkBoxSMSPower";
             this.checkBoxSMSPower.Size = new System.Drawing.Size(99, 17);
             this.checkBoxSMSPower.TabIndex = 21;
             this.checkBoxSMSPower.Text = "SMS Power On";
             this.checkBoxSMSPower.UseVisualStyleBackColor = true;
+            this.checkBoxSMSPower.CheckedChanged += new System.EventHandler(this.checkBoxSMSPower_CheckedChanged);
             // 
             // checkBoxWOW
             // 
             this.checkBoxWOW.AutoSize = true;
-            this.checkBoxWOW.Location = new System.Drawing.Point(547, 148);
+            this.checkBoxWOW.Location = new System.Drawing.Point(548, 172);
             this.checkBoxWOW.Name = "checkBoxWOW";
             this.checkBoxWOW.Size = new System.Drawing.Size(155, 17);
             this.checkBoxWOW.TabIndex = 22;
             this.checkBoxWOW.Text = "Weight On Wheels (WOW)";
             this.checkBoxWOW.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMRM
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(547, 200);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 17);
-            this.radioButton1.TabIndex = 23;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "MRM Override";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonMRM.AutoSize = true;
+            this.radioButtonMRM.Location = new System.Drawing.Point(548, 224);
+            this.radioButtonMRM.Name = "radioButtonMRM";
+            this.radioButtonMRM.Size = new System.Drawing.Size(94, 17);
+            this.radioButtonMRM.TabIndex = 23;
+            this.radioButtonMRM.Text = "MRM Override";
+            this.radioButtonMRM.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonCancelOverride
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(548, 223);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(101, 17);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Cancel Override";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonCancelOverride.AutoSize = true;
+            this.radioButtonCancelOverride.Checked = true;
+            this.radioButtonCancelOverride.Location = new System.Drawing.Point(549, 247);
+            this.radioButtonCancelOverride.Name = "radioButtonCancelOverride";
+            this.radioButtonCancelOverride.Size = new System.Drawing.Size(101, 17);
+            this.radioButtonCancelOverride.TabIndex = 24;
+            this.radioButtonCancelOverride.TabStop = true;
+            this.radioButtonCancelOverride.Text = "Cancel Override";
+            this.radioButtonCancelOverride.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonDGFT
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(548, 246);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(97, 17);
-            this.radioButton3.TabIndex = 25;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "DGFT Override";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonDGFT.AutoSize = true;
+            this.radioButtonDGFT.Location = new System.Drawing.Point(549, 270);
+            this.radioButtonDGFT.Name = "radioButtonDGFT";
+            this.radioButtonDGFT.Size = new System.Drawing.Size(97, 17);
+            this.radioButtonDGFT.TabIndex = 25;
+            this.radioButtonDGFT.Text = "DGFT Override";
+            this.radioButtonDGFT.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -341,97 +342,110 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "System Startup Options";
             // 
-            // button1
+            // buttonAAMastermode
             // 
-            this.button1.Location = new System.Drawing.Point(547, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "A-A";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAAMastermode.Location = new System.Drawing.Point(548, 195);
+            this.buttonAAMastermode.Name = "buttonAAMastermode";
+            this.buttonAAMastermode.Size = new System.Drawing.Size(75, 23);
+            this.buttonAAMastermode.TabIndex = 27;
+            this.buttonAAMastermode.Text = "A-A";
+            this.buttonAAMastermode.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonAGMastermode
             // 
-            this.button2.Location = new System.Drawing.Point(628, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "A-G";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonAGMastermode.Location = new System.Drawing.Point(629, 195);
+            this.buttonAGMastermode.Name = "buttonAGMastermode";
+            this.buttonAGMastermode.Size = new System.Drawing.Size(75, 23);
+            this.buttonAGMastermode.TabIndex = 28;
+            this.buttonAGMastermode.Text = "A-G";
+            this.buttonAGMastermode.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxMMCPower
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(547, 50);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 17);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "MMC Power On";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxMMCPower.AutoSize = true;
+            this.checkBoxMMCPower.Location = new System.Drawing.Point(547, 50);
+            this.checkBoxMMCPower.Name = "checkBoxMMCPower";
+            this.checkBoxMMCPower.Size = new System.Drawing.Size(101, 17);
+            this.checkBoxMMCPower.TabIndex = 29;
+            this.checkBoxMMCPower.Text = "MMC Power On";
+            this.checkBoxMMCPower.UseVisualStyleBackColor = true;
+            this.checkBoxMMCPower.CheckedChanged += new System.EventHandler(this.checkBoxMMCPower_CheckedChanged);
             // 
-            // button3
+            // buttonDTCSelect
             // 
-            this.button3.Location = new System.Drawing.Point(583, 119);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Select DTC";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonDTCSelect.Location = new System.Drawing.Point(584, 143);
+            this.buttonDTCSelect.Name = "buttonDTCSelect";
+            this.buttonDTCSelect.Size = new System.Drawing.Size(75, 23);
+            this.buttonDTCSelect.TabIndex = 30;
+            this.buttonDTCSelect.Text = "Select DTC";
+            this.buttonDTCSelect.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxGunArmed
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(547, 96);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 17);
-            this.checkBox2.TabIndex = 31;
-            this.checkBox2.Text = "Gun Armed";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxGunArmed.AutoSize = true;
+            this.checkBoxGunArmed.Location = new System.Drawing.Point(548, 120);
+            this.checkBoxGunArmed.Name = "checkBoxGunArmed";
+            this.checkBoxGunArmed.Size = new System.Drawing.Size(79, 17);
+            this.checkBoxGunArmed.TabIndex = 31;
+            this.checkBoxGunArmed.Text = "Gun Armed";
+            this.checkBoxGunArmed.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonMSLSTEP
             // 
-            this.button4.Location = new System.Drawing.Point(583, 298);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 32;
-            this.button4.Text = "MSL STEP";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonMSLSTEP.Location = new System.Drawing.Point(584, 322);
+            this.buttonMSLSTEP.Name = "buttonMSLSTEP";
+            this.buttonMSLSTEP.Size = new System.Drawing.Size(75, 23);
+            this.buttonMSLSTEP.TabIndex = 32;
+            this.buttonMSLSTEP.Text = "MSL STEP";
+            this.buttonMSLSTEP.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonEJPressAndHold
             // 
-            this.button5.Location = new System.Drawing.Point(561, 269);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 23);
-            this.button5.TabIndex = 33;
-            this.button5.Text = "E-J (Press and Hold)";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonEJPressAndHold.Location = new System.Drawing.Point(562, 293);
+            this.buttonEJPressAndHold.Name = "buttonEJPressAndHold";
+            this.buttonEJPressAndHold.Size = new System.Drawing.Size(119, 23);
+            this.buttonEJPressAndHold.TabIndex = 33;
+            this.buttonEJPressAndHold.Text = "E-J (Press and Hold)";
+            this.buttonEJPressAndHold.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonWPNREL
             // 
-            this.button6.Location = new System.Drawing.Point(583, 327);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 34;
-            this.button6.Text = "WPN REL";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonWPNREL.Location = new System.Drawing.Point(584, 351);
+            this.buttonWPNREL.Name = "buttonWPNREL";
+            this.buttonWPNREL.Size = new System.Drawing.Size(75, 23);
+            this.buttonWPNREL.TabIndex = 34;
+            this.buttonWPNREL.Text = "WPN REL";
+            this.buttonWPNREL.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxMFDSPower
+            // 
+            this.checkBoxMFDSPower.AutoSize = true;
+            this.checkBoxMFDSPower.Location = new System.Drawing.Point(548, 74);
+            this.checkBoxMFDSPower.Name = "checkBoxMFDSPower";
+            this.checkBoxMFDSPower.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxMFDSPower.TabIndex = 35;
+            this.checkBoxMFDSPower.Text = "MFDS Power On";
+            this.checkBoxMFDSPower.UseVisualStyleBackColor = true;
+            this.checkBoxMFDSPower.CheckedChanged += new System.EventHandler(this.checkBoxMFDSPower_CheckedChanged);
             // 
             // SMSDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 527);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkBoxMFDSPower);
+            this.Controls.Add(this.buttonWPNREL);
+            this.Controls.Add(this.buttonEJPressAndHold);
+            this.Controls.Add(this.buttonMSLSTEP);
+            this.Controls.Add(this.checkBoxGunArmed);
+            this.Controls.Add(this.buttonDTCSelect);
+            this.Controls.Add(this.checkBoxMMCPower);
+            this.Controls.Add(this.buttonAGMastermode);
+            this.Controls.Add(this.buttonAAMastermode);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonDGFT);
+            this.Controls.Add(this.radioButtonCancelOverride);
+            this.Controls.Add(this.radioButtonMRM);
             this.Controls.Add(this.checkBoxWOW);
             this.Controls.Add(this.checkBoxSMSPower);
             this.Controls.Add(this.buttonOSB20);
@@ -488,17 +502,18 @@
         private System.Windows.Forms.Button buttonOSB20;
         private System.Windows.Forms.CheckBox checkBoxSMSPower;
         private System.Windows.Forms.CheckBox checkBoxWOW;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButtonMRM;
+        private System.Windows.Forms.RadioButton radioButtonCancelOverride;
+        private System.Windows.Forms.RadioButton radioButtonDGFT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonAAMastermode;
+        private System.Windows.Forms.Button buttonAGMastermode;
+        private System.Windows.Forms.CheckBox checkBoxMMCPower;
+        private System.Windows.Forms.Button buttonDTCSelect;
+        private System.Windows.Forms.CheckBox checkBoxGunArmed;
+        private System.Windows.Forms.Button buttonMSLSTEP;
+        private System.Windows.Forms.Button buttonEJPressAndHold;
+        private System.Windows.Forms.Button buttonWPNREL;
+        private System.Windows.Forms.CheckBox checkBoxMFDSPower;
     }
 }

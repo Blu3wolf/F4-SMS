@@ -16,5 +16,41 @@ namespace F4_SMS
         {
             InitializeComponent();
         }
+
+        // This will eventually allow complex interactions between states - for now, all boxes simply need to be checked
+        public void SystemStartupOptionsChanged()
+        {
+            if (checkBoxMFDSPower.Checked)
+            {
+				if (!(checkBoxSMSPower.Checked & checkBoxMMCPower.Checked))
+				{
+					SetSMSPage(OFF);
+                }
+				else
+				{
+					SetSMSPage(STBY);
+				}
+            }
+        }
+
+		public void SetSMSPage()
+		{
+
+		}
+            
+        private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
+        {
+            SystemStartupOptionsChanged();
+        }
+
+        private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
+        {
+            SystemStartupOptionsChanged();
+        }
+
+        private void checkBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
+        {
+            SystemStartupOptionsChanged();
+        }
     }
 }
