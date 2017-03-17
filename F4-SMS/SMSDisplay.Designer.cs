@@ -87,10 +87,10 @@
 			this.labelOSB16 = new System.Windows.Forms.Label();
 			this.labelOSB19 = new System.Windows.Forms.Label();
 			this.labelOSB20 = new System.Windows.Forms.Label();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.pictureBoxSMSW = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBoxSMS
@@ -336,6 +336,7 @@
 			this.radioButtonMRM.TabIndex = 23;
 			this.radioButtonMRM.Text = "MRM Override";
 			this.radioButtonMRM.UseVisualStyleBackColor = true;
+			this.radioButtonMRM.CheckedChanged += new System.EventHandler(this.radioButtonMRM_CheckedChanged);
 			// 
 			// radioButtonCancelOverride
 			// 
@@ -348,6 +349,7 @@
 			this.radioButtonCancelOverride.TabStop = true;
 			this.radioButtonCancelOverride.Text = "Cancel Override";
 			this.radioButtonCancelOverride.UseVisualStyleBackColor = true;
+			this.radioButtonCancelOverride.CheckedChanged += new System.EventHandler(this.radioButtonCancelOverride_CheckedChanged);
 			// 
 			// radioButtonDGFT
 			// 
@@ -358,6 +360,7 @@
 			this.radioButtonDGFT.TabIndex = 25;
 			this.radioButtonDGFT.Text = "DGFT Override";
 			this.radioButtonDGFT.UseVisualStyleBackColor = true;
+			this.radioButtonDGFT.CheckedChanged += new System.EventHandler(this.radioButtonDGFT_CheckedChanged);
 			// 
 			// labelStartupOptions
 			// 
@@ -378,6 +381,7 @@
 			this.buttonAAMastermode.TabIndex = 27;
 			this.buttonAAMastermode.Text = "A-A";
 			this.buttonAAMastermode.UseVisualStyleBackColor = true;
+			this.buttonAAMastermode.Click += new System.EventHandler(this.buttonAAMastermode_Click);
 			// 
 			// buttonAGMastermode
 			// 
@@ -387,6 +391,7 @@
 			this.buttonAGMastermode.TabIndex = 28;
 			this.buttonAGMastermode.Text = "A-G";
 			this.buttonAGMastermode.UseVisualStyleBackColor = true;
+			this.buttonAGMastermode.Click += new System.EventHandler(this.buttonAGMastermode_Click);
 			// 
 			// checkBoxMMCPower
 			// 
@@ -698,22 +703,22 @@
 			this.labelOSB20.Text = "CLR\r\nWPN";
 			this.labelOSB20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// pictureBox1
+			// pictureBoxSMSW
 			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(79, 388);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(47, 43);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 58;
-			this.pictureBox1.TabStop = false;
+			this.pictureBoxSMSW.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSMSW.Image")));
+			this.pictureBoxSMSW.Location = new System.Drawing.Point(79, 388);
+			this.pictureBoxSMSW.Name = "pictureBoxSMSW";
+			this.pictureBoxSMSW.Size = new System.Drawing.Size(47, 43);
+			this.pictureBoxSMSW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBoxSMSW.TabIndex = 58;
+			this.pictureBoxSMSW.TabStop = false;
 			// 
 			// SMSDisplay
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(715, 527);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pictureBoxSMSW);
 			this.Controls.Add(this.labelOSB20);
 			this.Controls.Add(this.labelOSB19);
 			this.Controls.Add(this.labelOSB16);
@@ -776,7 +781,7 @@
 			this.Text = "SMSDisplay";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -842,6 +847,6 @@
 		private System.Windows.Forms.Label labelOSB16;
 		private System.Windows.Forms.Label labelOSB19;
 		private System.Windows.Forms.Label labelOSB20;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBoxSMSW;
 	}
 }

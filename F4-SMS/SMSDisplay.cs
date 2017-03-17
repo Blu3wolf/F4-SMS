@@ -12,14 +12,16 @@ namespace F4_SMS
 {
     public partial class SMSDisplay : Form
     {
+		// SMSDisplay() gets called when the form is initialised, which happens when someone pressed load on the main menu
         public SMSDisplay()
         {
 			// Ini Com required for winforms designer support
             InitializeComponent();
 
-			// set initial page value for form start, and blank the page completely (MFD starts off, off)
+			// set initial values for form start
 			displayPage = (int)Pages.OFF;
-			BlankSMSPage();
+			masterMode = (int)Mastermodes.NAV;
+			overrideState = false;
 
 			// Generate the list of all labels
 			allLabels.Add(labelOSB1);
@@ -46,6 +48,10 @@ namespace F4_SMS
 
 			// Generate the list of all picture elements
 			allPictures.Add(pictureBoxSMSOFF);
+			allPictures.Add(pictureBoxSMSW);
+
+			// Blank the MFD completely
+			BlankSMSPage();
 		}
 
 		private List<Label> allLabels = new List<Label>();
@@ -53,25 +59,28 @@ namespace F4_SMS
 		private List<PictureBox> allPictures = new List<PictureBox>();
 
 		// Pages is a enum of all possible display pages
-		public enum Pages
+		private enum Pages
 		{
 			OFF, STBY, INV, SJ, EJ, AAM, MSL, DGFT, GUN, AG, BIT, WPN, FCR
 		}
 
 		// displayPage is the int of the current page if read from the enum Pages
-		public int displayPage;
+		private int displayPage;
 
 		// Mastermodes is an enum of all possible system mastermodes
-		public enum Mastermodes
+		private enum Mastermodes
 		{
 			NAV, AA, AG, DGFT, MSL
 		}
 
 		// masterMode is the int of the system mastermode if read from the enum Mastermodes
-		public int Mastermode;
+		private int masterMode;
 
-        // If Startup options change, this function figures out what changes to make to the display
-        public void SystemStartupOptionsChanged()
+		// overrideState is the bool of whether the DGFT switch is not centered
+		private bool overrideState;
+
+		// If Startup options change, this function figures out what changes to make to the display
+		private void SystemStartupOptionsChanged()
         {
             if (checkBoxMFDSPower.Checked)
             {
@@ -86,6 +95,7 @@ namespace F4_SMS
 					{
 						// MFDS, MMC and SMS have power, and WOW=true, so display the STBY page
 						SetSMSPage((int)Pages.STBY);
+						masterMode = (int)Mastermodes.NAV;
 					}
 					else
 					{
@@ -101,7 +111,7 @@ namespace F4_SMS
 			}
         }
 
-		public void BlankSMSPage()
+		private void BlankSMSPage()
 		{
 			// Make all display screen elements non visible
 			// Do this by iterating over the collection allLabels and marking each object .Visible = false;
@@ -117,7 +127,7 @@ namespace F4_SMS
 			}
 		}
 
-		public void SetSMSPage(int page)
+		private void SetSMSPage(int page)
 		{
 			// Wipe the slate clean
 			BlankSMSPage();
@@ -126,7 +136,7 @@ namespace F4_SMS
 			switch (page)
 			{
 				case (int)Pages.OFF:
-					pictureBoxSMSOFF.Visible = true;
+					displayOFF();
 					break;
 				case (int)Pages.STBY:
 					break;
@@ -162,6 +172,17 @@ namespace F4_SMS
 
 			displayPage = page;
 		}
+
+		private void displayOFF()
+		{
+			pictureBoxSMSOFF.Visible = true;
+			pictureBoxSMSW.Visible = true;
+			labelOSB9.Visible = true;
+			labelOSB12.Visible = true;
+			labelOSB13.Visible = true;
+			labelOSB14.Visible = true;
+			labelOSB15.Visible = true;
+		}
             
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
@@ -180,27 +201,43 @@ namespace F4_SMS
 
 		private void checkBoxWOW_CheckedChanged(object sender, EventArgs e)
 		{
-			SystemStartupOptionsChanged();
+			// WOW changing doesnt actually change the SMS state itself, so dont do anything in particular
 		}
-	}
 
-	public class Controls
-	{
-
-	}
-
-	public class OFF
-	{
-		public OFF()
+		private void buttonAAMastermode_Click(object sender, EventArgs e)
 		{
 
 		}
 
-		private List<Label> offLabels = new List<Label>();
-	}
+		private void buttonAGMastermode_Click(object sender, EventArgs e)
+		{
 
-	public class STBY
-	{
+		}
 
+		private void radioButtonMRM_CheckedChanged(object sender, EventArgs e)
+		{
+			if (radioButtonMRM.Checked)
+			{
+				overrideState = true;
+				masterMode = (int)Mastermodes.MSL;
+			}
+		}
+
+		private void radioButtonCancelOverride_CheckedChanged(object sender, EventArgs e)
+		{
+			if (radioButtonCancelOverride.Checked)
+			{
+				overrideState = false;
+			}
+		}
+
+		private void radioButtonDGFT_CheckedChanged(object sender, EventArgs e)
+		{
+			if (radioButtonDGFT.Checked)
+			{
+				overrideState = true;
+				masterMode = (int)Mastermodes.DGFT;
+			}
+		}
 	}
 }
