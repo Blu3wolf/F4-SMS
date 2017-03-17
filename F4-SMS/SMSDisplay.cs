@@ -79,6 +79,9 @@ namespace F4_SMS
 		// overrideState is the bool of whether the DGFT switch is not centered
 		private bool overrideState;
 
+		// overridden is the int of the system mastermode that was overridden by the override
+		private int overridden;
+
 		// If Startup options change, this function figures out what changes to make to the display
 		private void SystemStartupOptionsChanged()
         {
@@ -206,12 +209,32 @@ namespace F4_SMS
 
 		private void buttonAAMastermode_Click(object sender, EventArgs e)
 		{
-
+			if (!overrideState)
+			{
+				if (masterMode == (int)Mastermodes.AA)
+				{
+					masterMode = (int)Mastermodes.NAV;
+				}
+				else
+				{
+					masterMode = (int)Mastermodes.AA;
+				}
+			}
 		}
 
 		private void buttonAGMastermode_Click(object sender, EventArgs e)
 		{
-
+			if (!overrideState)
+			{
+				if (masterMode == (int)Mastermodes.AG)
+				{
+					masterMode = (int)Mastermodes.NAV;
+				}
+				else
+				{
+					masterMode = (int)Mastermodes.AG;
+				}
+			}
 		}
 
 		private void radioButtonMRM_CheckedChanged(object sender, EventArgs e)
@@ -219,6 +242,7 @@ namespace F4_SMS
 			if (radioButtonMRM.Checked)
 			{
 				overrideState = true;
+				overridden = masterMode;
 				masterMode = (int)Mastermodes.MSL;
 			}
 		}
@@ -228,6 +252,7 @@ namespace F4_SMS
 			if (radioButtonCancelOverride.Checked)
 			{
 				overrideState = false;
+				masterMode = overridden;
 			}
 		}
 
@@ -236,6 +261,7 @@ namespace F4_SMS
 			if (radioButtonDGFT.Checked)
 			{
 				overrideState = true;
+				overridden = masterMode;
 				masterMode = (int)Mastermodes.DGFT;
 			}
 		}
