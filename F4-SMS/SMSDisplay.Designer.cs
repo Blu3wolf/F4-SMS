@@ -55,7 +55,7 @@
 			this.radioButtonMRM = new System.Windows.Forms.RadioButton();
 			this.radioButtonCancelOverride = new System.Windows.Forms.RadioButton();
 			this.radioButtonDGFT = new System.Windows.Forms.RadioButton();
-			this.label1 = new System.Windows.Forms.Label();
+			this.labelStartupOptions = new System.Windows.Forms.Label();
 			this.buttonAAMastermode = new System.Windows.Forms.Button();
 			this.buttonAGMastermode = new System.Windows.Forms.Button();
 			this.checkBoxMMCPower = new System.Windows.Forms.CheckBox();
@@ -66,8 +66,31 @@
 			this.buttonWPNREL = new System.Windows.Forms.Button();
 			this.checkBoxMFDSPower = new System.Windows.Forms.CheckBox();
 			this.pictureBoxSMSOFF = new System.Windows.Forms.PictureBox();
+			this.labelOSB1 = new System.Windows.Forms.Label();
+			this.labelOSB2 = new System.Windows.Forms.Label();
+			this.labelOSB3 = new System.Windows.Forms.Label();
+			this.labelOSB4 = new System.Windows.Forms.Label();
+			this.labelOSB5 = new System.Windows.Forms.Label();
+			this.labelOSB9 = new System.Windows.Forms.Label();
+			this.labelOSB6 = new System.Windows.Forms.Label();
+			this.labelOSB7 = new System.Windows.Forms.Label();
+			this.labelOSB8 = new System.Windows.Forms.Label();
+			this.labelOSB10 = new System.Windows.Forms.Label();
+			this.labelHungStores = new System.Windows.Forms.Label();
+			this.labelOSB11 = new System.Windows.Forms.Label();
+			this.labelOSB12 = new System.Windows.Forms.Label();
+			this.labelOSB13 = new System.Windows.Forms.Label();
+			this.labelOSB14 = new System.Windows.Forms.Label();
+			this.labelOSB15 = new System.Windows.Forms.Label();
+			this.labelOSB18 = new System.Windows.Forms.Label();
+			this.labelOSB17 = new System.Windows.Forms.Label();
+			this.labelOSB16 = new System.Windows.Forms.Label();
+			this.labelOSB19 = new System.Windows.Forms.Label();
+			this.labelOSB20 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBoxSMS
@@ -294,12 +317,15 @@
 			// checkBoxWOW
 			// 
 			this.checkBoxWOW.AutoSize = true;
+			this.checkBoxWOW.Checked = true;
+			this.checkBoxWOW.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.checkBoxWOW.Location = new System.Drawing.Point(548, 172);
 			this.checkBoxWOW.Name = "checkBoxWOW";
 			this.checkBoxWOW.Size = new System.Drawing.Size(155, 17);
 			this.checkBoxWOW.TabIndex = 22;
 			this.checkBoxWOW.Text = "Weight On Wheels (WOW)";
 			this.checkBoxWOW.UseVisualStyleBackColor = true;
+			this.checkBoxWOW.CheckedChanged += new System.EventHandler(this.checkBoxWOW_CheckedChanged);
 			// 
 			// radioButtonMRM
 			// 
@@ -333,16 +359,16 @@
 			this.radioButtonDGFT.Text = "DGFT Override";
 			this.radioButtonDGFT.UseVisualStyleBackColor = true;
 			// 
-			// label1
+			// labelStartupOptions
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label1.Location = new System.Drawing.Point(545, 18);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(147, 16);
-			this.label1.TabIndex = 26;
-			this.label1.Text = "System Startup Options";
+			this.labelStartupOptions.AutoSize = true;
+			this.labelStartupOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelStartupOptions.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.labelStartupOptions.Location = new System.Drawing.Point(545, 18);
+			this.labelStartupOptions.Name = "labelStartupOptions";
+			this.labelStartupOptions.Size = new System.Drawing.Size(147, 16);
+			this.labelStartupOptions.TabIndex = 26;
+			this.labelStartupOptions.Text = "System Startup Options";
 			// 
 			// buttonAAMastermode
 			// 
@@ -441,11 +467,274 @@
 			this.pictureBoxSMSOFF.TabStop = false;
 			this.pictureBoxSMSOFF.Visible = false;
 			// 
+			// labelOSB1
+			// 
+			this.labelOSB1.BackColor = System.Drawing.Color.White;
+			this.labelOSB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB1.Location = new System.Drawing.Point(130, 71);
+			this.labelOSB1.Name = "labelOSB1";
+			this.labelOSB1.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB1.TabIndex = 37;
+			this.labelOSB1.Text = "STBY";
+			this.labelOSB1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB2
+			// 
+			this.labelOSB2.BackColor = System.Drawing.Color.White;
+			this.labelOSB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB2.Location = new System.Drawing.Point(182, 71);
+			this.labelOSB2.Name = "labelOSB2";
+			this.labelOSB2.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB2.TabIndex = 38;
+			this.labelOSB2.Text = "STBY";
+			this.labelOSB2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB3
+			// 
+			this.labelOSB3.BackColor = System.Drawing.Color.White;
+			this.labelOSB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB3.Location = new System.Drawing.Point(235, 71);
+			this.labelOSB3.Name = "labelOSB3";
+			this.labelOSB3.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB3.TabIndex = 39;
+			this.labelOSB3.Text = "STBY";
+			this.labelOSB3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB4
+			// 
+			this.labelOSB4.BackColor = System.Drawing.Color.White;
+			this.labelOSB4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB4.Location = new System.Drawing.Point(289, 71);
+			this.labelOSB4.Name = "labelOSB4";
+			this.labelOSB4.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB4.TabIndex = 40;
+			this.labelOSB4.Text = "INV";
+			this.labelOSB4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB5
+			// 
+			this.labelOSB5.BackColor = System.Drawing.Color.White;
+			this.labelOSB5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB5.Location = new System.Drawing.Point(342, 71);
+			this.labelOSB5.Name = "labelOSB5";
+			this.labelOSB5.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB5.TabIndex = 41;
+			this.labelOSB5.Text = "STBY";
+			this.labelOSB5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB9
+			// 
+			this.labelOSB9.BackColor = System.Drawing.Color.White;
+			this.labelOSB9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB9.Location = new System.Drawing.Point(403, 290);
+			this.labelOSB9.Name = "labelOSB9";
+			this.labelOSB9.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB9.TabIndex = 42;
+			this.labelOSB9.Text = "C\r\nZ";
+			this.labelOSB9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelOSB6
+			// 
+			this.labelOSB6.BackColor = System.Drawing.Color.White;
+			this.labelOSB6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB6.Location = new System.Drawing.Point(399, 128);
+			this.labelOSB6.Name = "labelOSB6";
+			this.labelOSB6.Size = new System.Drawing.Size(57, 54);
+			this.labelOSB6.TabIndex = 43;
+			this.labelOSB6.Text = "BARO";
+			this.labelOSB6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelOSB7
+			// 
+			this.labelOSB7.BackColor = System.Drawing.Color.White;
+			this.labelOSB7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB7.Location = new System.Drawing.Point(403, 182);
+			this.labelOSB7.Name = "labelOSB7";
+			this.labelOSB7.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB7.TabIndex = 44;
+			this.labelOSB7.Text = "C\r\nZ";
+			this.labelOSB7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelOSB8
+			// 
+			this.labelOSB8.BackColor = System.Drawing.Color.White;
+			this.labelOSB8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB8.Location = new System.Drawing.Point(403, 235);
+			this.labelOSB8.Name = "labelOSB8";
+			this.labelOSB8.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB8.TabIndex = 45;
+			this.labelOSB8.Text = "CLR\r\nRACK";
+			this.labelOSB8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelOSB10
+			// 
+			this.labelOSB10.BackColor = System.Drawing.Color.White;
+			this.labelOSB10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB10.Location = new System.Drawing.Point(403, 344);
+			this.labelOSB10.Name = "labelOSB10";
+			this.labelOSB10.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB10.TabIndex = 46;
+			this.labelOSB10.Text = "C\r\nZ";
+			this.labelOSB10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// labelHungStores
+			// 
+			this.labelHungStores.BackColor = System.Drawing.Color.White;
+			this.labelHungStores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelHungStores.Location = new System.Drawing.Point(181, 339);
+			this.labelHungStores.Name = "labelHungStores";
+			this.labelHungStores.Size = new System.Drawing.Size(160, 23);
+			this.labelHungStores.TabIndex = 47;
+			this.labelHungStores.Text = "HUNG STORE";
+			this.labelHungStores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB11
+			// 
+			this.labelOSB11.BackColor = System.Drawing.Color.White;
+			this.labelOSB11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB11.Location = new System.Drawing.Point(342, 419);
+			this.labelOSB11.Name = "labelOSB11";
+			this.labelOSB11.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB11.TabIndex = 48;
+			this.labelOSB11.Text = "S-J";
+			this.labelOSB11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB12
+			// 
+			this.labelOSB12.BackColor = System.Drawing.Color.White;
+			this.labelOSB12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB12.Location = new System.Drawing.Point(289, 419);
+			this.labelOSB12.Name = "labelOSB12";
+			this.labelOSB12.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB12.TabIndex = 49;
+			this.labelOSB12.Text = "FCR";
+			this.labelOSB12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB13
+			// 
+			this.labelOSB13.BackColor = System.Drawing.Color.White;
+			this.labelOSB13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB13.Location = new System.Drawing.Point(235, 419);
+			this.labelOSB13.Name = "labelOSB13";
+			this.labelOSB13.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB13.TabIndex = 50;
+			this.labelOSB13.Text = "WPN";
+			this.labelOSB13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB14
+			// 
+			this.labelOSB14.BackColor = System.Drawing.Color.White;
+			this.labelOSB14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB14.Location = new System.Drawing.Point(182, 419);
+			this.labelOSB14.Name = "labelOSB14";
+			this.labelOSB14.Size = new System.Drawing.Size(54, 23);
+			this.labelOSB14.TabIndex = 51;
+			this.labelOSB14.Text = "SMS";
+			this.labelOSB14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB15
+			// 
+			this.labelOSB15.BackColor = System.Drawing.Color.White;
+			this.labelOSB15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB15.Location = new System.Drawing.Point(127, 419);
+			this.labelOSB15.Name = "labelOSB15";
+			this.labelOSB15.Size = new System.Drawing.Size(57, 23);
+			this.labelOSB15.TabIndex = 52;
+			this.labelOSB15.Text = "SWAP";
+			this.labelOSB15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			// 
+			// labelOSB18
+			// 
+			this.labelOSB18.BackColor = System.Drawing.Color.White;
+			this.labelOSB18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB18.Location = new System.Drawing.Point(68, 235);
+			this.labelOSB18.Name = "labelOSB18";
+			this.labelOSB18.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB18.TabIndex = 53;
+			this.labelOSB18.Text = "CLR\r\nWPN";
+			this.labelOSB18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelOSB17
+			// 
+			this.labelOSB17.BackColor = System.Drawing.Color.White;
+			this.labelOSB17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB17.Location = new System.Drawing.Point(68, 290);
+			this.labelOSB17.Name = "labelOSB17";
+			this.labelOSB17.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB17.TabIndex = 54;
+			this.labelOSB17.Text = "CLR\r\nWPN";
+			this.labelOSB17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelOSB16
+			// 
+			this.labelOSB16.BackColor = System.Drawing.Color.White;
+			this.labelOSB16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB16.Location = new System.Drawing.Point(68, 344);
+			this.labelOSB16.Name = "labelOSB16";
+			this.labelOSB16.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB16.TabIndex = 55;
+			this.labelOSB16.Text = "CLR\r\nWPN";
+			this.labelOSB16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelOSB19
+			// 
+			this.labelOSB19.BackColor = System.Drawing.Color.White;
+			this.labelOSB19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB19.Location = new System.Drawing.Point(68, 182);
+			this.labelOSB19.Name = "labelOSB19";
+			this.labelOSB19.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB19.TabIndex = 56;
+			this.labelOSB19.Text = "CLR\r\nWPN";
+			this.labelOSB19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelOSB20
+			// 
+			this.labelOSB20.BackColor = System.Drawing.Color.White;
+			this.labelOSB20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelOSB20.Location = new System.Drawing.Point(68, 128);
+			this.labelOSB20.Name = "labelOSB20";
+			this.labelOSB20.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB20.TabIndex = 57;
+			this.labelOSB20.Text = "CLR\r\nWPN";
+			this.labelOSB20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(79, 388);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(47, 43);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 58;
+			this.pictureBox1.TabStop = false;
+			// 
 			// SMSDisplay
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(715, 527);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.labelOSB20);
+			this.Controls.Add(this.labelOSB19);
+			this.Controls.Add(this.labelOSB16);
+			this.Controls.Add(this.labelOSB17);
+			this.Controls.Add(this.labelOSB18);
+			this.Controls.Add(this.labelOSB15);
+			this.Controls.Add(this.labelOSB14);
+			this.Controls.Add(this.labelOSB13);
+			this.Controls.Add(this.labelOSB12);
+			this.Controls.Add(this.labelOSB11);
+			this.Controls.Add(this.labelHungStores);
+			this.Controls.Add(this.labelOSB10);
+			this.Controls.Add(this.labelOSB8);
+			this.Controls.Add(this.labelOSB7);
+			this.Controls.Add(this.labelOSB6);
+			this.Controls.Add(this.labelOSB9);
+			this.Controls.Add(this.labelOSB5);
+			this.Controls.Add(this.labelOSB4);
+			this.Controls.Add(this.labelOSB3);
+			this.Controls.Add(this.labelOSB2);
+			this.Controls.Add(this.labelOSB1);
 			this.Controls.Add(this.pictureBoxSMSOFF);
 			this.Controls.Add(this.checkBoxMFDSPower);
 			this.Controls.Add(this.buttonWPNREL);
@@ -456,7 +745,7 @@
 			this.Controls.Add(this.checkBoxMMCPower);
 			this.Controls.Add(this.buttonAGMastermode);
 			this.Controls.Add(this.buttonAAMastermode);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.labelStartupOptions);
 			this.Controls.Add(this.radioButtonDGFT);
 			this.Controls.Add(this.radioButtonCancelOverride);
 			this.Controls.Add(this.radioButtonMRM);
@@ -487,6 +776,7 @@
 			this.Text = "SMSDisplay";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -520,7 +810,7 @@
         private System.Windows.Forms.RadioButton radioButtonMRM;
         private System.Windows.Forms.RadioButton radioButtonCancelOverride;
         private System.Windows.Forms.RadioButton radioButtonDGFT;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelStartupOptions;
         private System.Windows.Forms.Button buttonAAMastermode;
         private System.Windows.Forms.Button buttonAGMastermode;
         private System.Windows.Forms.CheckBox checkBoxMMCPower;
@@ -531,5 +821,27 @@
         private System.Windows.Forms.Button buttonWPNREL;
         private System.Windows.Forms.CheckBox checkBoxMFDSPower;
 		private System.Windows.Forms.PictureBox pictureBoxSMSOFF;
+		private System.Windows.Forms.Label labelOSB1;
+		private System.Windows.Forms.Label labelOSB2;
+		private System.Windows.Forms.Label labelOSB3;
+		private System.Windows.Forms.Label labelOSB4;
+		private System.Windows.Forms.Label labelOSB5;
+		private System.Windows.Forms.Label labelOSB9;
+		private System.Windows.Forms.Label labelOSB6;
+		private System.Windows.Forms.Label labelOSB7;
+		private System.Windows.Forms.Label labelOSB8;
+		private System.Windows.Forms.Label labelOSB10;
+		private System.Windows.Forms.Label labelHungStores;
+		private System.Windows.Forms.Label labelOSB11;
+		private System.Windows.Forms.Label labelOSB12;
+		private System.Windows.Forms.Label labelOSB13;
+		private System.Windows.Forms.Label labelOSB14;
+		private System.Windows.Forms.Label labelOSB15;
+		private System.Windows.Forms.Label labelOSB18;
+		private System.Windows.Forms.Label labelOSB17;
+		private System.Windows.Forms.Label labelOSB16;
+		private System.Windows.Forms.Label labelOSB19;
+		private System.Windows.Forms.Label labelOSB20;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
