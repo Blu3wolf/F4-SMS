@@ -59,7 +59,7 @@
 			this.buttonAAMastermode = new System.Windows.Forms.Button();
 			this.buttonAGMastermode = new System.Windows.Forms.Button();
 			this.checkBoxMMCPower = new System.Windows.Forms.CheckBox();
-			this.buttonDTCSelect = new System.Windows.Forms.Button();
+			this.buttonDTC = new System.Windows.Forms.Button();
 			this.checkBoxGunArmed = new System.Windows.Forms.CheckBox();
 			this.buttonMSLSTEP = new System.Windows.Forms.Button();
 			this.buttonEJPressAndHold = new System.Windows.Forms.Button();
@@ -88,9 +88,19 @@
 			this.labelOSB19 = new System.Windows.Forms.Label();
 			this.labelOSB20 = new System.Windows.Forms.Label();
 			this.pictureBoxSMSW = new System.Windows.Forms.PictureBox();
+			this.radioButtonArm = new System.Windows.Forms.RadioButton();
+			this.buttonInventory = new System.Windows.Forms.Button();
+			this.radioButtonOff = new System.Windows.Forms.RadioButton();
+			this.radioButtonSimulate = new System.Windows.Forms.RadioButton();
+			this.groupBoxArmSwitch = new System.Windows.Forms.GroupBox();
+			this.groupBoxStartupOptions = new System.Windows.Forms.GroupBox();
+			this.groupBoxDGFTSwitch = new System.Windows.Forms.GroupBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).BeginInit();
+			this.groupBoxArmSwitch.SuspendLayout();
+			this.groupBoxStartupOptions.SuspendLayout();
+			this.groupBoxDGFTSwitch.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBoxSMS
@@ -306,7 +316,7 @@
 			// checkBoxSMSPower
 			// 
 			this.checkBoxSMSPower.AutoSize = true;
-			this.checkBoxSMSPower.Location = new System.Drawing.Point(548, 97);
+			this.checkBoxSMSPower.Location = new System.Drawing.Point(7, 65);
 			this.checkBoxSMSPower.Name = "checkBoxSMSPower";
 			this.checkBoxSMSPower.Size = new System.Drawing.Size(99, 17);
 			this.checkBoxSMSPower.TabIndex = 21;
@@ -319,7 +329,7 @@
 			this.checkBoxWOW.AutoSize = true;
 			this.checkBoxWOW.Checked = true;
 			this.checkBoxWOW.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBoxWOW.Location = new System.Drawing.Point(548, 172);
+			this.checkBoxWOW.Location = new System.Drawing.Point(6, 140);
 			this.checkBoxWOW.Name = "checkBoxWOW";
 			this.checkBoxWOW.Size = new System.Drawing.Size(155, 17);
 			this.checkBoxWOW.TabIndex = 22;
@@ -330,7 +340,7 @@
 			// radioButtonMRM
 			// 
 			this.radioButtonMRM.AutoSize = true;
-			this.radioButtonMRM.Location = new System.Drawing.Point(548, 224);
+			this.radioButtonMRM.Location = new System.Drawing.Point(6, 17);
 			this.radioButtonMRM.Name = "radioButtonMRM";
 			this.radioButtonMRM.Size = new System.Drawing.Size(94, 17);
 			this.radioButtonMRM.TabIndex = 23;
@@ -342,7 +352,7 @@
 			// 
 			this.radioButtonCancelOverride.AutoSize = true;
 			this.radioButtonCancelOverride.Checked = true;
-			this.radioButtonCancelOverride.Location = new System.Drawing.Point(549, 247);
+			this.radioButtonCancelOverride.Location = new System.Drawing.Point(7, 40);
 			this.radioButtonCancelOverride.Name = "radioButtonCancelOverride";
 			this.radioButtonCancelOverride.Size = new System.Drawing.Size(101, 17);
 			this.radioButtonCancelOverride.TabIndex = 24;
@@ -354,7 +364,7 @@
 			// radioButtonDGFT
 			// 
 			this.radioButtonDGFT.AutoSize = true;
-			this.radioButtonDGFT.Location = new System.Drawing.Point(549, 270);
+			this.radioButtonDGFT.Location = new System.Drawing.Point(7, 63);
 			this.radioButtonDGFT.Name = "radioButtonDGFT";
 			this.radioButtonDGFT.Size = new System.Drawing.Size(97, 17);
 			this.radioButtonDGFT.TabIndex = 25;
@@ -367,15 +377,15 @@
 			this.labelStartupOptions.AutoSize = true;
 			this.labelStartupOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelStartupOptions.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.labelStartupOptions.Location = new System.Drawing.Point(545, 18);
+			this.labelStartupOptions.Location = new System.Drawing.Point(576, 12);
 			this.labelStartupOptions.Name = "labelStartupOptions";
-			this.labelStartupOptions.Size = new System.Drawing.Size(147, 16);
+			this.labelStartupOptions.Size = new System.Drawing.Size(95, 16);
 			this.labelStartupOptions.TabIndex = 26;
-			this.labelStartupOptions.Text = "System Startup Options";
+			this.labelStartupOptions.Text = "Config Options";
 			// 
 			// buttonAAMastermode
 			// 
-			this.buttonAAMastermode.Location = new System.Drawing.Point(548, 195);
+			this.buttonAAMastermode.Location = new System.Drawing.Point(542, 199);
 			this.buttonAAMastermode.Name = "buttonAAMastermode";
 			this.buttonAAMastermode.Size = new System.Drawing.Size(75, 23);
 			this.buttonAAMastermode.TabIndex = 27;
@@ -385,7 +395,7 @@
 			// 
 			// buttonAGMastermode
 			// 
-			this.buttonAGMastermode.Location = new System.Drawing.Point(629, 195);
+			this.buttonAGMastermode.Location = new System.Drawing.Point(623, 199);
 			this.buttonAGMastermode.Name = "buttonAGMastermode";
 			this.buttonAGMastermode.Size = new System.Drawing.Size(75, 23);
 			this.buttonAGMastermode.TabIndex = 28;
@@ -396,7 +406,7 @@
 			// checkBoxMMCPower
 			// 
 			this.checkBoxMMCPower.AutoSize = true;
-			this.checkBoxMMCPower.Location = new System.Drawing.Point(547, 50);
+			this.checkBoxMMCPower.Location = new System.Drawing.Point(6, 19);
 			this.checkBoxMMCPower.Name = "checkBoxMMCPower";
 			this.checkBoxMMCPower.Size = new System.Drawing.Size(101, 17);
 			this.checkBoxMMCPower.TabIndex = 29;
@@ -404,19 +414,19 @@
 			this.checkBoxMMCPower.UseVisualStyleBackColor = true;
 			this.checkBoxMMCPower.CheckedChanged += new System.EventHandler(this.checkBoxMMCPower_CheckedChanged);
 			// 
-			// buttonDTCSelect
+			// buttonDTC
 			// 
-			this.buttonDTCSelect.Location = new System.Drawing.Point(584, 143);
-			this.buttonDTCSelect.Name = "buttonDTCSelect";
-			this.buttonDTCSelect.Size = new System.Drawing.Size(75, 23);
-			this.buttonDTCSelect.TabIndex = 30;
-			this.buttonDTCSelect.Text = "Select DTC";
-			this.buttonDTCSelect.UseVisualStyleBackColor = true;
+			this.buttonDTC.Location = new System.Drawing.Point(6, 111);
+			this.buttonDTC.Name = "buttonDTC";
+			this.buttonDTC.Size = new System.Drawing.Size(75, 23);
+			this.buttonDTC.TabIndex = 30;
+			this.buttonDTC.Text = "DTC";
+			this.buttonDTC.UseVisualStyleBackColor = true;
 			// 
 			// checkBoxGunArmed
 			// 
 			this.checkBoxGunArmed.AutoSize = true;
-			this.checkBoxGunArmed.Location = new System.Drawing.Point(548, 120);
+			this.checkBoxGunArmed.Location = new System.Drawing.Point(7, 88);
 			this.checkBoxGunArmed.Name = "checkBoxGunArmed";
 			this.checkBoxGunArmed.Size = new System.Drawing.Size(79, 17);
 			this.checkBoxGunArmed.TabIndex = 31;
@@ -425,7 +435,7 @@
 			// 
 			// buttonMSLSTEP
 			// 
-			this.buttonMSLSTEP.Location = new System.Drawing.Point(584, 322);
+			this.buttonMSLSTEP.Location = new System.Drawing.Point(579, 351);
 			this.buttonMSLSTEP.Name = "buttonMSLSTEP";
 			this.buttonMSLSTEP.Size = new System.Drawing.Size(75, 23);
 			this.buttonMSLSTEP.TabIndex = 32;
@@ -434,7 +444,7 @@
 			// 
 			// buttonEJPressAndHold
 			// 
-			this.buttonEJPressAndHold.Location = new System.Drawing.Point(562, 293);
+			this.buttonEJPressAndHold.Location = new System.Drawing.Point(562, 322);
 			this.buttonEJPressAndHold.Name = "buttonEJPressAndHold";
 			this.buttonEJPressAndHold.Size = new System.Drawing.Size(119, 23);
 			this.buttonEJPressAndHold.TabIndex = 33;
@@ -443,7 +453,7 @@
 			// 
 			// buttonWPNREL
 			// 
-			this.buttonWPNREL.Location = new System.Drawing.Point(584, 351);
+			this.buttonWPNREL.Location = new System.Drawing.Point(579, 380);
 			this.buttonWPNREL.Name = "buttonWPNREL";
 			this.buttonWPNREL.Size = new System.Drawing.Size(75, 23);
 			this.buttonWPNREL.TabIndex = 34;
@@ -453,7 +463,7 @@
 			// checkBoxMFDSPower
 			// 
 			this.checkBoxMFDSPower.AutoSize = true;
-			this.checkBoxMFDSPower.Location = new System.Drawing.Point(548, 74);
+			this.checkBoxMFDSPower.Location = new System.Drawing.Point(7, 42);
 			this.checkBoxMFDSPower.Name = "checkBoxMFDSPower";
 			this.checkBoxMFDSPower.Size = new System.Drawing.Size(106, 17);
 			this.checkBoxMFDSPower.TabIndex = 35;
@@ -713,11 +723,93 @@
 			this.pictureBoxSMSW.TabIndex = 58;
 			this.pictureBoxSMSW.TabStop = false;
 			// 
+			// radioButtonArm
+			// 
+			this.radioButtonArm.Location = new System.Drawing.Point(7, 12);
+			this.radioButtonArm.Name = "radioButtonArm";
+			this.radioButtonArm.Size = new System.Drawing.Size(104, 24);
+			this.radioButtonArm.TabIndex = 63;
+			this.radioButtonArm.Text = "MASTER ARM";
+			// 
+			// buttonInventory
+			// 
+			this.buttonInventory.Location = new System.Drawing.Point(87, 111);
+			this.buttonInventory.Name = "buttonInventory";
+			this.buttonInventory.Size = new System.Drawing.Size(74, 23);
+			this.buttonInventory.TabIndex = 60;
+			this.buttonInventory.Text = "Inventory";
+			this.buttonInventory.UseVisualStyleBackColor = true;
+			// 
+			// radioButtonOff
+			// 
+			this.radioButtonOff.AutoSize = true;
+			this.radioButtonOff.Checked = true;
+			this.radioButtonOff.Location = new System.Drawing.Point(6, 42);
+			this.radioButtonOff.Name = "radioButtonOff";
+			this.radioButtonOff.Size = new System.Drawing.Size(45, 17);
+			this.radioButtonOff.TabIndex = 61;
+			this.radioButtonOff.TabStop = true;
+			this.radioButtonOff.Text = "OFF";
+			this.radioButtonOff.UseVisualStyleBackColor = true;
+			// 
+			// radioButtonSimulate
+			// 
+			this.radioButtonSimulate.AutoSize = true;
+			this.radioButtonSimulate.Location = new System.Drawing.Point(6, 65);
+			this.radioButtonSimulate.Name = "radioButtonSimulate";
+			this.radioButtonSimulate.Size = new System.Drawing.Size(79, 17);
+			this.radioButtonSimulate.TabIndex = 62;
+			this.radioButtonSimulate.Text = "SIMULATE";
+			this.radioButtonSimulate.UseVisualStyleBackColor = true;
+			// 
+			// groupBoxArmSwitch
+			// 
+			this.groupBoxArmSwitch.Controls.Add(this.radioButtonSimulate);
+			this.groupBoxArmSwitch.Controls.Add(this.radioButtonOff);
+			this.groupBoxArmSwitch.Controls.Add(this.radioButtonArm);
+			this.groupBoxArmSwitch.Location = new System.Drawing.Point(536, 412);
+			this.groupBoxArmSwitch.Name = "groupBoxArmSwitch";
+			this.groupBoxArmSwitch.Size = new System.Drawing.Size(167, 100);
+			this.groupBoxArmSwitch.TabIndex = 63;
+			this.groupBoxArmSwitch.TabStop = false;
+			this.groupBoxArmSwitch.Text = "Master Arm";
+			// 
+			// groupBoxStartupOptions
+			// 
+			this.groupBoxStartupOptions.Controls.Add(this.checkBoxMMCPower);
+			this.groupBoxStartupOptions.Controls.Add(this.checkBoxSMSPower);
+			this.groupBoxStartupOptions.Controls.Add(this.buttonInventory);
+			this.groupBoxStartupOptions.Controls.Add(this.checkBoxGunArmed);
+			this.groupBoxStartupOptions.Controls.Add(this.checkBoxMFDSPower);
+			this.groupBoxStartupOptions.Controls.Add(this.buttonDTC);
+			this.groupBoxStartupOptions.Controls.Add(this.checkBoxWOW);
+			this.groupBoxStartupOptions.Location = new System.Drawing.Point(536, 31);
+			this.groupBoxStartupOptions.Name = "groupBoxStartupOptions";
+			this.groupBoxStartupOptions.Size = new System.Drawing.Size(167, 163);
+			this.groupBoxStartupOptions.TabIndex = 64;
+			this.groupBoxStartupOptions.TabStop = false;
+			this.groupBoxStartupOptions.Text = "System Startup Options";
+			// 
+			// groupBoxDGFTSwitch
+			// 
+			this.groupBoxDGFTSwitch.Controls.Add(this.radioButtonMRM);
+			this.groupBoxDGFTSwitch.Controls.Add(this.radioButtonCancelOverride);
+			this.groupBoxDGFTSwitch.Controls.Add(this.radioButtonDGFT);
+			this.groupBoxDGFTSwitch.Location = new System.Drawing.Point(536, 228);
+			this.groupBoxDGFTSwitch.Name = "groupBoxDGFTSwitch";
+			this.groupBoxDGFTSwitch.Size = new System.Drawing.Size(167, 88);
+			this.groupBoxDGFTSwitch.TabIndex = 65;
+			this.groupBoxDGFTSwitch.TabStop = false;
+			this.groupBoxDGFTSwitch.Text = "DGFT/MRM Switch";
+			// 
 			// SMSDisplay
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(715, 527);
+			this.Controls.Add(this.groupBoxDGFTSwitch);
+			this.Controls.Add(this.groupBoxStartupOptions);
+			this.Controls.Add(this.groupBoxArmSwitch);
 			this.Controls.Add(this.pictureBoxSMSW);
 			this.Controls.Add(this.labelOSB20);
 			this.Controls.Add(this.labelOSB19);
@@ -741,21 +833,12 @@
 			this.Controls.Add(this.labelOSB2);
 			this.Controls.Add(this.labelOSB1);
 			this.Controls.Add(this.pictureBoxSMSOFF);
-			this.Controls.Add(this.checkBoxMFDSPower);
 			this.Controls.Add(this.buttonWPNREL);
 			this.Controls.Add(this.buttonEJPressAndHold);
 			this.Controls.Add(this.buttonMSLSTEP);
-			this.Controls.Add(this.checkBoxGunArmed);
-			this.Controls.Add(this.buttonDTCSelect);
-			this.Controls.Add(this.checkBoxMMCPower);
 			this.Controls.Add(this.buttonAGMastermode);
 			this.Controls.Add(this.buttonAAMastermode);
 			this.Controls.Add(this.labelStartupOptions);
-			this.Controls.Add(this.radioButtonDGFT);
-			this.Controls.Add(this.radioButtonCancelOverride);
-			this.Controls.Add(this.radioButtonMRM);
-			this.Controls.Add(this.checkBoxWOW);
-			this.Controls.Add(this.checkBoxSMSPower);
 			this.Controls.Add(this.buttonOSB20);
 			this.Controls.Add(this.buttonOSB19);
 			this.Controls.Add(this.buttonOSB18);
@@ -782,6 +865,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).EndInit();
+			this.groupBoxArmSwitch.ResumeLayout(false);
+			this.groupBoxArmSwitch.PerformLayout();
+			this.groupBoxStartupOptions.ResumeLayout(false);
+			this.groupBoxStartupOptions.PerformLayout();
+			this.groupBoxDGFTSwitch.ResumeLayout(false);
+			this.groupBoxDGFTSwitch.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -819,7 +908,7 @@
         private System.Windows.Forms.Button buttonAAMastermode;
         private System.Windows.Forms.Button buttonAGMastermode;
         private System.Windows.Forms.CheckBox checkBoxMMCPower;
-        private System.Windows.Forms.Button buttonDTCSelect;
+        private System.Windows.Forms.Button buttonDTC;
         private System.Windows.Forms.CheckBox checkBoxGunArmed;
         private System.Windows.Forms.Button buttonMSLSTEP;
         private System.Windows.Forms.Button buttonEJPressAndHold;
@@ -848,5 +937,12 @@
 		private System.Windows.Forms.Label labelOSB19;
 		private System.Windows.Forms.Label labelOSB20;
 		private System.Windows.Forms.PictureBox pictureBoxSMSW;
+		private System.Windows.Forms.RadioButton radioButtonArm;
+		private System.Windows.Forms.Button buttonInventory;
+		private System.Windows.Forms.RadioButton radioButtonOff;
+		private System.Windows.Forms.RadioButton radioButtonSimulate;
+		private System.Windows.Forms.GroupBox groupBoxArmSwitch;
+		private System.Windows.Forms.GroupBox groupBoxStartupOptions;
+		private System.Windows.Forms.GroupBox groupBoxDGFTSwitch;
 	}
 }
