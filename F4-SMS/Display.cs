@@ -1,8 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Display
+namespace F4_SMS
 {
-	public Display()
+	/* Responsible for displaying the MFD on the DisplayForm
+	 * knows what is drawn on the MFD */
+
+	class Display
 	{
+
 	}
 }
