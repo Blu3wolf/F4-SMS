@@ -1,6 +1,6 @@
 ﻿namespace F4_SMS
 {
-    partial class SMSDisplay
+    partial class DisplayForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SMSDisplay));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayForm));
 			this.pictureBoxSMS = new System.Windows.Forms.PictureBox();
 			this.buttonOSB1 = new System.Windows.Forms.Button();
 			this.buttonOSB2 = new System.Windows.Forms.Button();

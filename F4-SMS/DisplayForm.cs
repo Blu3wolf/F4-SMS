@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace F4_SMS
 {
-    public partial class SMSDisplay : Form
+    public partial class DisplayForm : Form
     {
 		// SMSDisplay() gets called when the form is initialised, which happens when someone pressed load on the main menu
-        public SMSDisplay()
+        public DisplayForm()
         {
 			// Ini Com required for winforms designer support
             InitializeComponent();

@@ -30,7 +30,7 @@ namespace F4_SMS
         private void tapeLoadButton_Click(object sender, EventArgs e)
         {
             // Create a new instance of the SMSDisplay class and show it
-            SMSDisplay formSMS = new SMSDisplay();
+            DisplayForm formSMS = new DisplayForm();
             formSMS.Show();
         }
     }
