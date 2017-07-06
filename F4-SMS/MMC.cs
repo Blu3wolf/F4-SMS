@@ -11,5 +11,18 @@ namespace F4_SMS
 
 	class MMC
 	{
+		private bool mmcpower;
+
+		private bool mfdspower;
+
+		private bool smspower;
+
+		private bool gunarmed;
+
+		private enum MasterMode
+		{
+
+		}
+
 	}
 }
