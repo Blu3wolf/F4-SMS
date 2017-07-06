@@ -725,7 +725,7 @@
 			// 
 			// radioButtonArm
 			// 
-			this.radioButtonArm.Location = new System.Drawing.Point(7, 12);
+			this.radioButtonArm.Location = new System.Drawing.Point(7, 17);
 			this.radioButtonArm.Name = "radioButtonArm";
 			this.radioButtonArm.Size = new System.Drawing.Size(104, 24);
 			this.radioButtonArm.TabIndex = 63;
@@ -744,7 +744,7 @@
 			// 
 			this.radioButtonOff.AutoSize = true;
 			this.radioButtonOff.Checked = true;
-			this.radioButtonOff.Location = new System.Drawing.Point(6, 42);
+			this.radioButtonOff.Location = new System.Drawing.Point(7, 40);
 			this.radioButtonOff.Name = "radioButtonOff";
 			this.radioButtonOff.Size = new System.Drawing.Size(45, 17);
 			this.radioButtonOff.TabIndex = 61;
@@ -755,7 +755,7 @@
 			// radioButtonSimulate
 			// 
 			this.radioButtonSimulate.AutoSize = true;
-			this.radioButtonSimulate.Location = new System.Drawing.Point(6, 65);
+			this.radioButtonSimulate.Location = new System.Drawing.Point(7, 63);
 			this.radioButtonSimulate.Name = "radioButtonSimulate";
 			this.radioButtonSimulate.Size = new System.Drawing.Size(79, 17);
 			this.radioButtonSimulate.TabIndex = 62;
@@ -769,7 +769,7 @@
 			this.groupBoxArmSwitch.Controls.Add(this.radioButtonArm);
 			this.groupBoxArmSwitch.Location = new System.Drawing.Point(536, 412);
 			this.groupBoxArmSwitch.Name = "groupBoxArmSwitch";
-			this.groupBoxArmSwitch.Size = new System.Drawing.Size(167, 100);
+			this.groupBoxArmSwitch.Size = new System.Drawing.Size(167, 88);
 			this.groupBoxArmSwitch.TabIndex = 63;
 			this.groupBoxArmSwitch.TabStop = false;
 			this.groupBoxArmSwitch.Text = "Master Arm";
@@ -802,7 +802,7 @@
 			this.groupBoxDGFTSwitch.TabStop = false;
 			this.groupBoxDGFTSwitch.Text = "DGFT/MRM Switch";
 			// 
-			// SMSDisplay
+			// DisplayForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -860,7 +860,7 @@
 			this.Controls.Add(this.buttonOSB2);
 			this.Controls.Add(this.buttonOSB1);
 			this.Controls.Add(this.pictureBoxSMS);
-			this.Name = "SMSDisplay";
+			this.Name = "DisplayForm";
 			this.Text = "SMSDisplay";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).EndInit();
