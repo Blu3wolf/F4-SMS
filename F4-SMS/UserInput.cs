@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* passes user input from whatever sources to display
 	 * currently that just means from the DisplayForm */

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* Responsible for behavior of S-J page,
 	 * tells display how to draw S-J page */

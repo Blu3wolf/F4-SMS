@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* responsible for behavior of BIT page, and tells display how to draw BIT page */
 

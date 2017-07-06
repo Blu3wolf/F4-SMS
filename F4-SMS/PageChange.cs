@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* responsible for behavior of MFD page change page, and for telling display how to draw it */
 

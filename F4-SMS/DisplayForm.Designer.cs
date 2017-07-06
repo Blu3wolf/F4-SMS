@@ -1,4 +1,4 @@
-﻿namespace F4_SMS
+﻿namespace F4SMS
 {
     partial class DisplayForm
     {

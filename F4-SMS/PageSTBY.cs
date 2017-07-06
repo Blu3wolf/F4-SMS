@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* Responsible for logic about how STBY page reacts to user input. 
 	 * knows how STBY page reacts to input

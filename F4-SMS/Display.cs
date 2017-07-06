@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* Responsible for displaying the MFD on the DisplayForm
 	 * knows what is drawn on the MFD */

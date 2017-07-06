@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace F4_SMS
+namespace F4SMS
 {
     public partial class MainMenu : Form
     {

@@ -8,18 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace F4_SMS
+namespace F4SMS
 {
 
 	/* Class is responsible for the whole of the Form - the UI and the MFDS display */
 
     public partial class DisplayForm : Form
     {
-		// SMSDisplay() gets called when the form is initialised, which happens when someone pressed load on the main menu
+		// DisplayForm() gets called when the form is initialised, which happens when someone pressed load on the main menu
         public DisplayForm()
         {
 			// Ini Com required for winforms designer support
             InitializeComponent();
+
+			// instantiate MMC
+			MMC MMC1 = new MMC();
 
 			// set initial values for form start
 			displayPage = (int)Pages.OFF;
@@ -60,24 +63,6 @@ namespace F4_SMS
 		private List<Label> allLabels = new List<Label>();
 
 		private List<PictureBox> allPictures = new List<PictureBox>();
-
-		// Pages is a enum of all possible display pages
-		private enum Pages
-		{
-			OFF, STBY, INV, SJ, EJ, AAM, MSL, DGFT, GUN, AG, BIT, WPN, FCR
-		}
-
-		// displayPage is the int of the current page if read from the enum Pages
-		private int displayPage;
-
-		// Mastermodes is an enum of all possible system mastermodes
-		private enum Mastermodes
-		{
-			NAV, AA, AG, DGFT, MSL
-		}
-
-		// masterMode is the int of the system mastermode if read from the enum Mastermodes
-		private int masterMode;
 
 		// overrideState is the bool of whether the DGFT switch is not centered
 		private bool overrideState;
@@ -197,6 +182,7 @@ namespace F4_SMS
 
         private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
+			
             SystemStartupOptionsChanged();
         }
 

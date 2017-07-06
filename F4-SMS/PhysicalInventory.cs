@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	/* Responsible for providing information on actual load. Stores information about load.
 	 * Knows which RIUs are xmitting on the 1553 Mux, 

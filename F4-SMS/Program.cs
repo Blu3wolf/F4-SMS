@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace F4_SMS
+namespace F4SMS
 {
     static class Program
     {

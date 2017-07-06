@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace F4_SMS.Properties
+namespace F4SMS.Properties
 {
 
 
