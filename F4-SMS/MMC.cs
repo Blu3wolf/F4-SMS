@@ -17,19 +17,29 @@ namespace F4SMS
 			
 		}
 
-		public bool MMCPower;
+		private bool mMCPower;
 
-		public bool MFDSPower;
+		private bool mFDSPower;
 
-		public bool SMSPower;
+		private bool sMSPower;
 
-		public bool GunArmed;
+		private bool gunArmed;
 
-		public bool WOW;
+		private bool wOW;
 
 		private int currentMasterMode;
 
 		public int CurrentMasterMode { get => currentMasterMode; set => currentMasterMode = value; }
+
+		public bool MMCPower { get => mMCPower; set => mMCPower = value; }
+
+		public bool MFDSPower { get => mFDSPower; set => mFDSPower = value; }
+
+		public bool SMSPower { get => sMSPower; set => sMSPower = value; }
+
+		public bool GunArmed { get => gunArmed; set => gunArmed = value; }
+
+		public bool WOW { get => wOW; set => wOW = value; }
 
 		public enum MasterModes
 		{
@@ -50,8 +60,9 @@ namespace F4SMS
 			MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
 		}
 
-		public void SystemStartupOptionsChanged(int Option)
+		public void SystemStartupOptionsChanged(int Option, bool Value)
 		{
+			(SystemStartupOptions)Option
 			if (MFDSPower)
 			{
 				if (!(SMSPower & MMCPower))

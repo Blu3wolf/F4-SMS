@@ -182,23 +182,26 @@ namespace F4SMS
             
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
-            SystemStartupOptionsChanged();
+			MMC1.SMSPower = checkBoxSMSPower.Checked;
+            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.SMSPower, );
         }
 
         private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
-			MMC1.SystemStartupOptionsChanged();
+			MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.MMCPower);
         }
 
         private void checkBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
         {
-            SystemStartupOptionsChanged();
+			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
+            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.MFDSPower);
         }
 
 		private void checkBoxWOW_CheckedChanged(object sender, EventArgs e)
 		{
-			// WOW changing doesnt actually change the SMS state itself, so dont do anything in particular
+			MMC1.WOW = checkBoxWOW.Checked;
+			MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.WOW);
 		}
 
 		private void buttonAAMastermode_Click(object sender, EventArgs e)
