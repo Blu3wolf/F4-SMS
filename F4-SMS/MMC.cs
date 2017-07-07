@@ -14,7 +14,7 @@ namespace F4SMS
 	{
 		public MMC()
 		{
-
+			
 		}
 
 		public bool MMCPower;
@@ -25,27 +25,82 @@ namespace F4SMS
 
 		public bool GunArmed;
 
+		public bool WOW;
+
 		private int currentMasterMode;
 
 		public int CurrentMasterMode { get => currentMasterMode; set => currentMasterMode = value; }
 
-		private enum MasterModes
+		public enum MasterModes
 		{
 			NAV, AA, AG, DGFT, MSL
-		}
-
-		public int SetMasterMode()
-		{
-
 		}
 
 		// displayPage is the int of the current page if read from the enum Pages
 		private int displayPage;
 
 		// Pages is a enum of all possible display pages
-		private enum Pages
+		public enum Pages
 		{
 			OFF, STBY, INV, SJ, EJ, AAM, MSL, DGFT, GUN, AG, BIT
+		}
+
+		public enum SystemStartupOptions
+		{
+			MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
+		}
+
+		public void SystemStartupOptionsChanged(int Option)
+		{
+			if (MFDSPower)
+			{
+				if (!(SMSPower & MMCPower))
+				{
+					// MFDS has power, but either ST STA or FCC is not powered, so display the OFF page
+
+				}
+				else
+				{
+					// MFDS, SMS and MMC all have power
+					switch (Option)
+					{
+						case (int)SystemStartupOptions.MMCPower:
+							// MMC just powered up
+							if (WOW)
+							{
+								// MMC just powered up on the ground
+								// Mastermode will now be NAV
+								// SMS will now be STBY mode, INV page
+
+							}
+							else
+							{
+								// MMC just powered up in the air
+								// Mastermode will be whatever it was last
+
+							}
+							break;
+						case (int)SystemStartupOptions.SMSPower:
+							// SMS just powered up, in STBY mode
+							// we should probably display the INV page
+
+							break;
+						default:
+							break;
+					}
+					{ 
+						// MFDS, MMC and SMS have power, and WOW=true, so display the STBY page
+						Display.SetSMSPage((int)Pages.STBY);
+						// If the 
+						masterMode = (int)Mastermodes.NAV;
+					}
+				}
+			}
+			else
+			{
+				// MFDS has no power, so blank the MFD
+
+			}
 		}
 
 	}

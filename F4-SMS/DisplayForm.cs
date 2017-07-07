@@ -21,13 +21,15 @@ namespace F4SMS
 			// Ini Com required for winforms designer support
             InitializeComponent();
 
-			// instantiate MMC
-			MMC MMC1 = new MMC();
-
 			// set initial values for form start
-			displayPage = (int)Pages.OFF;
-			masterMode = (int)Mastermodes.NAV;
-			overrideState = false;
+			MMC MMCObject = new MMC();
+			MMC1 = MMCObject;
+
+			DigitalInventory DigInvObject = new DigitalInventory();
+			DigInv1 = DigInvObject;
+
+			PhysicalInventory PhyInvObject = new PhysicalInventory();
+			PhyInv1 = PhyInvObject;
 
 			// Generate the list of all labels
 			allLabels.Add(labelOSB1);
@@ -60,15 +62,18 @@ namespace F4SMS
 			BlankSMSPage();
 		}
 
+		// this is the MMC object for this instance of the DisplayForm window
+		private MMC MMC1;
+
+		// this is the Digital Inventory object for this instance of the DF window
+		private DigitalInventory DigInv1;
+
+		// this is the Physical Inventory object for this instance of the DF window
+		private PhysicalInventory PhyInv1;
+
 		private List<Label> allLabels = new List<Label>();
 
 		private List<PictureBox> allPictures = new List<PictureBox>();
-
-		// overrideState is the bool of whether the DGFT switch is not centered
-		private bool overrideState;
-
-		// overridden is the int of the system mastermode that was overridden by the override
-		private int overridden;
 
 		// If Startup options change, this function figures out what changes to make to the display
 		private void SystemStartupOptionsChanged()
@@ -102,7 +107,7 @@ namespace F4SMS
 			}
         }
 
-		private void BlankSMSPage()
+		public void BlankSMSPage()
 		{
 			// Make all display screen elements non visible
 			// Do this by iterating over the collection allLabels and marking each object .Visible = false;
@@ -182,8 +187,8 @@ namespace F4SMS
 
         private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
-			
-            SystemStartupOptionsChanged();
+			MMC1.MMCPower = checkBoxMMCPower.Checked;
+			MMC1.SystemStartupOptionsChanged();
         }
 
         private void checkBoxMFDSPower_CheckedChanged(object sender, EventArgs e)

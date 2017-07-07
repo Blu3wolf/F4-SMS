@@ -329,7 +329,7 @@
 			this.checkBoxWOW.AutoSize = true;
 			this.checkBoxWOW.Checked = true;
 			this.checkBoxWOW.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBoxWOW.Location = new System.Drawing.Point(6, 140);
+			this.checkBoxWOW.Location = new System.Drawing.Point(6, 88);
 			this.checkBoxWOW.Name = "checkBoxWOW";
 			this.checkBoxWOW.Size = new System.Drawing.Size(155, 17);
 			this.checkBoxWOW.TabIndex = 22;
@@ -426,7 +426,7 @@
 			// checkBoxGunArmed
 			// 
 			this.checkBoxGunArmed.AutoSize = true;
-			this.checkBoxGunArmed.Location = new System.Drawing.Point(7, 88);
+			this.checkBoxGunArmed.Location = new System.Drawing.Point(43, 140);
 			this.checkBoxGunArmed.Name = "checkBoxGunArmed";
 			this.checkBoxGunArmed.Size = new System.Drawing.Size(79, 17);
 			this.checkBoxGunArmed.TabIndex = 31;
