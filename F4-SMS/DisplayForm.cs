@@ -75,38 +75,6 @@ namespace F4SMS
 
 		private List<PictureBox> allPictures = new List<PictureBox>();
 
-		// If Startup options change, this function figures out what changes to make to the display
-		private void SystemStartupOptionsChanged()
-        {
-            if (checkBoxMFDSPower.Checked)
-            {
-				if (!(checkBoxSMSPower.Checked & checkBoxMMCPower.Checked))
-				{
-					// MFDS has power, but either ST STA or FCC is not powered, so display the OFF page
-					SetSMSPage((int)Pages.OFF);
-                }
-				else 
-				{
-					if (checkBoxWOW.Checked)
-					{
-						// MFDS, MMC and SMS have power, and WOW=true, so display the STBY page
-						SetSMSPage((int)Pages.STBY);
-						masterMode = (int)Mastermodes.NAV;
-					}
-					else
-					{
-						// MFDS, MMC and SMS have power, and WOW=false, so display the last selected master mode
-						// ... somehow
-					}
-				}
-            }
-			else
-			{
-				// MFDS has no power, so blank the MFD
-				BlankSMSPage();
-			}
-        }
-
 		public void BlankSMSPage()
 		{
 			// Make all display screen elements non visible
@@ -123,52 +91,6 @@ namespace F4SMS
 			}
 		}
 
-		private void SetSMSPage(int page)
-		{
-			// Wipe the slate clean
-			BlankSMSPage();
-
-			// Figure out which page we are switching to, and display that page
-			switch (page)
-			{
-				case (int)Pages.OFF:
-					displayOFF();
-					break;
-				case (int)Pages.STBY:
-					break;
-				case (int)Pages.INV:
-					break;
-				case (int)Pages.SJ:
-					break;
-				case (int)Pages.EJ:
-					break;
-				case (int)Pages.AAM:
-					break;
-				case (int)Pages.MSL:
-					break;
-				case (int)Pages.DGFT:
-					break;
-				case (int)Pages.GUN:
-					break;
-				case (int)Pages.AG:
-					break;
-				case (int)Pages.BIT:
-					break;
-				case (int)Pages.WPN:
-					break;
-				case (int)Pages.FCR:
-					break;
-				default:
-					// We got a weird result; Display the OFF page anyway. 
-					pictureBoxSMSOFF.Visible = true;
-					break;
-			}
-
-			// Update the value of displayPage
-
-			displayPage = page;
-		}
-
 		private void displayOFF()
 		{
 			pictureBoxSMSOFF.Visible = true;
@@ -183,7 +105,7 @@ namespace F4SMS
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.SMSPower = checkBoxSMSPower.Checked;
-            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.SMSPower, );
+            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.SMSPower);
         }
 
         private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
@@ -206,41 +128,19 @@ namespace F4SMS
 
 		private void buttonAAMastermode_Click(object sender, EventArgs e)
 		{
-			if (!overrideState)
-			{
-				if (masterMode == (int)Mastermodes.AA)
-				{
-					masterMode = (int)Mastermodes.NAV;
-				}
-				else
-				{
-					masterMode = (int)Mastermodes.AA;
-				}
-			}
+			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AA;
 		}
 
 		private void buttonAGMastermode_Click(object sender, EventArgs e)
 		{
-			if (!overrideState)
-			{
-				if (masterMode == (int)Mastermodes.AG)
-				{
-					masterMode = (int)Mastermodes.NAV;
-				}
-				else
-				{
-					masterMode = (int)Mastermodes.AG;
-				}
-			}
+			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AG;
 		}
 
 		private void radioButtonMRM_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonMRM.Checked)
 			{
-				overrideState = true;
-				overridden = masterMode;
-				masterMode = (int)Mastermodes.MSL;
+				MMC1.CurrentMasterMode = (int)MMC.MasterModes.MSL;
 			}
 		}
 
@@ -248,8 +148,7 @@ namespace F4SMS
 		{
 			if (radioButtonCancelOverride.Checked)
 			{
-				overrideState = false;
-				masterMode = overridden;
+				MMC1.CancelOverride();
 			}
 		}
 
@@ -257,9 +156,7 @@ namespace F4SMS
 		{
 			if (radioButtonDGFT.Checked)
 			{
-				overrideState = true;
-				overridden = masterMode;
-				masterMode = (int)Mastermodes.DGFT;
+				MMC1.CurrentMasterMode = (int)MMC.MasterModes.DGFT;
 			}
 		}
 	}

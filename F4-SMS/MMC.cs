@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 namespace F4SMS
 {
 	/* Responsible for controlling the MMC state
-	 * decides what mastermode to be in
+	 * decides what mastermode to be in, based on input to DisplayForm
 	 * stores current master mode, power status, status of A/C */
 
 	class MMC
 	{
 		public MMC()
 		{
-			
+			// does anything need to be done to instantiate the object?
 		}
 
 		private bool mMCPower;
@@ -29,7 +29,51 @@ namespace F4SMS
 
 		private int currentMasterMode;
 
-		public int CurrentMasterMode { get => currentMasterMode; set => currentMasterMode = value; }
+		private int overriddenMasterMode;
+
+		public int CurrentMasterMode
+		{
+			get => currentMasterMode;
+			set
+			{
+				switch (value)
+				{
+					case (int)MasterModes.DGFT | (int)MasterModes.MSL:
+						if (currentMasterMode == (int)MasterModes.DGFT | currentMasterMode == (int)MasterModes.MSL)
+						{
+							currentMasterMode = value;
+						}
+						else
+						{
+							overriddenMasterMode = currentMasterMode;
+							currentMasterMode = value;
+						}
+						break;
+					default:
+						if (currentMasterMode != (int)MasterModes.DGFT & currentMasterMode != (int)MasterModes.MSL)
+						{
+							if (currentMasterMode == value)
+							{
+								currentMasterMode = (int)MasterModes.NAV;
+							}
+							else
+							{
+								currentMasterMode = value;
+							}
+						}
+						else
+						{
+							// the current mastermode is DGFT or MSL, and we just tried to switch to a non override mode
+						}
+						break;
+				}
+			}
+		}
+
+		public void CancelOverride()
+		{
+			currentMasterMode = overriddenMasterMode;
+		}
 
 		public bool MMCPower { get => mMCPower; set => mMCPower = value; }
 
@@ -60,9 +104,8 @@ namespace F4SMS
 			MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
 		}
 
-		public void SystemStartupOptionsChanged(int Option, bool Value)
+		public void SystemStartupOptionsChanged(int Option)
 		{
-			(SystemStartupOptions)Option
 			if (MFDSPower)
 			{
 				if (!(SMSPower & MMCPower))
@@ -99,12 +142,6 @@ namespace F4SMS
 						default:
 							break;
 					}
-					{ 
-						// MFDS, MMC and SMS have power, and WOW=true, so display the STBY page
-						Display.SetSMSPage((int)Pages.STBY);
-						// If the 
-						masterMode = (int)Mastermodes.NAV;
-					}
 				}
 			}
 			else
@@ -112,7 +149,15 @@ namespace F4SMS
 				// MFDS has no power, so blank the MFD
 
 			}
+
+			if (Option == (int)SystemStartupOptions.MMCPower & !MMCPower)
+			{
+				// the MMC just powered off. If the DTC was being loaded, or the INV was being changed, SMS might lockup
+
+			}
 		}
+
+
 
 	}
 }
