@@ -24,6 +24,10 @@ namespace F4SMS
 			// set initial values for form start
 			MMC MMCObject = new MMC(this);
 			MMC1 = MMCObject;
+			MMC1.WOW = checkBoxWOW.Checked;
+			MMC1.SMSPower = checkBoxSMSPower.Checked;
+			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
+			MMC1.MMCPower = checkBoxMMCPower.Checked;
 
 			DigitalInventory DigInvObject = new DigitalInventory();
 			DigInv1 = DigInvObject;
