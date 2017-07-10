@@ -12,10 +12,13 @@ namespace F4SMS
 
 	class MMC
 	{
-		public MMC()
+		public MMC(DisplayForm WinForm)
 		{
 			// does anything need to be done to instantiate the object?
+			winform = WinForm;
 		}
+
+		private DisplayForm winform;
 
 		private bool mMCPower;
 
@@ -67,12 +70,14 @@ namespace F4SMS
 						}
 						break;
 				}
+				winform.UpdateMMLabel();
 			}
 		}
 
 		public void CancelOverride()
 		{
 			currentMasterMode = overriddenMasterMode;
+			winform.UpdateMMLabel();
 		}
 
 		public bool MMCPower { get => mMCPower; set => mMCPower = value; }
@@ -116,6 +121,7 @@ namespace F4SMS
 				else
 				{
 					// MFDS, SMS and MMC all have power
+					winform.UpdateMMLabel();
 					switch (Option)
 					{
 						case (int)SystemStartupOptions.MMCPower:
@@ -150,10 +156,17 @@ namespace F4SMS
 
 			}
 
-			if (Option == (int)SystemStartupOptions.MMCPower & !MMCPower)
+			if (!MMCPower)
 			{
-				// the MMC just powered off. If the DTC was being loaded, or the INV was being changed, SMS might lockup
+				// MMC has no power
+				winform.HideMMLabel();
 
+				if (Option == (int)SystemStartupOptions.MMCPower)
+				{
+					// the MMC just powered off. If the DTC was being loaded, 
+					// or the INV was being changed, SMS might lockup
+
+				}
 			}
 		}
 

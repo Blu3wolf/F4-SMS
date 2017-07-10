@@ -95,6 +95,7 @@
 			this.groupBoxArmSwitch = new System.Windows.Forms.GroupBox();
 			this.groupBoxStartupOptions = new System.Windows.Forms.GroupBox();
 			this.groupBoxDGFTSwitch = new System.Windows.Forms.GroupBox();
+			this.CurrMMLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).BeginInit();
@@ -377,11 +378,11 @@
 			this.labelStartupOptions.AutoSize = true;
 			this.labelStartupOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelStartupOptions.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.labelStartupOptions.Location = new System.Drawing.Point(576, 12);
+			this.labelStartupOptions.Location = new System.Drawing.Point(539, 12);
 			this.labelStartupOptions.Name = "labelStartupOptions";
-			this.labelStartupOptions.Size = new System.Drawing.Size(95, 16);
+			this.labelStartupOptions.Size = new System.Drawing.Size(132, 16);
 			this.labelStartupOptions.TabIndex = 26;
-			this.labelStartupOptions.Text = "Config Options";
+			this.labelStartupOptions.Text = "Current Mastermode:";
 			// 
 			// buttonAAMastermode
 			// 
@@ -802,11 +803,20 @@
 			this.groupBoxDGFTSwitch.TabStop = false;
 			this.groupBoxDGFTSwitch.Text = "DGFT/MRM Switch";
 			// 
+			// CurrMMLabel
+			// 
+			this.CurrMMLabel.AutoSize = true;
+			this.CurrMMLabel.Location = new System.Drawing.Point(668, 14);
+			this.CurrMMLabel.Name = "CurrMMLabel";
+			this.CurrMMLabel.Size = new System.Drawing.Size(0, 13);
+			this.CurrMMLabel.TabIndex = 66;
+			// 
 			// DisplayForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(715, 527);
+			this.Controls.Add(this.CurrMMLabel);
 			this.Controls.Add(this.groupBoxDGFTSwitch);
 			this.Controls.Add(this.groupBoxStartupOptions);
 			this.Controls.Add(this.groupBoxArmSwitch);
@@ -944,5 +954,6 @@
 		private System.Windows.Forms.GroupBox groupBoxArmSwitch;
 		private System.Windows.Forms.GroupBox groupBoxStartupOptions;
 		private System.Windows.Forms.GroupBox groupBoxDGFTSwitch;
+		private System.Windows.Forms.Label CurrMMLabel;
 	}
 }

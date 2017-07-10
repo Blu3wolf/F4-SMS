@@ -22,7 +22,7 @@ namespace F4SMS
             InitializeComponent();
 
 			// set initial values for form start
-			MMC MMCObject = new MMC();
+			MMC MMCObject = new MMC(this);
 			MMC1 = MMCObject;
 
 			DigitalInventory DigInvObject = new DigitalInventory();
@@ -158,6 +158,19 @@ namespace F4SMS
 			{
 				MMC1.CurrentMasterMode = (int)MMC.MasterModes.DGFT;
 			}
+		}
+
+		public void UpdateMMLabel()
+		{
+			CurrMMLabel.Visible = true;
+			int mode = MMC1.CurrentMasterMode;
+			string modename = ((MMC.MasterModes) mode).ToString();
+			CurrMMLabel.Text = modename;
+		}
+
+		public void HideMMLabel()
+		{
+			CurrMMLabel.Visible = false;
 		}
 	}
 }
