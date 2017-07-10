@@ -65,7 +65,7 @@ namespace F4SMS
 			allPictures.Add(pictureBoxSMSW);
 
 			// Blank the MFD completely
-			BlankSMSPage();
+			BlankDisplay();
 		}
 
 		// this is the MMC object for this instance of the DisplayForm window
@@ -81,7 +81,7 @@ namespace F4SMS
 
 		private List<PictureBox> allPictures = new List<PictureBox>();
 
-		public void BlankSMSPage()
+		public void BlankDisplay()
 		{
 			// Make all display screen elements non visible
 			// Do this by iterating over the collection OSBLabels and marking each object .Visible = false;
@@ -125,25 +125,21 @@ namespace F4SMS
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.SMSPower = checkBoxSMSPower.Checked;
-            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.SMSPower);
         }
 
         private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
-			MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.MMCPower);
         }
 
         private void checkBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
-            MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.MFDSPower);
         }
 
 		private void checkBoxWOW_CheckedChanged(object sender, EventArgs e)
 		{
 			MMC1.WOW = checkBoxWOW.Checked;
-			MMC1.SystemStartupOptionsChanged((int)MMC.SystemStartupOptions.WOW);
 		}
 
 		private void buttonAAMastermode_Click(object sender, EventArgs e)
