@@ -32,43 +32,49 @@ namespace F4SMS
 
 		private int currentMasterMode;
 
-		private int overriddenMasterMode;
+		private int overriddenMasterMode; // this should be the mode to reenter after cancelling an override mode
 
 		public int CurrentMasterMode
 		{
 			get => currentMasterMode;
 			set
 			{
-				switch (value)
+				if (value == (int)MasterModes.DGFT | value == (int)MasterModes.MSL)
 				{
-					case (int)MasterModes.DGFT | (int)MasterModes.MSL:
-						if (currentMasterMode == (int)MasterModes.DGFT | currentMasterMode == (int)MasterModes.MSL)
+				// we are switching to an override mode
+					if (currentMasterMode == (int)MasterModes.DGFT | currentMasterMode == (int)MasterModes.MSL)
+					// we are switching from an override mode, to an override mode
+					{
+						currentMasterMode = value;
+					}
+					else
+					// we are switching from a non-override mode to an override mode
+					{
+						overriddenMasterMode = currentMasterMode;
+						currentMasterMode = value;
+					}
+				}
+				else // we are switching to a non-override mode
+				{
+					if (currentMasterMode != (int)MasterModes.DGFT & currentMasterMode != (int)MasterModes.MSL)
+					{
+					// then are are switching from a non-override mode
+						if (currentMasterMode == value)
+						// we are trying to switch to the current mode? select NAV then
+						{
+							currentMasterMode = (int)MasterModes.NAV;
+						}
+						else
+						// we are switching to a non-override mode,
+						// and we arent trying to select the current mode
 						{
 							currentMasterMode = value;
 						}
-						else
-						{
-							overriddenMasterMode = currentMasterMode;
-							currentMasterMode = value;
-						}
-						break;
-					default:
-						if (currentMasterMode != (int)MasterModes.DGFT & currentMasterMode != (int)MasterModes.MSL)
-						{
-							if (currentMasterMode == value)
-							{
-								currentMasterMode = (int)MasterModes.NAV;
-							}
-							else
-							{
-								currentMasterMode = value;
-							}
-						}
-						else
-						{
-							// the current mastermode is DGFT or MSL, and we just tried to switch to a non override mode
-						}
-						break;
+					}
+					else
+					{
+					// the current mastermode is DGFT or MSL, and we just tried to switch to a non override mode
+					}
 				}
 				winform.UpdateMMLabel();
 			}
