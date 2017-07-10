@@ -31,28 +31,30 @@ namespace F4SMS
 			PhysicalInventory PhyInvObject = new PhysicalInventory();
 			PhyInv1 = PhyInvObject;
 
-			// Generate the list of all labels
-			allLabels.Add(labelOSB1);
-			allLabels.Add(labelOSB2);
-			allLabels.Add(labelOSB3);
-			allLabels.Add(labelOSB4);
-			allLabels.Add(labelOSB5);
-			allLabels.Add(labelOSB6);
-			allLabels.Add(labelOSB7);
-			allLabels.Add(labelOSB8);
-			allLabels.Add(labelOSB9);
-			allLabels.Add(labelOSB10);
-			allLabels.Add(labelOSB11);
-			allLabels.Add(labelOSB12);
-			allLabels.Add(labelOSB13);
-			allLabels.Add(labelOSB14);
-			allLabels.Add(labelOSB15);
-			allLabels.Add(labelOSB16);
-			allLabels.Add(labelOSB17);
-			allLabels.Add(labelOSB18);
-			allLabels.Add(labelOSB19);
-			allLabels.Add(labelOSB20);
-			allLabels.Add(labelHungStores);
+			// Generate the array of OSB labels for this display
+			OSBLabels = new Label[]
+			{
+				labelOSB1,
+				labelOSB2,
+				labelOSB3,
+				labelOSB4,
+				labelOSB5,
+				labelOSB6,
+				labelOSB7,
+				labelOSB8,
+				labelOSB9,
+				labelOSB10,
+				labelOSB11,
+				labelOSB12,
+				labelOSB13,
+				labelOSB14,
+				labelOSB15,
+				labelOSB16,
+				labelOSB17,
+				labelOSB18,
+				labelOSB19,
+				labelOSB20
+			};
 
 			// Generate the list of all picture elements
 			allPictures.Add(pictureBoxSMSOFF);
@@ -71,17 +73,17 @@ namespace F4SMS
 		// this is the Physical Inventory object for this instance of the DF window
 		private PhysicalInventory PhyInv1;
 
-		private List<Label> allLabels = new List<Label>();
+		private Label[] OSBLabels;
 
 		private List<PictureBox> allPictures = new List<PictureBox>();
 
 		public void BlankSMSPage()
 		{
 			// Make all display screen elements non visible
-			// Do this by iterating over the collection allLabels and marking each object .Visible = false;
-			foreach (Label displayLabel in allLabels)
+			// Do this by iterating over the collection OSBLabels and marking each object .Visible = false;
+			foreach (Label label in OSBLabels)
 			{
-				displayLabel.Visible = false;
+				label.Visible = false;
 			}
 
 			// Do the same for allPictures and mark each one as .Visible = false;
@@ -100,6 +102,20 @@ namespace F4SMS
 			labelOSB13.Visible = true;
 			labelOSB14.Visible = true;
 			labelOSB15.Visible = true;
+		}
+
+		public void UpdateOSBLabel(int OSB, string text)
+		{
+			Label label = OSBLabels[(OSB - 1)];
+			if (text.Length == 0)
+			{
+				label.Visible = false;
+			}
+			else
+			{
+				label.Text = text;
+				label.Visible = true;
+			}
 		}
             
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
