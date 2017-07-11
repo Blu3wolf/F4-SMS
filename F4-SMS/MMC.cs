@@ -16,6 +16,7 @@ namespace F4SMS
 		{
 			// does anything need to be done to instantiate the object?
 			winform = WinForm;
+			display = winform.display;
 			CurrentMasterMode = (int)MasterModes.NAV;
 			overridden = false;
 			DigInv1 = new DigitalInventory();
@@ -29,6 +30,8 @@ namespace F4SMS
 		private PhysicalInventory PhyInv1;
 
 		private DisplayForm winform;
+
+		private Display display;
 
 		private bool mMCPower;
 
@@ -120,12 +123,14 @@ namespace F4SMS
 							if (!overridden)
 							{
 								currentMasterMode = (int)MasterModes.NAV;
+								// SMS mode is now STBY
 							}
 						}
 						else
 						{
 							// MMC just powered up in the air
 							// Mastermode will be whatever it was last
+							// SMS mode will be whatever it was
 						}
 						mMCPower = value;
 						winform.UpdateMMLabel();
