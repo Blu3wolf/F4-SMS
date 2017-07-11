@@ -11,14 +11,13 @@ namespace F4SMS
 
 	class PageOFF : SMSPage
 	{
-		public PageOFF()
-		{
-
-		}
+		public PageOFF(Display Displayer) : base(Displayer) { }
 
 		public override void DrawMe()
 		{
 
 		}
+
+
 	}
 }

@@ -12,5 +12,11 @@ namespace F4SMS
 
 	class PageSTBY : SMSPage
 	{
+		public PageSTBY(Display Displayer) : base(Displayer) { }
+
+		public override void DrawMe()
+		{
+
+		}
 	}
 }
