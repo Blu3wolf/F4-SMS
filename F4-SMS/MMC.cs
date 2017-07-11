@@ -219,12 +219,12 @@ namespace F4SMS
 				if (SMSPower & MMCPower)
 				{
 					// MFDS has power, MMC and ST STA have power
-					
+					display.SwitchTo((int)Pages.STBY);
 				}
 				else
 				{
 					// MFDS has power, but either ST STA or MMC is not powered, so display the OFF page
-
+					display.SwitchTo((int)Pages.OFF);
 				}
 			}
 		}
