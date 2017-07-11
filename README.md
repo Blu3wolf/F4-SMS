@@ -1,6 +1,8 @@
 # F4-SMS
 F4-SMS is a standalone simulation of the Stores Management Subsystem page within the Multi Function Display Suite for the Lockheed Martin Fighting Falcon F-16 strike fighter. This interactive tool is presently in development, but will soon allow simple demonstration of the functionality of the Stores Management Subsystem and its various sub pages and modes.
 
+![Software image](images/MFD2.PNG)
+
 ## SMS
 The SMS links multiplexed data communication between displays, weapons delivery avionics, and store suspension equipment. Weapons delivery is facilitated by the MFDS, which provides displays of store status and weapons delivery modes, allowing delivery options to be preprogrammed in flight via the ICP. SMS functions are selected via the ICP, MFDS, and hands-on controls. 
 
@@ -21,6 +23,8 @@ The following SMS page displays provide controls and data for these functions:
 + GUN (gunnery) – Selected via AAM/GUN rotary when A-A is selected or A-G/GUN rotary when A-G is selected and provides EEGS rotary in A-A or STRAFE gunsight in A-G.
 + A-G (air-to-ground) – Selected via A-G/GUN rotary when A-G master mode is selected.
 + BIT (built-in test) – Selected via MFD TEST page.
+
+![Figure 1](images/OFF-STBY.PNG)
 
 ## Copyright and Licensing
 F4-SMS is copyright © 2017 Bill 'Blu3wolf' Teale. 
