@@ -26,6 +26,7 @@ namespace F4SMS
 			UpdateOSB(15, "SWAP");
 			UpdateOSB(18, string.Format("CLR{0}WPN", Environment.NewLine));
 			UpdateMid(8, "HUNG STORE");
+			display.UpdateDisplayImage((int)Display.DisplayImage.SMSW, true);
 		}
 	}
 }

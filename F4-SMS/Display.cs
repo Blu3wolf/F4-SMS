@@ -69,6 +69,7 @@ namespace F4SMS
 
 		public void SwitchTo(int pagetype)
 		{
+			BlankDisplay();
 			Pages[pagetype].SwitchTo();
 		}
 	}
