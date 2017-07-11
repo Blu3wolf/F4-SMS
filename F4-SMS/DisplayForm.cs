@@ -31,9 +31,6 @@ namespace F4SMS
 
 			display = new Display();
 
-			PageOFF OFFPage = new PageOFF();
-			PageSTBY STBYPage = new PageSTBY();
-
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
 			{
@@ -59,12 +56,6 @@ namespace F4SMS
 				labelOSB20
 			};
 
-			Pages = new Object[]
-			{
-				OFFPage,
-				STBYPage
-			};
-
 			// Generate the list of all picture elements
 			allPictures.Add(pictureBoxSMSOFF);
 			allPictures.Add(pictureBoxSMSW);
@@ -73,14 +64,7 @@ namespace F4SMS
 			BlankDisplay();
 		}
 
-		public Object ReturnObject()
-		{
-
-		}
-
 		private Display display;
-
-		private Object[] Pages;
 
 		// this is the MMC object for this instance of the DisplayForm window
 		private MMC MMC1;

@@ -12,6 +12,20 @@ namespace F4SMS
 
 	class Display
 	{
+		public Display()
+		{
+			PageOFF OFFPage = new PageOFF();
+			PageSTBY STBYPage = new PageSTBY();
+			
+			Pages = new Object[]
+			{
+				OFFPage,
+				STBYPage
+			};
+
+		}
+
+		private Object[] Pages;
 
 	}
 }
