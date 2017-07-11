@@ -29,7 +29,7 @@ namespace F4SMS
 
 		public void UpdateOSB(int OSB, string text)
 		{
-
+			display.UpdateOSBLabel(OSB, text);
 		}
 
 	}
