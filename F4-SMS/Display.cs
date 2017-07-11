@@ -26,6 +26,11 @@ namespace F4SMS
 
 		}
 
+		public enum displayImage
+		{
+			SMSOFF, SMSW
+		}
+
 		private DisplayForm winform;
 
 		private Object[] Pages;
@@ -37,6 +42,11 @@ namespace F4SMS
 		public void UpdateOSBLabel(int OSB, string text)
 		{
 			winform.UpdateOSBLabel(OSB, text);
+		}
+
+		public void UpdateDisplayImage(int Image, bool visible)
+		{
+			winform.UpdateDisplayImage(Image, visible);
 		}
 	}
 }
