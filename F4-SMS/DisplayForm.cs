@@ -22,6 +22,8 @@ namespace F4SMS
             InitializeComponent();
 
 			// set initial values for form start
+			display = new Display(this);
+
 			MMC MMCObject = new MMC(this);
 			MMC1 = MMCObject;
 			MMC1.WOW = checkBoxWOW.Checked;
@@ -29,7 +31,6 @@ namespace F4SMS
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
 
-			display = new Display(this);
 
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
@@ -56,22 +57,25 @@ namespace F4SMS
 				labelOSB20
 			};
 
-			// Generate the list of all picture elements
-			allPictures.Add(pictureBoxSMSOFF);
-			allPictures.Add(pictureBoxSMSW);
+			// Generate the array of all picture elements
+			displayImages = new PictureBox[]
+			{
+				pictureBoxSMSOFF,
+				pictureBoxSMSW
+			};
 
 			// Blank the MFD completely
 			BlankDisplay();
 		}
 
-		private Display display;
+		internal Display display;
 
 		// this is the MMC object for this instance of the DisplayForm window
 		private MMC MMC1;
 
 		private Label[] OSBLabels;
 
-		private List<PictureBox> allPictures = new List<PictureBox>();
+		private PictureBox[] displayImages;
 
 		public void BlankDisplay()
 		{
@@ -82,8 +86,8 @@ namespace F4SMS
 				label.Visible = false;
 			}
 
-			// Do the same for allPictures and mark each one as .Visible = false;
-			foreach (PictureBox displayPicture in allPictures)
+			// Do the same for displayImages and mark each one as .Visible = false;
+			foreach (PictureBox displayPicture in displayImages)
 			{
 				displayPicture.Visible = false;
 			}
@@ -101,6 +105,11 @@ namespace F4SMS
 				label.Text = text;
 				label.Visible = true;
 			}
+		}
+
+		public void UpdateDisplayImage(int Image, bool visible)
+		{
+			displayImages[Image].Visible = visible;
 		}
             
         private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
