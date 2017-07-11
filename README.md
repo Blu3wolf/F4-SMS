@@ -10,8 +10,7 @@ The SMS mode configuration may be preprogrammed. When a mode is entered, the las
 The SMS format provides for stores inventory and loading, weapons delivery mode selection, and weapons release parameter selection. These controls and data are generally a function of the SMS mode as discussed in subsequent paragraphs.
 
 The following SMS page displays provide controls and data for these functions:
-+ OFF (SMS off) – When the MMC and ST STA power switch is OFF or if the MFDS can not communicate with the
-+ SMS.
++ OFF (SMS off) – When the MMC and ST STA power switch is OFF or if the MFDS can not communicate with the SMS.
 + STBY (SMS standby) – STBY mode allows loading and verification of stores inventory.
 + INV (inventory) – Automatically displayed when standby mode is accessed and selectable via all SMS modes except EJ, S-J, and BIT.
 + S-J (selective jettison) – Selected via OSB adjacent to S-J mnemonic on all SMS pages except BIT, data entry, and E-J.
