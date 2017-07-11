@@ -18,7 +18,15 @@ namespace F4SMS
 			winform = WinForm;
 			CurrentMasterMode = (int)MasterModes.NAV;
 			overridden = false;
+			DigInv1 = new DigitalInventory();
+			PhyInv1 = new PhysicalInventory();
 		}
+
+		// this is the Digital Inventory object for this instance of the DF window
+		private DigitalInventory DigInv1;
+
+		// this is the Physical Inventory object for this instance of the DF window
+		private PhysicalInventory PhyInv1;
 
 		private DisplayForm winform;
 

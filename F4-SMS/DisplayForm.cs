@@ -29,11 +29,7 @@ namespace F4SMS
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
 
-			DigitalInventory DigInvObject = new DigitalInventory();
-			DigInv1 = DigInvObject;
-
-			PhysicalInventory PhyInvObject = new PhysicalInventory();
-			PhyInv1 = PhyInvObject;
+			display = new Display();
 
 			PageOFF OFFPage = new PageOFF();
 			PageSTBY STBYPage = new PageSTBY();
@@ -82,16 +78,12 @@ namespace F4SMS
 
 		}
 
+		private Display display;
+
 		private Object[] Pages;
 
 		// this is the MMC object for this instance of the DisplayForm window
 		private MMC MMC1;
-
-		// this is the Digital Inventory object for this instance of the DF window
-		private DigitalInventory DigInv1;
-
-		// this is the Physical Inventory object for this instance of the DF window
-		private PhysicalInventory PhyInv1;
 
 		private Label[] OSBLabels;
 
