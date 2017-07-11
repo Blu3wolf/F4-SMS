@@ -15,8 +15,8 @@ namespace F4SMS
 		public Display(DisplayForm WinForm)
 		{
 			winform = WinForm;
-			PageOFF OFFPage = new PageOFF();
-			PageSTBY STBYPage = new PageSTBY();
+			PageOFF OFFPage = new PageOFF(this);
+			PageSTBY STBYPage = new PageSTBY(this);
 			
 			Pages = new Object[]
 			{
@@ -30,7 +30,8 @@ namespace F4SMS
 
 		private Object[] Pages;
 
-		private SMSPage CurrPage;
+		private SMSPage currPage;
 
+		internal SMSPage CurrPage { get => currPage; set => currPage = value; }
 	}
 }
