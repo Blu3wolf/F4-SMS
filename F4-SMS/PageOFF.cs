@@ -20,12 +20,8 @@ namespace F4SMS
 			display.UpdateOSBLabel(13, "WPN");
 			display.UpdateOSBLabel(14, "SMS");
 			display.UpdateOSBLabel(15, "SWAP");
-		}
-
-		private void displayOFF()
-		{
-			pictureBoxSMSOFF.Visible = true;
-			pictureBoxSMSW.Visible = true;
+			display.UpdateDisplayImage((int)Display.displayImage.SMSOFF, true);
+			display.UpdateDisplayImage((int)Display.displayImage.SMSW, true);
 		}
 	}
 }
