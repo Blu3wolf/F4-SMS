@@ -15,9 +15,17 @@ namespace F4SMS
 
 		public override void DrawMe()
 		{
-
+			display.UpdateOSBLabel(9, string.Format("C{0}Z", Environment.NewLine));
+			display.UpdateOSBLabel(12, "FCR");
+			display.UpdateOSBLabel(13, "WPN");
+			display.UpdateOSBLabel(14, "SMS");
+			display.UpdateOSBLabel(15, "SWAP");
 		}
 
-
+		private void displayOFF()
+		{
+			pictureBoxSMSOFF.Visible = true;
+			pictureBoxSMSW.Visible = true;
+		}
 	}
 }

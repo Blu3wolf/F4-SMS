@@ -32,6 +32,11 @@ namespace F4SMS
 
 		private SMSPage currPage;
 
-		internal SMSPage CurrPage { get => currPage; set => currPage = value; }
+		public SMSPage CurrPage { get => currPage; set => currPage = value; }
+
+		public void UpdateOSBLabel(int OSB, string text)
+		{
+			winform.UpdateOSBLabel(OSB, text);
+		}
 	}
 }

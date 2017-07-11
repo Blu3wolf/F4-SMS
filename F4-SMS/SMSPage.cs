@@ -20,10 +20,10 @@ namespace F4SMS
 		public void SwitchTo()
 		{
 			DrawMe();
-
+			display.CurrPage = this;
 		}
 
-		private Display display;
+		internal Display display;
 
 		public abstract void DrawMe();
 

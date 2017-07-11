@@ -89,17 +89,6 @@ namespace F4SMS
 			}
 		}
 
-		private void displayOFF()
-		{
-			pictureBoxSMSOFF.Visible = true;
-			pictureBoxSMSW.Visible = true;
-			labelOSB9.Visible = true;
-			labelOSB12.Visible = true;
-			labelOSB13.Visible = true;
-			labelOSB14.Visible = true;
-			labelOSB15.Visible = true;
-		}
-
 		public void UpdateOSBLabel(int OSB, string text)
 		{
 			Label label = OSBLabels[(OSB - 1)];
