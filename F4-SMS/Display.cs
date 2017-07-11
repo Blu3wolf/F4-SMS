@@ -12,8 +12,9 @@ namespace F4SMS
 
 	class Display
 	{
-		public Display()
+		public Display(DisplayForm WinForm)
 		{
+			winform = WinForm;
 			PageOFF OFFPage = new PageOFF();
 			PageSTBY STBYPage = new PageSTBY();
 			
@@ -24,6 +25,8 @@ namespace F4SMS
 			};
 
 		}
+
+		private DisplayForm winform;
 
 		private Object[] Pages;
 

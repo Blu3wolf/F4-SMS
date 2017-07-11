@@ -29,7 +29,7 @@ namespace F4SMS
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
 
-			display = new Display();
+			display = new Display(this);
 
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
