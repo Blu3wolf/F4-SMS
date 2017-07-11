@@ -27,5 +27,7 @@ namespace F4SMS
 
 		private Object[] Pages;
 
+		private SMSPage CurrPage;
+
 	}
 }

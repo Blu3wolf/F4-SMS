@@ -10,7 +10,7 @@ namespace F4SMS
 	 * knows how STBY page reacts to input
 	 * tells display how to draw STBY page */
 
-	class PageSTBY
+	class PageSTBY : SMSPage
 	{
 	}
 }

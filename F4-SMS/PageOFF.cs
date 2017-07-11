@@ -9,7 +9,7 @@ namespace F4SMS
 	/* responsible for telling display how to draw the OFF page, 
 	 * contains information about how OFF page reacts to user input */
 
-	class PageOFF : Display
+	class PageOFF : SMSPage
 	{
 		public PageOFF()
 		{
