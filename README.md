@@ -13,8 +13,7 @@ The following SMS page displays provide controls and data for these functions:
 + OFF (SMS off) – When the MMC and ST STA power switch is OFF or if the MFDS can not communicate with the
 + SMS.
 + STBY (SMS standby) – STBY mode allows loading and verification of stores inventory.
-+ INV (inventory) – Automatically displayed when standby mode is accessed and selectable via all SMS modes except EJ,
-+ S-J, and BIT.
++ INV (inventory) – Automatically displayed when standby mode is accessed and selectable via all SMS modes except EJ, S-J, and BIT.
 + S-J (selective jettison) – Selected via OSB adjacent to S-J mnemonic on all SMS pages except BIT, data entry, and E-J.
 + E-J (emergency jettison) – Selected via EMER STORES JETTISON button on landing gear panel; overrides all other master modes except AIM-120 launch in progress.
 + AAM (air-to-air missile) – Selected via AAM/GUN rotary OSB’s when A-A master mode is selected.
