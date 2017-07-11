@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace F4SMS
 {
-	class SMSPage
+	abstract class SMSPage
 	{
+
+
+		public void SwitchTo()
+		{
+			DrawMe();
+
+		}
+
+		public abstract void DrawMe();
 
 	}
 }
