@@ -76,7 +76,7 @@
 			this.labelOSB7 = new System.Windows.Forms.Label();
 			this.labelOSB8 = new System.Windows.Forms.Label();
 			this.labelOSB10 = new System.Windows.Forms.Label();
-			this.labelHungStores = new System.Windows.Forms.Label();
+			this.labelMid8 = new System.Windows.Forms.Label();
 			this.labelOSB11 = new System.Windows.Forms.Label();
 			this.labelOSB12 = new System.Windows.Forms.Label();
 			this.labelOSB13 = new System.Windows.Forms.Label();
@@ -323,7 +323,7 @@
 			this.checkBoxSMSPower.TabIndex = 21;
 			this.checkBoxSMSPower.Text = "SMS Power On";
 			this.checkBoxSMSPower.UseVisualStyleBackColor = true;
-			this.checkBoxSMSPower.CheckedChanged += new System.EventHandler(this.checkBoxSMSPower_CheckedChanged);
+			this.checkBoxSMSPower.CheckedChanged += new System.EventHandler(this.CheckBoxSMSPower_CheckedChanged);
 			// 
 			// checkBoxWOW
 			// 
@@ -336,7 +336,7 @@
 			this.checkBoxWOW.TabIndex = 22;
 			this.checkBoxWOW.Text = "Weight On Wheels (WOW)";
 			this.checkBoxWOW.UseVisualStyleBackColor = true;
-			this.checkBoxWOW.CheckedChanged += new System.EventHandler(this.checkBoxWOW_CheckedChanged);
+			this.checkBoxWOW.CheckedChanged += new System.EventHandler(this.CheckBoxWOW_CheckedChanged);
 			// 
 			// radioButtonMRM
 			// 
@@ -347,7 +347,7 @@
 			this.radioButtonMRM.TabIndex = 23;
 			this.radioButtonMRM.Text = "MRM Override";
 			this.radioButtonMRM.UseVisualStyleBackColor = true;
-			this.radioButtonMRM.CheckedChanged += new System.EventHandler(this.radioButtonMRM_CheckedChanged);
+			this.radioButtonMRM.CheckedChanged += new System.EventHandler(this.RadioButtonMRM_CheckedChanged);
 			// 
 			// radioButtonCancelOverride
 			// 
@@ -360,7 +360,7 @@
 			this.radioButtonCancelOverride.TabStop = true;
 			this.radioButtonCancelOverride.Text = "Cancel Override";
 			this.radioButtonCancelOverride.UseVisualStyleBackColor = true;
-			this.radioButtonCancelOverride.CheckedChanged += new System.EventHandler(this.radioButtonCancelOverride_CheckedChanged);
+			this.radioButtonCancelOverride.CheckedChanged += new System.EventHandler(this.RadioButtonCancelOverride_CheckedChanged);
 			// 
 			// radioButtonDGFT
 			// 
@@ -371,7 +371,7 @@
 			this.radioButtonDGFT.TabIndex = 25;
 			this.radioButtonDGFT.Text = "DGFT Override";
 			this.radioButtonDGFT.UseVisualStyleBackColor = true;
-			this.radioButtonDGFT.CheckedChanged += new System.EventHandler(this.radioButtonDGFT_CheckedChanged);
+			this.radioButtonDGFT.CheckedChanged += new System.EventHandler(this.RadioButtonDGFT_CheckedChanged);
 			// 
 			// labelStartupOptions
 			// 
@@ -392,7 +392,7 @@
 			this.buttonAAMastermode.TabIndex = 27;
 			this.buttonAAMastermode.Text = "A-A";
 			this.buttonAAMastermode.UseVisualStyleBackColor = true;
-			this.buttonAAMastermode.Click += new System.EventHandler(this.buttonAAMastermode_Click);
+			this.buttonAAMastermode.Click += new System.EventHandler(this.ButtonAAMastermode_Click);
 			// 
 			// buttonAGMastermode
 			// 
@@ -402,7 +402,7 @@
 			this.buttonAGMastermode.TabIndex = 28;
 			this.buttonAGMastermode.Text = "A-G";
 			this.buttonAGMastermode.UseVisualStyleBackColor = true;
-			this.buttonAGMastermode.Click += new System.EventHandler(this.buttonAGMastermode_Click);
+			this.buttonAGMastermode.Click += new System.EventHandler(this.ButtonAGMastermode_Click);
 			// 
 			// checkBoxMMCPower
 			// 
@@ -413,7 +413,7 @@
 			this.checkBoxMMCPower.TabIndex = 29;
 			this.checkBoxMMCPower.Text = "MMC Power On";
 			this.checkBoxMMCPower.UseVisualStyleBackColor = true;
-			this.checkBoxMMCPower.CheckedChanged += new System.EventHandler(this.checkBoxMMCPower_CheckedChanged);
+			this.checkBoxMMCPower.CheckedChanged += new System.EventHandler(this.CheckBoxMMCPower_CheckedChanged);
 			// 
 			// buttonDTC
 			// 
@@ -470,7 +470,7 @@
 			this.checkBoxMFDSPower.TabIndex = 35;
 			this.checkBoxMFDSPower.Text = "MFDS Power On";
 			this.checkBoxMFDSPower.UseVisualStyleBackColor = true;
-			this.checkBoxMFDSPower.CheckedChanged += new System.EventHandler(this.checkBoxMFDSPower_CheckedChanged);
+			this.checkBoxMFDSPower.CheckedChanged += new System.EventHandler(this.CheckBoxMFDSPower_CheckedChanged);
 			// 
 			// pictureBoxSMSOFF
 			// 
@@ -593,16 +593,16 @@
 			this.labelOSB10.Text = "C\r\nZ";
 			this.labelOSB10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
-			// labelHungStores
+			// labelMid8
 			// 
-			this.labelHungStores.BackColor = System.Drawing.Color.White;
-			this.labelHungStores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelHungStores.Location = new System.Drawing.Point(181, 339);
-			this.labelHungStores.Name = "labelHungStores";
-			this.labelHungStores.Size = new System.Drawing.Size(160, 23);
-			this.labelHungStores.TabIndex = 47;
-			this.labelHungStores.Text = "HUNG STORE";
-			this.labelHungStores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.labelMid8.BackColor = System.Drawing.Color.White;
+			this.labelMid8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelMid8.Location = new System.Drawing.Point(181, 339);
+			this.labelMid8.Name = "labelHungStores";
+			this.labelMid8.Size = new System.Drawing.Size(160, 23);
+			this.labelMid8.TabIndex = 47;
+			this.labelMid8.Text = "HUNG STORE";
+			this.labelMid8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// labelOSB11
 			// 
@@ -831,7 +831,7 @@
 			this.Controls.Add(this.labelOSB13);
 			this.Controls.Add(this.labelOSB12);
 			this.Controls.Add(this.labelOSB11);
-			this.Controls.Add(this.labelHungStores);
+			this.Controls.Add(this.labelMid8);
 			this.Controls.Add(this.labelOSB10);
 			this.Controls.Add(this.labelOSB8);
 			this.Controls.Add(this.labelOSB7);
@@ -935,7 +935,7 @@
 		private System.Windows.Forms.Label labelOSB7;
 		private System.Windows.Forms.Label labelOSB8;
 		private System.Windows.Forms.Label labelOSB10;
-		private System.Windows.Forms.Label labelHungStores;
+		private System.Windows.Forms.Label labelMid8;
 		private System.Windows.Forms.Label labelOSB11;
 		private System.Windows.Forms.Label labelOSB12;
 		private System.Windows.Forms.Label labelOSB13;
