@@ -8,7 +8,14 @@ namespace F4SMS
 {
 	abstract class SMSPage
 	{
+		public SMSPage(Display Displayer)
+		{
+			display = Displayer;
+		}
 
+		public SMSPage()
+		{
+		}
 
 		public void SwitchTo()
 		{
@@ -16,7 +23,14 @@ namespace F4SMS
 
 		}
 
+		private Display display;
+
 		public abstract void DrawMe();
+
+		public void UpdateOSB(int OSB, string text)
+		{
+
+		}
 
 	}
 }
