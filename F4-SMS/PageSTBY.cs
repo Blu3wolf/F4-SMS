@@ -16,7 +16,16 @@ namespace F4SMS
 
 		public override void DrawMe()
 		{
-
+			UpdateOSB(1, "STBY");
+			UpdateOSB(4, "INV");
+			UpdateOSB(6, "BARO");
+			UpdateOSB(8, string.Format("CLR{0}RACK", Environment.NewLine));
+			UpdateOSB(11, "S-J");
+			UpdateOSB(12, "WPN");
+			UpdateOSB(14, "SMS");
+			UpdateOSB(15, "SWAP");
+			UpdateOSB(18, string.Format("CLR{0}WPN", Environment.NewLine));
+			UpdateMid(8, "HUNG STORE");
 		}
 	}
 }

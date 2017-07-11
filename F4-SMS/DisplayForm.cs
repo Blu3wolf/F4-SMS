@@ -21,17 +21,6 @@ namespace F4SMS
 			// Ini Com required for winforms designer support
             InitializeComponent();
 
-			// set initial values for form start
-			display = new Display(this);
-
-			MMC MMCObject = new MMC(this);
-			MMC1 = MMCObject;
-			MMC1.WOW = checkBoxWOW.Checked;
-			MMC1.SMSPower = checkBoxSMSPower.Checked;
-			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
-			MMC1.MMCPower = checkBoxMMCPower.Checked;
-
-
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
 			{
@@ -64,8 +53,16 @@ namespace F4SMS
 				pictureBoxSMSW
 			};
 
-			// Blank the MFD completely
-			BlankDisplay();
+			// set initial values for form start
+			display = new Display(this);
+
+			MMC MMCObject = new MMC(this);
+			MMC1 = MMCObject;
+			MMC1.WOW = checkBoxWOW.Checked;
+			MMC1.SMSPower = checkBoxSMSPower.Checked;
+			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
+			MMC1.MMCPower = checkBoxMMCPower.Checked;
+
 		}
 
 		internal Display display;
@@ -91,11 +88,13 @@ namespace F4SMS
 			{
 				displayPicture.Visible = false;
 			}
+
+			// Do the same for the labelMid8
+			labelMid8.Visible = false;
 		}
 
-		public void UpdateOSBLabel(int OSB, string text)
+		private void ValidateInput(Label label, string text)
 		{
-			Label label = OSBLabels[(OSB - 1)];
 			if (text.Length == 0)
 			{
 				label.Visible = false;
@@ -107,42 +106,54 @@ namespace F4SMS
 			}
 		}
 
+		public void UpdateOSBLabel(int OSB, string text)
+		{
+			Label label = OSBLabels[(OSB - 1)];
+			ValidateInput(label, text);
+		}
+
+		public void UpdateMidLabel(int line, string text)
+		{
+			Label label = labelMid8;
+			ValidateInput(label, text);
+		}
+
 		public void UpdateDisplayImage(int Image, bool visible)
 		{
 			displayImages[Image].Visible = visible;
 		}
             
-        private void checkBoxSMSPower_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.SMSPower = checkBoxSMSPower.Checked;
         }
 
-        private void checkBoxMMCPower_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
         }
 
-        private void checkBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
         {
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
         }
 
-		private void checkBoxWOW_CheckedChanged(object sender, EventArgs e)
+		private void CheckBoxWOW_CheckedChanged(object sender, EventArgs e)
 		{
 			MMC1.WOW = checkBoxWOW.Checked;
 		}
 
-		private void buttonAAMastermode_Click(object sender, EventArgs e)
+		private void ButtonAAMastermode_Click(object sender, EventArgs e)
 		{
 			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AA;
 		}
 
-		private void buttonAGMastermode_Click(object sender, EventArgs e)
+		private void ButtonAGMastermode_Click(object sender, EventArgs e)
 		{
 			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AG;
 		}
 
-		private void radioButtonMRM_CheckedChanged(object sender, EventArgs e)
+		private void RadioButtonMRM_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonMRM.Checked)
 			{
@@ -150,7 +161,7 @@ namespace F4SMS
 			}
 		}
 
-		private void radioButtonCancelOverride_CheckedChanged(object sender, EventArgs e)
+		private void RadioButtonCancelOverride_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonCancelOverride.Checked)
 			{
@@ -158,7 +169,7 @@ namespace F4SMS
 			}
 		}
 
-		private void radioButtonDGFT_CheckedChanged(object sender, EventArgs e)
+		private void RadioButtonDGFT_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonDGFT.Checked)
 			{

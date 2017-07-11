@@ -27,9 +27,14 @@ namespace F4SMS
 
 		public abstract void DrawMe();
 
-		public void UpdateOSB(int OSB, string text)
+		internal void UpdateOSB(int OSB, string text)
 		{
 			display.UpdateOSBLabel(OSB, text);
+		}
+
+		internal void UpdateMid(int line, string text)
+		{
+			display.UpdateMidLabel(line, text);
 		}
 
 	}

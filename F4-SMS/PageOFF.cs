@@ -15,13 +15,13 @@ namespace F4SMS
 
 		public override void DrawMe()
 		{
-			display.UpdateOSBLabel(9, string.Format("C{0}Z", Environment.NewLine));
-			display.UpdateOSBLabel(12, "FCR");
-			display.UpdateOSBLabel(13, "WPN");
-			display.UpdateOSBLabel(14, "SMS");
-			display.UpdateOSBLabel(15, "SWAP");
-			display.UpdateDisplayImage((int)Display.displayImage.SMSOFF, true);
-			display.UpdateDisplayImage((int)Display.displayImage.SMSW, true);
+			UpdateOSB(9, string.Format("C{0}Z", Environment.NewLine));
+			UpdateOSB(12, "FCR");
+			UpdateOSB(13, "WPN");
+			UpdateOSB(14, "SMS");
+			UpdateOSB(15, "SWAP");
+			display.UpdateDisplayImage((int)Display.DisplayImage.SMSOFF, true);
+			display.UpdateDisplayImage((int)Display.DisplayImage.SMSW, true);
 		}
 	}
 }

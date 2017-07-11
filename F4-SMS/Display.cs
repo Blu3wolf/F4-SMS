@@ -18,35 +18,58 @@ namespace F4SMS
 			PageOFF OFFPage = new PageOFF(this);
 			PageSTBY STBYPage = new PageSTBY(this);
 			
-			Pages = new Object[]
+			Pages = new SMSPage[]
 			{
 				OFFPage,
 				STBYPage
 			};
 
+			// Blank the MFD completely
+			BlankDisplay();
+
 		}
 
-		public enum displayImage
+		public enum PageTypes
+		{
+			OFFPage, STBYPage
+		}
+
+		public enum DisplayImage
 		{
 			SMSOFF, SMSW
 		}
 
 		private DisplayForm winform;
 
-		private Object[] Pages;
+		private SMSPage[] Pages;
 
 		private SMSPage currPage;
 
 		public SMSPage CurrPage { get => currPage; set => currPage = value; }
+
+		public void BlankDisplay()
+		{
+			winform.BlankDisplay();
+		}
 
 		public void UpdateOSBLabel(int OSB, string text)
 		{
 			winform.UpdateOSBLabel(OSB, text);
 		}
 
+		public void UpdateMidLabel(int line, string text)
+		{
+			winform.UpdateMidLabel(line, text);
+		}
+
 		public void UpdateDisplayImage(int Image, bool visible)
 		{
 			winform.UpdateDisplayImage(Image, visible);
+		}
+
+		public void SwitchTo(int pagetype)
+		{
+			Pages[pagetype].SwitchTo();
 		}
 	}
 }
