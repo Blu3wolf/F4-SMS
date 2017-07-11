@@ -164,6 +164,7 @@ namespace F4SMS
 						winform.BlankDisplay();
 					}
 					mFDSPower = value;
+					SystemStartupOptionsChanged();
 				}
 			}
 		}
