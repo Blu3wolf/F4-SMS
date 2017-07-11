@@ -198,6 +198,7 @@ _pkginfo.txt
 ClientBin/
 ~$*
 *~
+Thumbs.db
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
