@@ -74,6 +74,7 @@
     <Compile Include="PageINV.cs" />
     <Compile Include="PageSTBY.cs" />
     <Compile Include="PageTEST.cs" />
+    <Compile Include="Rotary.cs" />
     <Compile Include="SMSPage.cs" />
     <Compile Include="UserInput.cs" />
     <Compile Include="PageOFF.cs" />

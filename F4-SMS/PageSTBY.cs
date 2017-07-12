@@ -44,7 +44,5 @@ namespace F4SMS
 		{
 			
 		}
-
-		private 
 	}
 }

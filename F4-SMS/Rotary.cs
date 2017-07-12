@@ -8,5 +8,11 @@ namespace F4_SMS
 {
 	class Rotary
 	{
+		public Rotary()
+		{
+
+		}
+
+
 	}
 }
