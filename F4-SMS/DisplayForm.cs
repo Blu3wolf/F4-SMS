@@ -190,104 +190,104 @@ namespace F4SMS
 			CurrMMLabel.Visible = false;
 		}
 
-		private void buttonOSB1_Click(object sender, EventArgs e)
+		private void ButtonOSB1_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(1);
 		}
 
-		private void buttonOSB2_Click(object sender, EventArgs e)
+		private void ButtonOSB2_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(2);
 		}
 
-		private void buttonOSB3_Click(object sender, EventArgs e)
+		private void ButtonOSB3_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(3);
 		}
 
-		private void buttonOSB4_Click(object sender, EventArgs e)
+		private void ButtonOSB4_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(4);
 		}
 
-		private void buttonOSB5_Click(object sender, EventArgs e)
+		private void ButtonOSB5_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(5);
 		}
 
-		private void buttonOSB6_Click(object sender, EventArgs e)
+		private void ButtonOSB6_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(6);
 		}
 
-		private void buttonOSB7_Click(object sender, EventArgs e)
+		private void ButtonOSB7_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(7);
 		}
 
-		private void buttonOSB8_Click(object sender, EventArgs e)
+		private void ButtonOSB8_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(8);
 		}
 
-		private void buttonOSB9_Click(object sender, EventArgs e)
+		private void ButtonOSB9_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(9);
 		}
 
-		private void buttonOSB10_Click(object sender, EventArgs e)
+		private void ButtonOSB10_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(10);
 		}
 
-		private void buttonOSB11_Click(object sender, EventArgs e)
+		private void ButtonOSB11_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(11);
 		}
 
-		private void buttonOSB12_Click(object sender, EventArgs e)
+		private void ButtonOSB12_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(12);
 		}
 
-		private void buttonOSB13_Click(object sender, EventArgs e)
+		private void ButtonOSB13_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(13);
 		}
 
-		private void buttonOSB14_Click(object sender, EventArgs e)
+		private void ButtonOSB14_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(14);
 		}
 
-		private void buttonOSB15_Click(object sender, EventArgs e)
+		private void ButtonOSB15_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(15);
 		}
 
-		private void buttonOSB16_Click(object sender, EventArgs e)
+		private void ButtonOSB16_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(16);
 		}
 
-		private void buttonOSB17_Click(object sender, EventArgs e)
+		private void ButtonOSB17_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(17);
 		}
 
-		private void buttonOSB18_Click(object sender, EventArgs e)
+		private void ButtonOSB18_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(18);
 		}
 
-		private void buttonOSB19_Click(object sender, EventArgs e)
+		private void ButtonOSB19_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(19);
 		}
 
-		private void buttonOSB20_Click(object sender, EventArgs e)
+		private void ButtonOSB20_Click(object sender, EventArgs e)
 		{
-
+			display.ButtonPress(20);
 		}
 	}
 }

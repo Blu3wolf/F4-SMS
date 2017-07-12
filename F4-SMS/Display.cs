@@ -17,6 +17,7 @@ namespace F4SMS
 			winform = WinForm;
 			PageOFF OFFPage = new PageOFF(this);
 			PageSTBY STBYPage = new PageSTBY(this);
+			currPage = OFFPage;
 			
 			Pages = new SMSPage[]
 			{
@@ -71,6 +72,11 @@ namespace F4SMS
 		{
 			BlankDisplay();
 			Pages[pagetype].SwitchTo();
+		}
+
+		public void ButtonPress(int OSB)
+		{
+			CurrPage.ButtonPress(OSB);
 		}
 	}
 }

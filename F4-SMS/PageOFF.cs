@@ -23,5 +23,10 @@ namespace F4SMS
 			display.UpdateDisplayImage((int)Display.DisplayImage.SMSOFF, true);
 			display.UpdateDisplayImage((int)Display.DisplayImage.SMSW, true);
 		}
+
+		public override void ButtonPress(int OSB)
+		{
+			
+		}
 	}
 }
