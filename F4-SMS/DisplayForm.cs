@@ -189,5 +189,105 @@ namespace F4SMS
 		{
 			CurrMMLabel.Visible = false;
 		}
+
+		private void buttonOSB1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB4_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB7_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB8_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB9_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB10_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB11_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB12_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB13_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB14_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB15_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB16_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB18_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB19_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void buttonOSB20_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

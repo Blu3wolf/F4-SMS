@@ -123,6 +123,7 @@
 			this.buttonOSB1.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB1.TabIndex = 1;
 			this.buttonOSB1.UseVisualStyleBackColor = true;
+			this.buttonOSB1.Click += new System.EventHandler(this.buttonOSB1_Click);
 			// 
 			// buttonOSB2
 			// 
@@ -133,6 +134,7 @@
 			this.buttonOSB2.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB2.TabIndex = 2;
 			this.buttonOSB2.UseVisualStyleBackColor = true;
+			this.buttonOSB2.Click += new System.EventHandler(this.buttonOSB2_Click);
 			// 
 			// buttonOSB3
 			// 
@@ -143,6 +145,7 @@
 			this.buttonOSB3.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB3.TabIndex = 3;
 			this.buttonOSB3.UseVisualStyleBackColor = true;
+			this.buttonOSB3.Click += new System.EventHandler(this.buttonOSB3_Click);
 			// 
 			// buttonOSB4
 			// 
@@ -153,6 +156,7 @@
 			this.buttonOSB4.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB4.TabIndex = 4;
 			this.buttonOSB4.UseVisualStyleBackColor = true;
+			this.buttonOSB4.Click += new System.EventHandler(this.buttonOSB4_Click);
 			// 
 			// buttonOSB5
 			// 
@@ -163,6 +167,7 @@
 			this.buttonOSB5.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB5.TabIndex = 5;
 			this.buttonOSB5.UseVisualStyleBackColor = true;
+			this.buttonOSB5.Click += new System.EventHandler(this.buttonOSB5_Click);
 			// 
 			// buttonOSB6
 			// 
@@ -173,6 +178,7 @@
 			this.buttonOSB6.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB6.TabIndex = 6;
 			this.buttonOSB6.UseVisualStyleBackColor = true;
+			this.buttonOSB6.Click += new System.EventHandler(this.buttonOSB6_Click);
 			// 
 			// buttonOSB7
 			// 
@@ -183,6 +189,7 @@
 			this.buttonOSB7.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB7.TabIndex = 7;
 			this.buttonOSB7.UseVisualStyleBackColor = true;
+			this.buttonOSB7.Click += new System.EventHandler(this.buttonOSB7_Click);
 			// 
 			// buttonOSB8
 			// 
@@ -193,6 +200,7 @@
 			this.buttonOSB8.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB8.TabIndex = 8;
 			this.buttonOSB8.UseVisualStyleBackColor = true;
+			this.buttonOSB8.Click += new System.EventHandler(this.buttonOSB8_Click);
 			// 
 			// buttonOSB9
 			// 
@@ -203,6 +211,7 @@
 			this.buttonOSB9.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB9.TabIndex = 9;
 			this.buttonOSB9.UseVisualStyleBackColor = true;
+			this.buttonOSB9.Click += new System.EventHandler(this.buttonOSB9_Click);
 			// 
 			// buttonOSB10
 			// 
@@ -213,6 +222,7 @@
 			this.buttonOSB10.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB10.TabIndex = 10;
 			this.buttonOSB10.UseVisualStyleBackColor = true;
+			this.buttonOSB10.Click += new System.EventHandler(this.buttonOSB10_Click);
 			// 
 			// buttonOSB11
 			// 
@@ -223,6 +233,7 @@
 			this.buttonOSB11.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB11.TabIndex = 11;
 			this.buttonOSB11.UseVisualStyleBackColor = true;
+			this.buttonOSB11.Click += new System.EventHandler(this.buttonOSB11_Click);
 			// 
 			// buttonOSB12
 			// 
@@ -233,6 +244,7 @@
 			this.buttonOSB12.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB12.TabIndex = 12;
 			this.buttonOSB12.UseVisualStyleBackColor = true;
+			this.buttonOSB12.Click += new System.EventHandler(this.buttonOSB12_Click);
 			// 
 			// buttonOSB13
 			// 
@@ -243,6 +255,7 @@
 			this.buttonOSB13.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB13.TabIndex = 13;
 			this.buttonOSB13.UseVisualStyleBackColor = true;
+			this.buttonOSB13.Click += new System.EventHandler(this.buttonOSB13_Click);
 			// 
 			// buttonOSB14
 			// 
@@ -253,6 +266,7 @@
 			this.buttonOSB14.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB14.TabIndex = 14;
 			this.buttonOSB14.UseVisualStyleBackColor = true;
+			this.buttonOSB14.Click += new System.EventHandler(this.buttonOSB14_Click);
 			// 
 			// buttonOSB15
 			// 
@@ -263,6 +277,7 @@
 			this.buttonOSB15.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB15.TabIndex = 15;
 			this.buttonOSB15.UseVisualStyleBackColor = true;
+			this.buttonOSB15.Click += new System.EventHandler(this.buttonOSB15_Click);
 			// 
 			// buttonOSB16
 			// 
@@ -273,6 +288,7 @@
 			this.buttonOSB16.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB16.TabIndex = 16;
 			this.buttonOSB16.UseVisualStyleBackColor = true;
+			this.buttonOSB16.Click += new System.EventHandler(this.buttonOSB16_Click);
 			// 
 			// buttonOSB17
 			// 
@@ -283,6 +299,7 @@
 			this.buttonOSB17.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB17.TabIndex = 17;
 			this.buttonOSB17.UseVisualStyleBackColor = true;
+			this.buttonOSB17.Click += new System.EventHandler(this.buttonOSB17_Click);
 			// 
 			// buttonOSB18
 			// 
@@ -293,6 +310,7 @@
 			this.buttonOSB18.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB18.TabIndex = 18;
 			this.buttonOSB18.UseVisualStyleBackColor = true;
+			this.buttonOSB18.Click += new System.EventHandler(this.buttonOSB18_Click);
 			// 
 			// buttonOSB19
 			// 
@@ -303,6 +321,7 @@
 			this.buttonOSB19.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB19.TabIndex = 19;
 			this.buttonOSB19.UseVisualStyleBackColor = true;
+			this.buttonOSB19.Click += new System.EventHandler(this.buttonOSB19_Click);
 			// 
 			// buttonOSB20
 			// 
@@ -313,6 +332,7 @@
 			this.buttonOSB20.Size = new System.Drawing.Size(37, 37);
 			this.buttonOSB20.TabIndex = 20;
 			this.buttonOSB20.UseVisualStyleBackColor = true;
+			this.buttonOSB20.Click += new System.EventHandler(this.buttonOSB20_Click);
 			// 
 			// checkBoxSMSPower
 			// 
@@ -598,7 +618,7 @@
 			this.labelMid8.BackColor = System.Drawing.Color.White;
 			this.labelMid8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelMid8.Location = new System.Drawing.Point(181, 339);
-			this.labelMid8.Name = "labelHungStores";
+			this.labelMid8.Name = "labelMid8";
 			this.labelMid8.Size = new System.Drawing.Size(160, 23);
 			this.labelMid8.TabIndex = 47;
 			this.labelMid8.Text = "HUNG STORE";
