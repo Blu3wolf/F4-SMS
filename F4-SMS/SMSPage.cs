@@ -17,17 +17,17 @@ namespace F4SMS
 		{
 		}
 
-		public void SwitchTo()
-		{
-			DrawMe();
-			display.CurrPage = this;
-		}
-
 		internal Display display;
 
 		public abstract void DrawMe();
 
 		public abstract void ButtonPress(int OSB);
+
+		public void SwitchTo()
+		{
+			DrawMe();
+			display.CurrPage = this;
+		}
 
 		internal void UpdateOSB(int OSB, string text)
 		{
@@ -37,6 +37,11 @@ namespace F4SMS
 		internal void UpdateMid(int line, string text)
 		{
 			display.UpdateMidLabel(line, text);
+		}
+
+		internal void CycleRotary()
+		{
+
 		}
 
 	}
