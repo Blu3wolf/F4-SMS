@@ -33,6 +33,19 @@ namespace F4SMS
 
 		private Display display;
 
+		public event EventHandler<SystemStartupEventArgs> SystemStartUpSwitches;
+
+		protected virtual void OnSystemStartUpSwitches(SystemStartupEventArgs e)
+		{
+			EventHandler<SystemStartupEventArgs> handler = SystemStartUpSwitches;
+
+			if (handler != null)
+			{
+				e = new SystemStartupEventArgs(this);
+				handler(this, e);
+			}
+		}
+
 		private bool mMCPower;
 
 		private bool mFDSPower;
@@ -143,7 +156,7 @@ namespace F4SMS
 						// switch SMS page to OFF
 						mMCPower = value;
 					}
-					SystemStartupOptionsChanged();
+					OnSystemStartUpSwitches(new SystemStartupEventArgs(this));
 				}
 			}
 		}
@@ -164,7 +177,7 @@ namespace F4SMS
 						winform.BlankDisplay();
 					}
 					mFDSPower = value;
-					SystemStartupOptionsChanged();
+					OnSystemStartUpSwitches(new SystemStartupEventArgs(this));
 				}
 			}
 		}
@@ -185,7 +198,7 @@ namespace F4SMS
 
 					}
 					sMSPower = value;
-					SystemStartupOptionsChanged();
+					OnSystemStartUpSwitches(new SystemStartupEventArgs(this));
 				}
 			}
 		}
@@ -209,28 +222,11 @@ namespace F4SMS
 		{
 			MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
 		}
-
-		private void SystemStartupOptionsChanged()
-		{
-			if (MFDSPower)
-			{
-				if (SMSPower & MMCPower)
-				{
-					// MFDS has power, MMC and ST STA have power
-					display.SwitchTo((int)Pages.STBY);
-				}
-				else
-				{
-					// MFDS has power, but either ST STA or MMC is not powered, so display the OFF page
-					display.SwitchTo((int)Pages.OFF);
-				}
-			}
-		}
 	}
 
 	public class SystemStartupEventArgs : EventArgs
 	{
-		SystemStartupEventArgs(MMC MMC)
+		internal SystemStartupEventArgs(MMC MMC)
 		{
 			MMCPower = MMC.MMCPower;
 			MFDSPower = MMC.MFDSPower;

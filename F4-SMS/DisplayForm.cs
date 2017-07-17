@@ -55,12 +55,13 @@ namespace F4SMS
 
 			// set initial values for form start
 
-			MMC MMC1 = new MMC(this);
-			MMC1.WOW = checkBoxWOW.Checked;
-			MMC1.SMSPower = checkBoxSMSPower.Checked;
-			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
-			MMC1.MMCPower = checkBoxMMCPower.Checked;
-
+			MMC = new MMC(this)
+			{
+				WOW = checkBoxWOW.Checked,
+				SMSPower = checkBoxSMSPower.Checked,
+				MFDSPower = checkBoxMFDSPower.Checked,
+				MMCPower = checkBoxMMCPower.Checked
+			};
 			display = new Display(this);
 		}
 
@@ -73,7 +74,7 @@ namespace F4SMS
 
 		private PictureBox[] displayImages;
 
-		public MMC MMC { get => mMC; set => mMC = value; }
+		internal MMC MMC { get => mMC; set => mMC = value; }
 
 		public void BlankDisplay()
 		{

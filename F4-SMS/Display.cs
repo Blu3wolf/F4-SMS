@@ -15,7 +15,9 @@ namespace F4SMS
 		public Display(DisplayForm WinForm)
 		{
 			winform = WinForm;
-			mMC = winform.MMC
+			mMC = winform.MMC;
+			mMC.SystemStartUpSwitches += SystemStartUp;
+
 			PageOFF OFFPage = new PageOFF(this);
 			PageSTBY STBYPage = new PageSTBY(this);
 			currPage = OFFPage;
