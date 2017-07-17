@@ -35,6 +35,8 @@ namespace F4SMS
 
 		public event EventHandler<SystemStartupEventArgs> SystemStartUpSwitches;
 
+		public event EventHandler MMCPowerUp;
+
 		protected virtual void OnSystemStartUpSwitches(SystemStartupEventArgs e)
 		{
 			EventHandler<SystemStartupEventArgs> handler = SystemStartUpSwitches;
@@ -44,6 +46,11 @@ namespace F4SMS
 				e = new SystemStartupEventArgs(this);
 				handler(this, e);
 			}
+		}
+
+		protected virtual void OnMMCPowerUp(EventArgs e)
+		{
+			MMCPowerUp?.Invoke(this, e);
 		}
 
 		private bool mMCPower;
@@ -129,6 +136,8 @@ namespace F4SMS
 				{
 					if (value) // then MMC is being turned on
 					{
+						// raise event
+						OnMMCPowerUp(null);
 						if (WOW)
 						{
 							// MMC just powered up on the ground
