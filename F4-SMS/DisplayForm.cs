@@ -54,25 +54,26 @@ namespace F4SMS
 			};
 
 			// set initial values for form start
-			display = new Display(this);
 
-			MMC MMCObject = new MMC(this);
-			MMC1 = MMCObject;
+			MMC MMC1 = new MMC(this);
 			MMC1.WOW = checkBoxWOW.Checked;
 			MMC1.SMSPower = checkBoxSMSPower.Checked;
 			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
 			MMC1.MMCPower = checkBoxMMCPower.Checked;
 
+			display = new Display(this);
 		}
 
 		internal Display display;
 
 		// this is the MMC object for this instance of the DisplayForm window
-		private MMC MMC1;
+		private MMC mMC;
 
 		private Label[] OSBLabels;
 
 		private PictureBox[] displayImages;
+
+		public MMC MMC { get => mMC; set => mMC = value; }
 
 		public void BlankDisplay()
 		{
@@ -125,39 +126,39 @@ namespace F4SMS
             
         private void CheckBoxSMSPower_CheckedChanged(object sender, EventArgs e)
         {
-			MMC1.SMSPower = checkBoxSMSPower.Checked;
+			MMC.SMSPower = checkBoxSMSPower.Checked;
         }
 
         private void CheckBoxMMCPower_CheckedChanged(object sender, EventArgs e)
         {
-			MMC1.MMCPower = checkBoxMMCPower.Checked;
+			MMC.MMCPower = checkBoxMMCPower.Checked;
         }
 
         private void CheckBoxMFDSPower_CheckedChanged(object sender, EventArgs e)
         {
-			MMC1.MFDSPower = checkBoxMFDSPower.Checked;
+			MMC.MFDSPower = checkBoxMFDSPower.Checked;
         }
 
 		private void CheckBoxWOW_CheckedChanged(object sender, EventArgs e)
 		{
-			MMC1.WOW = checkBoxWOW.Checked;
+			MMC.WOW = checkBoxWOW.Checked;
 		}
 
 		private void ButtonAAMastermode_Click(object sender, EventArgs e)
 		{
-			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AA;
+			MMC.CurrentMasterMode = (int)MMC.MasterModes.AA;
 		}
 
 		private void ButtonAGMastermode_Click(object sender, EventArgs e)
 		{
-			MMC1.CurrentMasterMode = (int)MMC.MasterModes.AG;
+			MMC.CurrentMasterMode = (int)MMC.MasterModes.AG;
 		}
 
 		private void RadioButtonMRM_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonMRM.Checked)
 			{
-				MMC1.CurrentMasterMode = (int)MMC.MasterModes.MSL;
+				MMC.CurrentMasterMode = (int)MMC.MasterModes.MSL;
 			}
 		}
 
@@ -165,7 +166,7 @@ namespace F4SMS
 		{
 			if (radioButtonCancelOverride.Checked)
 			{
-				MMC1.CancelOverride();
+				MMC.CancelOverride();
 			}
 		}
 
@@ -173,14 +174,14 @@ namespace F4SMS
 		{
 			if (radioButtonDGFT.Checked)
 			{
-				MMC1.CurrentMasterMode = (int)MMC.MasterModes.DGFT;
+				MMC.CurrentMasterMode = (int)MMC.MasterModes.DGFT;
 			}
 		}
 
 		public void UpdateMMLabel()
 		{
 			CurrMMLabel.Visible = true;
-			int mode = MMC1.CurrentMasterMode;
+			int mode = MMC.CurrentMasterMode;
 			string modename = ((MMC.MasterModes) mode).ToString();
 			CurrMMLabel.Text = modename;
 		}

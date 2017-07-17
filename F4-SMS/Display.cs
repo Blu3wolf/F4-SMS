@@ -15,6 +15,7 @@ namespace F4SMS
 		public Display(DisplayForm WinForm)
 		{
 			winform = WinForm;
+			mMC = winform.MMC
 			PageOFF OFFPage = new PageOFF(this);
 			PageSTBY STBYPage = new PageSTBY(this);
 			currPage = OFFPage;
@@ -42,11 +43,34 @@ namespace F4SMS
 
 		private DisplayForm winform;
 
+		private MMC mMC;
+
 		private SMSPage[] Pages;
 
 		private SMSPage currPage;
 
 		public SMSPage CurrPage { get => currPage; set => currPage = value; }
+
+		internal MMC MMC { get => mMC; set => mMC = value; }
+
+		
+
+		private void SystemStartUp(object sender, SystemStartupEventArgs e)
+		{
+			if (e.MFDSPower)
+			{
+				if (e.SMSPower & e.MMCPower)
+				{
+					// MFDS has power, MMC and ST STA have power
+					SwitchTo((int)PageTypes.STBYPage);
+				}
+				else
+				{
+					// MFDS has power, but either ST STA or MMC is not powered, so display the OFF page
+					SwitchTo((int)PageTypes.OFFPage);
+				}
+			}
+		}
 
 		public void BlankDisplay()
 		{
