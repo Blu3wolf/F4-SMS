@@ -15,21 +15,17 @@ namespace F4SMS
 		public PageSTBY(Display Displayer)
 		{
 			display = Displayer;
-			bBSMode = (int)BBSModes.BARO;
+			string[] BBSOptions = new string[] { "BARO", "RALT", "PR" };
+			BBS = new Rotary(BBSOptions);
 		}
 
-		private int bBSMode;
-
-		public enum BBSModes
-		{
-			BARO, RALT, PR
-		}
+		private Rotary BBS;
 
 		public override void DrawMe()
 		{
 			UpdateOSB(1, "STBY");
 			UpdateOSB(4, "INV");
-			UpdateOSB(6, bBSMode.ToString());
+			UpdateOSB(6, BBS.GetCurrOption());
 			UpdateOSB(8, string.Format("CLR{0}RACK", Environment.NewLine));
 			UpdateOSB(11, "S-J");
 			UpdateOSB(12, "WPN");
@@ -42,7 +38,15 @@ namespace F4SMS
 
 		public override void ButtonPress(int OSB)
 		{
-			
+			switch (OSB)
+			{
+				case 6:
+					BBS.IncOption();
+					UpdateOSB(6, BBS.GetCurrOption());
+					break;
+				default:
+					break;
+			}
 		}
 	}
 }

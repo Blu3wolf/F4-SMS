@@ -199,9 +199,6 @@ namespace F4SMS
 			NAV, AA, AG, DGFT, MSL
 		}
 
-		// displayPage is the int of the current page if read from the enum Pages
-		private int displayPage;
-
 		// Pages is a enum of all possible display pages
 		public enum Pages
 		{
