@@ -4,18 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F4_SMS
+namespace F4SMS
 {
 	class Rotary
 	{
 		public Rotary(string[] Options)
 		{
-
+			options = Options;
+			currOption = 0;
 		}
 
 		private string[] options;
 
 		private int currOption;
+
+		internal void SetCurrOption(string Option)
+		{
+			currOption = Array.IndexOf(options, Option);
+		}
 
 		public string GetCurrOption()
 		{
