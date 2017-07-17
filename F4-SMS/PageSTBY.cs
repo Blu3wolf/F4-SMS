@@ -17,6 +17,12 @@ namespace F4SMS
 			display = Displayer;
 			string[] BBSOptions = new string[] { "BARO", "RALT", "PR" };
 			BBS = new Rotary(BBSOptions);
+			display.MMC.MMCPowerUp += OnMMCPowerUp;
+		}
+
+		private void OnMMCPowerUp(object sender, EventArgs e)
+		{
+			BBS.ResetCurrOption();
 		}
 
 		private Rotary BBS;

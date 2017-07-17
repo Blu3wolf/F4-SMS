@@ -18,9 +18,19 @@ namespace F4SMS
 
 		private int currOption;
 
+		internal void ResetCurrOption()
+		{
+			currOption = 0;
+		}
+
 		internal void SetCurrOption(string Option)
 		{
-			currOption = Array.IndexOf(options, Option);
+			int index = Array.IndexOf(options, Option);
+			// IndexOf returns -1 if it cant find the string
+			if (index != -1)
+			{
+				currOption = index;
+			}
 		}
 
 		public string GetCurrOption()
