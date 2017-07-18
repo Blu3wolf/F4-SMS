@@ -20,8 +20,8 @@ namespace F4SMS
 			UpdateOSB(13, "WPN");
 			UpdateOSB(14, "SMS");
 			UpdateOSB(15, "SWAP");
-			display.UpdateDisplayImage((int)Display.DisplayImage.SMSOFF, true);
-			display.UpdateDisplayImage((int)Display.DisplayImage.SMSW, true);
+			display.UpdateDisplayImage((int)DisplayImage.SMSOFF, true);
+			display.UpdateDisplayImage((int)DisplayImage.SMSW, true);
 		}
 
 		public override void ButtonPress(int OSB)

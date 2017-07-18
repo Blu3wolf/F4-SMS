@@ -562,11 +562,11 @@
 			// 
 			this.labelOSB9.BackColor = System.Drawing.Color.White;
 			this.labelOSB9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB9.Location = new System.Drawing.Point(403, 290);
+			this.labelOSB9.Location = new System.Drawing.Point(350, 290);
 			this.labelOSB9.Name = "labelOSB9";
-			this.labelOSB9.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB9.Size = new System.Drawing.Size(106, 54);
 			this.labelOSB9.TabIndex = 42;
-			this.labelOSB9.Text = "C\r\nZ";
+			this.labelOSB9.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// labelOSB6
@@ -606,11 +606,11 @@
 			// 
 			this.labelOSB10.BackColor = System.Drawing.Color.White;
 			this.labelOSB10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB10.Location = new System.Drawing.Point(403, 344);
+			this.labelOSB10.Location = new System.Drawing.Point(350, 344);
 			this.labelOSB10.Name = "labelOSB10";
-			this.labelOSB10.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB10.Size = new System.Drawing.Size(106, 54);
 			this.labelOSB10.TabIndex = 46;
-			this.labelOSB10.Text = "C\r\nZ";
+			this.labelOSB10.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// labelMid8
@@ -696,9 +696,9 @@
 			this.labelOSB17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB17.Location = new System.Drawing.Point(68, 290);
 			this.labelOSB17.Name = "labelOSB17";
-			this.labelOSB17.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB17.Size = new System.Drawing.Size(106, 54);
 			this.labelOSB17.TabIndex = 54;
-			this.labelOSB17.Text = "CLR\r\nWPN";
+			this.labelOSB17.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// labelOSB16
@@ -707,9 +707,9 @@
 			this.labelOSB16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB16.Location = new System.Drawing.Point(68, 344);
 			this.labelOSB16.Name = "labelOSB16";
-			this.labelOSB16.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB16.Size = new System.Drawing.Size(116, 54);
 			this.labelOSB16.TabIndex = 55;
-			this.labelOSB16.Text = "CLR\r\nWPN";
+			this.labelOSB16.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// labelOSB19

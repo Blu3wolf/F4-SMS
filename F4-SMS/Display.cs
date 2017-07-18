@@ -25,27 +25,19 @@ namespace F4SMS
 
 			PageOFF OFFPage = new PageOFF(this);
 			PageSTBY STBYPage = new PageSTBY(this);
+			PageINV INVPage = new PageINV(this);
 			currPage = OFFPage;
 			
 			Pages = new SMSPage[]
 			{
 				OFFPage,
-				STBYPage
+				STBYPage,
+				INVPage
 			};
 
 			// Blank the MFD completely
 			BlankDisplay();
 
-		}
-
-		public enum PageTypes
-		{
-			OFFPage, STBYPage
-		}
-
-		public enum DisplayImage
-		{
-			SMSOFF, SMSW
 		}
 
 		private DisplayForm winform;
@@ -69,7 +61,7 @@ namespace F4SMS
 				if (e.SMSPower & e.MMCPower)
 				{
 					// MFDS has power, MMC and ST STA have power
-					SwitchTo((int)PageTypes.STBYPage);
+					SwitchTo((int)PageTypes.INVPage);
 				}
 				else
 				{
