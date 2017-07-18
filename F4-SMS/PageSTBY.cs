@@ -39,13 +39,16 @@ namespace F4SMS
 			UpdateOSB(15, "SWAP");
 			UpdateOSB(18, string.Format("CLR{0}WPN", Environment.NewLine));
 			// UpdateMid(8, "HUNG STORE"); // do this only if a hung store is present
-			display.UpdateDisplayImage((int)Display.DisplayImage.SMSW, true);
+			display.UpdateDisplayImage((int)DisplayImage.SMSW, true);
 		}
 
 		public override void ButtonPress(int OSB)
 		{
 			switch (OSB)
 			{
+				case 4:
+					display.SwitchTo((int)PageTypes.INVPage);
+					break;
 				case 6:
 					BBS.IncOption();
 					UpdateOSB(6, BBS.GetCurrOption());

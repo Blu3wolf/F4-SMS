@@ -11,9 +11,14 @@ using System.Windows.Forms;
 namespace F4SMS
 {
 
+	public enum DisplayImage
+	{
+		SMSOFF, SMSW
+	}
+
 	/* Class is responsible for the whole of the Form - the UI and the MFDS display */
 
-    public partial class DisplayForm : Form
+	public partial class DisplayForm : Form
     {
 		// DisplayForm() gets called when the form is initialised, which happens when someone pressed load on the main menu
         public DisplayForm()
@@ -147,19 +152,19 @@ namespace F4SMS
 
 		private void ButtonAAMastermode_Click(object sender, EventArgs e)
 		{
-			MMC.CurrentMasterMode = (int)MMC.MasterModes.AA;
+			MMC.CurrentMasterMode = (int)MasterModes.AA;
 		}
 
 		private void ButtonAGMastermode_Click(object sender, EventArgs e)
 		{
-			MMC.CurrentMasterMode = (int)MMC.MasterModes.AG;
+			MMC.CurrentMasterMode = (int)MasterModes.AG;
 		}
 
 		private void RadioButtonMRM_CheckedChanged(object sender, EventArgs e)
 		{
 			if (radioButtonMRM.Checked)
 			{
-				MMC.CurrentMasterMode = (int)MMC.MasterModes.MSL;
+				MMC.CurrentMasterMode = (int)MasterModes.MSL;
 			}
 		}
 
@@ -175,7 +180,7 @@ namespace F4SMS
 		{
 			if (radioButtonDGFT.Checked)
 			{
-				MMC.CurrentMasterMode = (int)MMC.MasterModes.DGFT;
+				MMC.CurrentMasterMode = (int)MasterModes.DGFT;
 			}
 		}
 
@@ -183,7 +188,7 @@ namespace F4SMS
 		{
 			CurrMMLabel.Visible = true;
 			int mode = MMC.CurrentMasterMode;
-			string modename = ((MMC.MasterModes) mode).ToString();
+			string modename = ((MasterModes) mode).ToString();
 			CurrMMLabel.Text = modename;
 		}
 
