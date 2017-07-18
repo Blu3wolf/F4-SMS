@@ -10,6 +10,11 @@ namespace F4SMS
 	 * knows what is drawn on the MFD 
 	 * acts a bit like the SMS computer, decides what page to display, etc*/
 
+	public enum PageTypes
+	{
+		OFFPage, STBYPage, INVPage
+	}
+
 	class Display
 	{
 		public Display(DisplayForm WinForm)

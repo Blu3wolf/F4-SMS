@@ -10,6 +10,22 @@ namespace F4SMS
 	 * decides what mastermode to be in, based on input to DisplayForm
 	 * stores current master mode, power status, status of A/C */
 
+	public enum MasterModes
+	{
+		NAV, AA, AG, DGFT, MSL
+	}
+
+	// Pages is a enum of all possible display pages
+	public enum Pages
+	{
+		OFF, STBY, INV, SJ, EJ, AAM, MSL, DGFT, GUN, AG, BIT
+	}
+
+	public enum SystemStartupOptions
+	{
+		MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
+	}
+
 	class MMC
 	{
 		public MMC(DisplayForm WinForm)
@@ -215,22 +231,6 @@ namespace F4SMS
 		public bool GunArmed { get => gunArmed; set => gunArmed = value; }
 
 		public bool WOW { get => wOW; set => wOW = value; }
-
-		public enum MasterModes
-		{
-			NAV, AA, AG, DGFT, MSL
-		}
-
-		// Pages is a enum of all possible display pages
-		public enum Pages
-		{
-			OFF, STBY, INV, SJ, EJ, AAM, MSL, DGFT, GUN, AG, BIT
-		}
-
-		public enum SystemStartupOptions
-		{
-			MMCPower, MFDSPower, SMSPower, WOW, DTCLoad, InvLoad, GunArmed
-		}
 	}
 
 	public class SystemStartupEventArgs : EventArgs

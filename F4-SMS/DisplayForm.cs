@@ -11,9 +11,14 @@ using System.Windows.Forms;
 namespace F4SMS
 {
 
+	public enum DisplayImage
+	{
+		SMSOFF, SMSW
+	}
+
 	/* Class is responsible for the whole of the Form - the UI and the MFDS display */
 
-    public partial class DisplayForm : Form
+	public partial class DisplayForm : Form
     {
 		// DisplayForm() gets called when the form is initialised, which happens when someone pressed load on the main menu
         public DisplayForm()
