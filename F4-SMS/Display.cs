@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,9 +77,19 @@ namespace F4SMS
 			winform.BlankDisplay();
 		}
 
+		public void ResetOSBAlign()
+		{
+			winform.ResetOSBLabelAlign();
+		}
+
 		public void UpdateOSBLabel(int OSB, string text)
 		{
 			winform.UpdateOSBLabel(OSB, text);
+		}
+
+		public void UpdateOSBLabel(int OSB, string text, ContentAlignment align)
+		{
+			winform.UpdateOSBLabel(OSB, text, align);
 		}
 
 		public void UpdateMidLabel(int line, string text)

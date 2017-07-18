@@ -15,6 +15,7 @@ namespace F4SMS
 
 		public override void DrawMe()
 		{
+			ResetOSBAlign();
 			UpdateOSB(9, string.Format("C{0}Z", Environment.NewLine));
 			UpdateOSB(12, "FCR");
 			UpdateOSB(13, "WPN");

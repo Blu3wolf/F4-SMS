@@ -113,10 +113,45 @@ namespace F4SMS
 			}
 		}
 
+		public void ResetOSBLabelAlign()
+		{
+			int count = 0;
+			foreach (Label OSBLabel in OSBLabels)
+			{
+				count += 1;
+				if (count < 6)
+				{
+					OSBLabel.TextAlign = ContentAlignment.TopCenter;
+					continue;
+				}
+				if (count < 11 && count > 5)
+				{
+					OSBLabel.TextAlign = ContentAlignment.MiddleRight;
+					continue;
+				}
+				if (count < 16 && count > 10)
+				{
+					OSBLabel.TextAlign = ContentAlignment.TopCenter;
+					continue;
+				}
+				else
+				{
+					OSBLabel.TextAlign = ContentAlignment.MiddleLeft;
+				}
+			}
+		}
+
 		public void UpdateOSBLabel(int OSB, string text)
 		{
 			Label label = OSBLabels[(OSB - 1)];
 			ValidateInput(label, text);
+		}
+
+		public void UpdateOSBLabel(int OSB, string text, ContentAlignment align)
+		{
+			UpdateOSBLabel(OSB, text);
+			Label label = OSBLabels[(OSB - 1)];
+			label.TextAlign = align;
 		}
 
 		public void UpdateMidLabel(int line, string text)

@@ -29,6 +29,7 @@ namespace F4SMS
 
 		public override void DrawMe()
 		{
+			ResetOSBAlign();
 			UpdateOSB(1, "STBY");
 			UpdateOSB(4, "INV");
 			UpdateOSB(6, BBS.GetCurrOption());

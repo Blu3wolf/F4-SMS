@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,9 +30,19 @@ namespace F4SMS
 			display.CurrPage = this;
 		}
 
+		internal void ResetOSBAlign()
+		{
+			display.ResetOSBAlign();
+		}
+
 		internal void UpdateOSB(int OSB, string text)
 		{
 			display.UpdateOSBLabel(OSB, text);
+		}
+
+		internal void UpdateOSB(int OSB, string text, ContentAlignment align)
+		{
+			display.UpdateOSBLabel(OSB, text, align);
 		}
 
 		internal void UpdateMid(int line, string text)
