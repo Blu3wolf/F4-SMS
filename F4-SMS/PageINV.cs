@@ -41,11 +41,14 @@ namespace F4SMS
 					ModeName = "STBY";
 					break;
 			}
-			 // string ModeName = Enum.GetName(typeof(MasterModes), ModeNo);
+			// string ModeName = Enum.GetName(typeof(MasterModes), ModeNo);
+			ResetOSBAlign();
 			UpdateOSB(1, ModeName);
 			UpdateOSB(3, string.Format("{0} 1  MAU{0} 1  TK300{0}- - - - - - -", Environment.NewLine));
 			UpdateOSB(4, "INV");
 			UpdateOSB(5, "CLR");
+			UpdateOSB(7, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
+			UpdateOSB(8, string.Format(" 1  MAU{0} 1  TER{0} 2  BD33T", Environment.NewLine), System.Drawing.ContentAlignment.MiddleCenter);
 			UpdateOSB(9, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
 			UpdateOSB(10, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
 			UpdateOSB(11, "S-J");
@@ -54,6 +57,7 @@ namespace F4SMS
 			UpdateOSB(15, "SWAP");
 			UpdateOSB(16, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
 			UpdateOSB(17, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
+			UpdateOSB(18, string.Format(" 1  MAU{0} 1  TER{0} 2  BD33T", Environment.NewLine), System.Drawing.ContentAlignment.MiddleCenter);
 			UpdateOSB(20, string.Format("51GUN{0}M56", Environment.NewLine));
 			display.UpdateDisplayImage((int)DisplayImage.SMSW, true);
 		}
