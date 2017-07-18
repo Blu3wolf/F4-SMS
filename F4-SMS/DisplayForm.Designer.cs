@@ -562,9 +562,9 @@
 			// 
 			this.labelOSB9.BackColor = System.Drawing.Color.White;
 			this.labelOSB9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB9.Location = new System.Drawing.Point(296, 290);
+			this.labelOSB9.Location = new System.Drawing.Point(296, 298);
 			this.labelOSB9.Name = "labelOSB9";
-			this.labelOSB9.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB9.Size = new System.Drawing.Size(160, 46);
 			this.labelOSB9.TabIndex = 42;
 			this.labelOSB9.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -597,7 +597,7 @@
 			this.labelOSB8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB8.Location = new System.Drawing.Point(296, 235);
 			this.labelOSB8.Name = "labelOSB8";
-			this.labelOSB8.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB8.Size = new System.Drawing.Size(160, 63);
 			this.labelOSB8.TabIndex = 45;
 			this.labelOSB8.Text = "CLR\r\nRACK";
 			this.labelOSB8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -606,9 +606,9 @@
 			// 
 			this.labelOSB10.BackColor = System.Drawing.Color.White;
 			this.labelOSB10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB10.Location = new System.Drawing.Point(296, 344);
+			this.labelOSB10.Location = new System.Drawing.Point(296, 346);
 			this.labelOSB10.Name = "labelOSB10";
-			this.labelOSB10.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB10.Size = new System.Drawing.Size(160, 46);
 			this.labelOSB10.TabIndex = 46;
 			this.labelOSB10.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -685,7 +685,7 @@
 			this.labelOSB18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB18.Location = new System.Drawing.Point(68, 235);
 			this.labelOSB18.Name = "labelOSB18";
-			this.labelOSB18.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB18.Size = new System.Drawing.Size(160, 63);
 			this.labelOSB18.TabIndex = 53;
 			this.labelOSB18.Text = "CLR\r\nWPN";
 			this.labelOSB18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -694,9 +694,9 @@
 			// 
 			this.labelOSB17.BackColor = System.Drawing.Color.White;
 			this.labelOSB17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB17.Location = new System.Drawing.Point(68, 290);
+			this.labelOSB17.Location = new System.Drawing.Point(68, 298);
 			this.labelOSB17.Name = "labelOSB17";
-			this.labelOSB17.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB17.Size = new System.Drawing.Size(160, 46);
 			this.labelOSB17.TabIndex = 54;
 			this.labelOSB17.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -705,9 +705,9 @@
 			// 
 			this.labelOSB16.BackColor = System.Drawing.Color.White;
 			this.labelOSB16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelOSB16.Location = new System.Drawing.Point(68, 344);
+			this.labelOSB16.Location = new System.Drawing.Point(68, 346);
 			this.labelOSB16.Name = "labelOSB16";
-			this.labelOSB16.Size = new System.Drawing.Size(160, 54);
+			this.labelOSB16.Size = new System.Drawing.Size(160, 46);
 			this.labelOSB16.TabIndex = 55;
 			this.labelOSB16.Text = " 1  MRLW\r\n 1  A120A";
 			this.labelOSB16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
