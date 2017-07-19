@@ -10,6 +10,11 @@ namespace F4SMS
 	 * Knows which RIUs are xmitting on the 1553 Mux, 
 	 * which racks are loaded, what stations they are at, what stores are on them */
 
+	public enum Racks
+	{
+		MAU, TER, LAU, SUU20, SUU25, AL119, AL131, AGTS, TOWPD, TK370, TK600, MRLW, LNCH
+	}
+
 	class PhysicalInventory
 	{
 	}
