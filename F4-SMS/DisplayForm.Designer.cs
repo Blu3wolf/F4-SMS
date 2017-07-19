@@ -734,7 +734,7 @@
 			this.labelOSB20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB20.Location = new System.Drawing.Point(68, 128);
 			this.labelOSB20.Name = "labelOSB20";
-			this.labelOSB20.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB20.Size = new System.Drawing.Size(70, 54);
 			this.labelOSB20.TabIndex = 57;
 			this.labelOSB20.Text = "CLR\r\nWPN";
 			this.labelOSB20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
