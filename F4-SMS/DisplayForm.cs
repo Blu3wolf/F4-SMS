@@ -51,6 +51,19 @@ namespace F4SMS
 				labelOSB20
 			};
 
+			INVLabels = new Label[]
+			{
+				labelOSB16,
+				labelOSB17,
+				labelINVSt3,
+				labelINVSt4,
+				labelINVSt5,
+				labelINVSt6,
+				labelINVSt7,
+				labelOSB9,
+				labelOSB10
+			};
+
 			// Generate the array of all picture elements
 			displayImages = new PictureBox[]
 			{
@@ -76,6 +89,8 @@ namespace F4SMS
 		private MMC mMC;
 
 		private Label[] OSBLabels;
+
+		private Label[] INVLabels;
 
 		private PictureBox[] displayImages;
 
