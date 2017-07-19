@@ -43,19 +43,23 @@ namespace F4SMS
 			}
 			 // string ModeName = Enum.GetName(typeof(MasterModes), ModeNo);
 			UpdateOSB(1, ModeName);
-			UpdateOSB(3, string.Format("{0} 1  MAU{0} 1  TK300{0}- - - - - - -", Environment.NewLine));
 			UpdateOSB(4, "INV");
 			UpdateOSB(5, "CLR");
-			UpdateOSB(9, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
-			UpdateOSB(10, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
 			UpdateOSB(11, "S-J");
 			UpdateOSB(12, "WPN");
 			UpdateOSB(14, "SMS");
 			UpdateOSB(15, "SWAP");
-			UpdateOSB(16, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
-			UpdateOSB(17, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
-			UpdateOSB(20, string.Format("51GUN{0}M56", Environment.NewLine));
 			display.UpdateDisplayImage((int)DisplayImage.SMSW, true);
+			UpdateINVSt(0, string.Format("51GUN{0}M56", Environment.NewLine));
+			UpdateINVSt(1, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
+			UpdateINVSt(2, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
+			UpdateINVSt(3, string.Format(" 1  MAU{0} 1  TER{0} 3  M82BS", Environment.NewLine));
+			UpdateINVSt(4, string.Format(" 1  TK370{0}-   -   -   -   -   -   -{0}-   -   -   -   -   -   -", Environment.NewLine));
+			UpdateINVSt(5, string.Format(" 1  MAU{0} 1  TK300{0}- - - - - - -", Environment.NewLine));
+			UpdateINVSt(6, string.Format(" 1  TK370{0}-   -   -   -   -   -   -{0}-   -   -   -   -   -   -", Environment.NewLine));
+			UpdateINVSt(7, string.Format(" 1  MAU{0} 1  TER{0} 3  M82BS", Environment.NewLine));
+			UpdateINVSt(8, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
+			UpdateINVSt(9, string.Format(" 1  MRLW{0} 1  A120A", Environment.NewLine));
 		}
 
 		public override void ButtonPress(int OSB)

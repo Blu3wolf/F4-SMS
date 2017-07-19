@@ -39,6 +39,11 @@ namespace F4SMS
 			display.UpdateMidLabel(line, text);
 		}
 
+		internal void UpdateINVSt(int station, string text)
+		{
+			display.UpdateINVStLabel(station, text);
+		}
+
 		internal void CycleRotary()
 		{
 

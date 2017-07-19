@@ -86,6 +86,11 @@ namespace F4SMS
 			winform.UpdateMidLabel(line, text);
 		}
 
+		public void UpdateINVStLabel(int station, string text)
+		{
+			winform.UpdateINVStLabel(station, text);
+		}
+
 		public void UpdateDisplayImage(int Image, bool visible)
 		{
 			winform.UpdateDisplayImage(Image, visible);

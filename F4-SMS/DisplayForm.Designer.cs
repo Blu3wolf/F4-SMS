@@ -96,6 +96,11 @@
 			this.groupBoxStartupOptions = new System.Windows.Forms.GroupBox();
 			this.groupBoxDGFTSwitch = new System.Windows.Forms.GroupBox();
 			this.CurrMMLabel = new System.Windows.Forms.Label();
+			this.labelINVSt3 = new System.Windows.Forms.Label();
+			this.labelINVSt7 = new System.Windows.Forms.Label();
+			this.labelINVSt4 = new System.Windows.Forms.Label();
+			this.labelINVSt6 = new System.Windows.Forms.Label();
+			this.labelINVSt5 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMS)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSOFF)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSMSW)).BeginInit();
@@ -729,7 +734,7 @@
 			this.labelOSB20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelOSB20.Location = new System.Drawing.Point(68, 128);
 			this.labelOSB20.Name = "labelOSB20";
-			this.labelOSB20.Size = new System.Drawing.Size(53, 54);
+			this.labelOSB20.Size = new System.Drawing.Size(70, 54);
 			this.labelOSB20.TabIndex = 57;
 			this.labelOSB20.Text = "CLR\r\nWPN";
 			this.labelOSB20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -831,11 +836,72 @@
 			this.CurrMMLabel.Size = new System.Drawing.Size(0, 13);
 			this.CurrMMLabel.TabIndex = 66;
 			// 
+			// labelINVSt3
+			// 
+			this.labelINVSt3.BackColor = System.Drawing.Color.White;
+			this.labelINVSt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelINVSt3.Location = new System.Drawing.Point(130, 230);
+			this.labelINVSt3.Name = "labelINVSt3";
+			this.labelINVSt3.Size = new System.Drawing.Size(106, 65);
+			this.labelINVSt3.TabIndex = 67;
+			this.labelINVSt3.Text = " 1  MAU\r\n 1  TER\r\n 3  M82BS";
+			this.labelINVSt3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelINVSt7
+			// 
+			this.labelINVSt7.BackColor = System.Drawing.Color.White;
+			this.labelINVSt7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelINVSt7.Location = new System.Drawing.Point(302, 230);
+			this.labelINVSt7.Name = "labelINVSt7";
+			this.labelINVSt7.Size = new System.Drawing.Size(106, 65);
+			this.labelINVSt7.TabIndex = 68;
+			this.labelINVSt7.Text = " 1  MAU\r\n 1  TER\r\n 3  M82BS";
+			this.labelINVSt7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelINVSt4
+			// 
+			this.labelINVSt4.BackColor = System.Drawing.Color.White;
+			this.labelINVSt4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelINVSt4.Location = new System.Drawing.Point(160, 165);
+			this.labelINVSt4.Name = "labelINVSt4";
+			this.labelINVSt4.Size = new System.Drawing.Size(106, 65);
+			this.labelINVSt4.TabIndex = 69;
+			this.labelINVSt4.Text = " 1  MAU\r\n 1  TER\r\n 3  M82BS";
+			this.labelINVSt4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelINVSt6
+			// 
+			this.labelINVSt6.BackColor = System.Drawing.Color.White;
+			this.labelINVSt6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelINVSt6.Location = new System.Drawing.Point(272, 165);
+			this.labelINVSt6.Name = "labelINVSt6";
+			this.labelINVSt6.Size = new System.Drawing.Size(106, 65);
+			this.labelINVSt6.TabIndex = 70;
+			this.labelINVSt6.Text = " 1  MAU\r\n 1  TER\r\n 3  M82BS";
+			this.labelINVSt6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// labelINVSt5
+			// 
+			this.labelINVSt5.BackColor = System.Drawing.Color.White;
+			this.labelINVSt5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.labelINVSt5.Location = new System.Drawing.Point(227, 96);
+			this.labelINVSt5.Name = "labelINVSt5";
+			this.labelINVSt5.Size = new System.Drawing.Size(106, 65);
+			this.labelINVSt5.TabIndex = 71;
+			this.labelINVSt5.Text = " 1  MAU\r\n 1  TER\r\n 3  M82BS";
+			this.labelINVSt5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// DisplayForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(715, 527);
+			this.Controls.Add(this.labelINVSt5);
+			this.Controls.Add(this.labelINVSt6);
+			this.Controls.Add(this.labelINVSt4);
+			this.Controls.Add(this.labelINVSt7);
+			this.Controls.Add(this.labelINVSt3);
+			this.Controls.Add(this.labelOSB2);
 			this.Controls.Add(this.CurrMMLabel);
 			this.Controls.Add(this.groupBoxDGFTSwitch);
 			this.Controls.Add(this.groupBoxStartupOptions);
@@ -860,7 +926,6 @@
 			this.Controls.Add(this.labelOSB5);
 			this.Controls.Add(this.labelOSB4);
 			this.Controls.Add(this.labelOSB3);
-			this.Controls.Add(this.labelOSB2);
 			this.Controls.Add(this.labelOSB1);
 			this.Controls.Add(this.pictureBoxSMSOFF);
 			this.Controls.Add(this.buttonWPNREL);
@@ -975,5 +1040,10 @@
 		private System.Windows.Forms.GroupBox groupBoxStartupOptions;
 		private System.Windows.Forms.GroupBox groupBoxDGFTSwitch;
 		private System.Windows.Forms.Label CurrMMLabel;
+		private System.Windows.Forms.Label labelINVSt3;
+		private System.Windows.Forms.Label labelINVSt7;
+		private System.Windows.Forms.Label labelINVSt4;
+		private System.Windows.Forms.Label labelINVSt6;
+		private System.Windows.Forms.Label labelINVSt5;
 	}
 }

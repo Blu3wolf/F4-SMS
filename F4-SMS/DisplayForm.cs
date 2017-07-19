@@ -51,6 +51,20 @@ namespace F4SMS
 				labelOSB20
 			};
 
+			INVLabels = new Label[]
+			{
+				labelOSB20,
+				labelOSB16,
+				labelOSB17,
+				labelINVSt3,
+				labelINVSt4,
+				labelINVSt5,
+				labelINVSt6,
+				labelINVSt7,
+				labelOSB9,
+				labelOSB10
+			};
+
 			// Generate the array of all picture elements
 			displayImages = new PictureBox[]
 			{
@@ -77,6 +91,8 @@ namespace F4SMS
 
 		private Label[] OSBLabels;
 
+		private Label[] INVLabels;
+
 		private PictureBox[] displayImages;
 
 		internal MMC MMC { get => mMC; set => mMC = value; }
@@ -84,19 +100,22 @@ namespace F4SMS
 		public void BlankDisplay()
 		{
 			// Make all display screen elements non visible
-			// Do this by iterating over the collection OSBLabels and marking each object .Visible = false;
 			foreach (Label label in OSBLabels)
 			{
 				label.Visible = false;
 			}
 
-			// Do the same for displayImages and mark each one as .Visible = false;
+			foreach (Label label in INVLabels)
+			{
+				label.Visible = false;
+			}
+			
 			foreach (PictureBox displayPicture in displayImages)
 			{
 				displayPicture.Visible = false;
 			}
 
-			// Do the same for the labelMid8
+			// Do the same for the labelMid8 (HUNG STORES)
 			labelMid8.Visible = false;
 		}
 
@@ -122,6 +141,12 @@ namespace F4SMS
 		public void UpdateMidLabel(int line, string text)
 		{
 			Label label = labelMid8;
+			ValidateInput(label, text);
+		}
+
+		public void UpdateINVStLabel(int station, string text)
+		{
+			Label label = INVLabels[station];
 			ValidateInput(label, text);
 		}
 
