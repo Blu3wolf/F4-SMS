@@ -1,63 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <inventory>
-	<station0>
-		<qty>516</qty>
-		<ammotype>PGU-28</ammotype>
-	</station0>
-	<station1>
-		<MRLW>
-			<Weapon>A120A</Weapon>
-		</MRLW>
-	</station1>
-	<station2>
-		<LNCH>
-			<Weapon>A-9X</Weapon>
-		</LNCH>
-	</station2>
-	<station3>
-		<MAU>
-			<TER>
-				<Weapon>M82BS</Weapon>
-				<Weapon>M82BS</Weapon>
-				<Weapon>M82BS</Weapon>
-			</TER>
-		</MAU>
-	</station3>
-	<station4>
-		TK370
-	</station4>
-	<station5L>
-		ATP
-	</station5L>
-	<station5>
-		<MAU>
-			TK300
-		</MAU>
-	</station5>
-	<station5R>
-		HTS
-	</station5R>
-	<station6>
-		TK600
-	</station6>
-	<station7>
-		<SUU20>
-			<Weapon>M82BS</Weapon>
-			<Weapon>M82BS</Weapon>
-			<Weapon>BD33S</Weapon>
-			<Weapon>BD33S</Weapon>
-			<Weapon>BD33S</Weapon>
-			<Weapon>BD33S</Weapon>
-		</SUU20>
-	</station7>
-	<station8>
-		<LNCHW>
-			<Weapon>A-9NP</Weapon>
-		</LNCHW>
-	</station8>
-	<station9>
-		<MRLW>
-			<Weapon>A120C</Weapon>
-		</MRLW>
-	</station9>
+	<station ID="gun">
+		<weapon qty="512">PGU-28</weapon>
+	</station>
+	<station ID="1">
+		<suspension type="LAU-129">
+			<weapon>AIM-120A</weapon>
+		</suspension>
+	</station>
+	<station ID="2">
+		<suspension type="16S301">
+			<suspension type="LAU-129">
+				<weapon>AIM-9X</weapon>
+			</suspension>
+		</suspension>
+	</station>
+	<station ID="3">
+		<suspension type="WWP">
+			<suspension type="TER-9A">
+				<weapon qty="3">Mk-82SE</weapon>
+			</suspension>
+		</suspension>
+	</station>
+	<station ID="4">
+		<tank>TK-370</tank>
+	</station>
+	<station ID="5L">
+		<pod>ATP</pod>
+	</station>
+	<station ID="5">
+		<suspension type="16S951">
+			<tank>TK-300</tank>
+		</suspension>
+	</station>
+	<station ID="5R">
+		<pod>HTS</pod>
+	</station>
+	<station ID="6">
+		<suspension type="NJETT">
+			<tank>TK-600</tank>
+		</suspension>
+	</station>
+	<station ID="7">
+		<suspension type="WWP">
+			<suspension type="SUU-20">
+				<weapon qty="4">FFAR</weapon>
+				<weapon qty="6">BDU-33</weapon>
+			</suspension>
+		</suspension>
+	</station>
+	<station ID="8">
+		<suspension type="LNCHW">
+			<weapon>A-9NP</weapon>
+		</suspension>
+	</station>
+	<station ID="9">
+		<suspension type="MRLW">
+			<weapon>A120C</weapon>
+		</suspension>
+	</station>
 </inventory>
