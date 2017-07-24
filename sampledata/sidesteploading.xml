@@ -50,12 +50,14 @@
 		</suspension>
 	</station>
 	<station ID="8">
-		<suspension type="LNCHW">
-			<weapon>A-9NP</weapon>
+		<suspension type="16S301">
+			<suspension type="16S210">
+				<weapon>A-9NP</weapon>
+			</suspension>
 		</suspension>
 	</station>
 	<station ID="9">
-		<suspension type="MRLW">
+		<suspension type="LAU-129">
 			<weapon>A120C</weapon>
 		</suspension>
 	</station>
