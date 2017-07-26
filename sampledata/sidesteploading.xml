@@ -1,64 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<inventory>
-	<station ID="gun">
-		<weapon qty="512">PGU-28</weapon>
-	</station>
-	<station ID="1">
-		<suspension type="LAU-129">
-			<weapon>AIM-120A</weapon>
-		</suspension>
-	</station>
-	<station ID="2">
-		<suspension type="16S301">
-			<suspension type="LAU-129">
-				<weapon>AIM-9X</weapon>
-			</suspension>
-		</suspension>
-	</station>
-	<station ID="3">
-		<suspension type="WWP">
-			<suspension type="TER-9A">
-				<weapon qty="3">Mk-82SE</weapon>
-			</suspension>
-		</suspension>
-	</station>
-	<station ID="4">
-		<tank>TK-370</tank>
-	</station>
-	<station ID="5L">
-		<pod>ATP</pod>
-	</station>
-	<station ID="5">
-		<suspension type="16S951">
-			<tank>TK-300</tank>
-		</suspension>
-	</station>
-	<station ID="5R">
-		<pod>HTS</pod>
-	</station>
-	<station ID="6">
-		<suspension type="NJETT">
-			<tank>TK-600</tank>
-		</suspension>
-	</station>
-	<station ID="7">
-		<suspension type="WWP">
-			<suspension type="SUU-20">
-				<weapon qty="4">FFAR</weapon>
-				<weapon qty="6">BDU-33</weapon>
-			</suspension>
-		</suspension>
-	</station>
-	<station ID="8">
-		<suspension type="16S301">
-			<suspension type="16S210">
-				<weapon>A-9NP</weapon>
-			</suspension>
-		</suspension>
-	</station>
-	<station ID="9">
-		<suspension type="LAU-129">
-			<weapon>A120C</weapon>
-		</suspension>
-	</station>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<inventory xmlns="http://www.falcon.blu3wolf.com/F4-SMS/PhysInvSchema">
+	<gun>
+		<PGU-28 qty="512" />
+	</gun>
+	<station1>
+		<LAU-129>
+			<AIM-120A />
+		</LAU-129>
+	</station1>
+	<station2>
+		<_16S301>
+			<LAU-129>
+				<AIM-9X />
+			</LAU-129>
+		</_16S301>
+	</station2>
+	<station3>
+		<WWP>
+			<TER-9A>
+				<Mk-82SE qty="3" />
+			</TER-9A>
+		</WWP>
+	</station3>
+	<station4>
+		<TK-370 />
+	</station4>
+	<station5L>
+		<pod type="ATP" />
+	</station5L>
+	<station5>
+		<_16S951>
+			<TK-300 />
+		</_16S951>
+	</station5>
+	<station5R>
+		<pod type="HTS" />
+	</station5R>
+	<station6>
+		<NJETT>
+			<TK-600 />
+		</NJETT>
+	</station6>
+	<station7>
+		<WWP>
+			<SUU-20>
+				<FFAR qty="4" />
+				<BDU-33 qty="6" />
+			</SUU-20>
+		</WWP>
+	</station7>
+	<station8>
+		<_16S301>
+			<_16S210>
+				<AIM-9NP />
+			</_16S210>
+		</_16S301>
+	</station8>
+	<station9>
+		<LAU-129>
+			<AIM-120C />
+		</LAU-129>
+	</station9>
 </inventory>

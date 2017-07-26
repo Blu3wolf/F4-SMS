@@ -1,12 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
-    elementFormDefault="qualified"
-    xmlns="http://tempuri.org/XMLSchema.xsd"
-    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
->
-	<xs:element name="inventory"></xs:element>
-	<xs:element name="station0"></xs:element>
-	<xs:attribute name="qty"></xs:attribute>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.falcon.blu3wolf.com/F4-SMS/PhysInvSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.falcon.blu3wolf.com/F4-SMS/PhysInvSchema">
+	<xs:element name="inventory">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="gun" type="gun" minOccurs="0" />
+				<xs:element name="station1" type="station19" minOccurs="0" />
+				<xs:element name="station2" type="station28" minOccurs="0" />
+				<xs:element name="station3" type="station37" minOccurs="0" />
+				<xs:element name="station4" type="station46" minOccurs="0" />
+				<xs:element name="station5L" type="stationN" minOccurs="0" />
+				<xs:element name="station5" type="station5" minOccurs="0" />
+				<xs:element name="station5R" type="stationN" minOccurs="0" />
+				<xs:element name="station6" type="station46" minOccurs="0" />
+				<xs:element name="station7" type="station37" minOccurs="0" />
+				<xs:element name="station8" type="station28" minOccurs="0" />
+				<xs:element name="station9" type="station19" minOccurs="0" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="gun">
+		<xs:all>
+			<xs:element name="weapon" type="gunweapon" />
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="station19" >
+		<xs:all>
+			
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="station28">
+		
+	</xs:complexType>
+	<xs:complexType name="station37">
+		
+	</xs:complexType>
+	<xs:complexType name="station46" >
+		
+	</xs:complexType>
+	<xs:complexType name="stationN" >
+		
+	</xs:complexType>
+	<xs:complexType name="station5" >
+		
+	</xs:complexType>
+	<xs:complexType name="suspension" >
+		<xs:attribute name="type" use="required" />
+	</xs:complexType>
+	<xs:complexType name="weapon" >
+		<xs:attribute ref="type" use="required" />
+		<xs:attribute ref="qty" />
+	</xs:complexType>
+	<xs:complexType name="tank" >
+		
+	</xs:complexType>
+	<xs:complexType name="pod" >
+		
+	</xs:complexType>
 	
+		
+	<xs:complexType name="gunweapon" >
+		<xs:complexContent>
+			<xs:restriction base="weapon" >
+				<xs:attribute name="type" use="required" >
+					<xs:simpleType>
+						<xs:restriction base="xs:string" >
+							<xs:enumeration value="PGU-28" />
+							<xs:enumeration value="M56" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:attribute default="1" name="qty" type="xs:int" />
+	<xs:attribute name="type" type="xs:string" />
+	<xs:attribute name="ID" type="xs:int" />
 </xs:schema>
