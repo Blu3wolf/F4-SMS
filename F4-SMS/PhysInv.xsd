@@ -19,60 +19,130 @@
 		</xs:complexType>
 	</xs:element>
 	<xs:complexType name="gun">
-		<xs:all>
-			<xs:element name="weapon" type="gunweapon" />
-		</xs:all>
+		<xs:choice>
+			<xs:element name="PGU-28" type="ammo" />
+			<xs:element name="M56" type="ammo" />
+		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="station19" >
-		<xs:all>
-			
-		</xs:all>
+		<xs:choice>
+			<xs:element name="_16S210" type="_16S210" />
+			<xs:element name="LAU-129" type="LAU-129" />
+		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="station28">
-		
+		<xs:all>
+			<xs:element name="_16S301" type="_16S301" />
+		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="station37">
-		
+		<xs:choice>
+			<xs:element name="_16S301" type="_16S301" />
+			<xs:element name="WWP" type="WWP" />
+		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="station46" >
-		
+		<xs:choice>
+			<xs:element name="WWP" type="WWP" />
+			<xs:element name="NJETT" type="NJETT" />
+			<xs:element name="TK-370" type="FUEL" />
+		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="stationN" >
-		
+		<xs:all>
+			<xs:element name="pod" type="pod" />
+		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="station5" >
-		
+		<xs:all>
+			<xs:element name="_16S951" type="_16S951" />
+		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="suspension" >
-		<xs:attribute name="type" use="required" />
+	<xs:complexType name="_16S210">
+		<xs:choice minOccurs="0">
+			<xs:element name="AIM-9P" type="AAM" />
+			<xs:element name="AIM-9N" type="AAM" />
+			<xs:element name="AIM-9M" type="AAM" />
+		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="weapon" >
-		<xs:attribute ref="type" use="required" />
-		<xs:attribute ref="qty" />
+	<xs:complexType name="LAU-129">
+		<xs:choice minOccurs="0">
+			<xs:element name="AIM-120A" type="AAM" />
+			<xs:element name="AIM-120B" type="AAM" />
+			<xs:element name="AIM-120C" type="AAM" />
+			<xs:element name="AIM-9P" type="AAM" />
+			<xs:element name="AIM-9N" type="AAM" />
+			<xs:element name="AIM-9M" type="AAM" />
+			<xs:element name="AIM-9X" type="AAM" />
+		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="tank" >
-		
+	<xs:complexType name="_16S301">
+		<xs:choice minOccurs="0" >
+			<xs:element name="LAU-129" type="LAU-129" />
+			<xs:element name="_16S210" type="_16S210" />
+		</xs:choice>
 	</xs:complexType>
-	<xs:complexType name="pod" >
-		
+	<xs:complexType name="WWP" >
+		<xs:choice minOccurs="0">
+			
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="NJETT" >
+		<xs:all minOccurs="0">
+			<xs:element name="TK-600" type="FUEL" />
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="_16S951">
+		<xs:choice minOccurs="0">
+			<xs:element name="TK-300" type="FUEL" />
+		</xs:choice>
 	</xs:complexType>
 	
-		
-	<xs:complexType name="gunweapon" >
-		<xs:complexContent>
-			<xs:restriction base="weapon" >
-				<xs:attribute name="type" use="required" >
-					<xs:simpleType>
-						<xs:restriction base="xs:string" >
-							<xs:enumeration value="PGU-28" />
-							<xs:enumeration value="M56" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:attribute>
-			</xs:restriction>
-		</xs:complexContent>
+	<xs:complexType name="AAM" >
+		<xs:attribute ref="aimqty" />
 	</xs:complexType>
-	<xs:attribute default="1" name="qty" type="xs:int" />
-	<xs:attribute name="type" type="xs:string" />
-	<xs:attribute name="ID" type="xs:int" />
+	<xs:complexType name="FUEL">
+	</xs:complexType>
+	<xs:complexType name="pod" >
+		<xs:attribute ref="type" />
+	</xs:complexType>
+	<xs:complexType name="ammo" >
+		<xs:attribute ref="ammoqty" use="required" />
+	</xs:complexType>
+
+	<xs:attribute default="1" name="agmqty" >
+		
+	</xs:attribute>
+	<xs:attribute default="1" name="aimqty" >
+		<xs:simpleType>
+			<xs:restriction base="qty" >
+				<xs:maxInclusive value="1" />
+				<xs:minInclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="ammoqty">
+		<xs:simpleType>
+			<xs:restriction base="qty" >
+				<xs:maxInclusive value="512" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="type">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="ASQ-213" />
+				<xs:enumeration value="AAQ-13" />
+				<xs:enumeration value="AAQ-14" />
+				<xs:enumeration value="AAQ-28" />
+				<xs:enumeration value="AAQ-33" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:simpleType name="qty" >
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0" />
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
