@@ -26,7 +26,7 @@
 		<TK-370 />
 	</station4>
 	<station5L>
-		<pod type="ATP" />
+		<pod type="AAQ-33" />
 	</station5L>
 	<station5>
 		<_16S951>
@@ -34,7 +34,7 @@
 		</_16S951>
 	</station5>
 	<station5R>
-		<pod type="HTS" />
+		<pod type="ASQ-213" />
 	</station5R>
 	<station6>
 		<NJETT>
