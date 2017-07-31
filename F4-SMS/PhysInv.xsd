@@ -113,7 +113,6 @@
 			<xs:element name="CBU-104" type="bomb" />
 			<xs:element name="CBU-105" type="bomb" />
 			<xs:element name="B61" type="bomb" />
-			
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="NJETT" >
@@ -128,7 +127,23 @@
 			<xs:element name="ALQ-184" type="ECM" />
 		</xs:choice>
 	</xs:complexType>
-	
+	<xs:complexType name="TER">
+		<xs:choice minOccurs="0">
+			<xs:element name="Mk-81" type="bomb3" />
+			<xs:element name="Mk-82" type="bomb3" />
+			<xs:element name="Mk-106" type="bomb3" />
+			<xs:element name="BDU-33" type="bomb3" />
+			<xs:element name="CBU-87" type="bomb3" />
+			<xs:element name="CBU-89" type="bomb3" />
+			<xs:element name="CBU-97" type="bomb3" />
+			<xs:element name="GBU-12" type="bomb3" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LAU-88">
+		<xs:choice minOccurs="0">
+			<xs:element name=""
+		</xs:choice>
+	</xs:complexType>
 	<xs:complexType name="AAM" >
 		<xs:attribute ref="aimqty" />
 	</xs:complexType>
@@ -143,14 +158,30 @@
 		<xs:attribute ref="ammoqty" use="required" />
 	</xs:complexType>
 	<xs:complexType name="bomb">
-		<xs:attribute ref="bombqty" />
+		<xs:attribute ref="bombqty1" />
+	</xs:complexType>
+	<xs:complexType name="bomb3">
+		<xs:attribute ref="bombqty3" />
 	</xs:complexType>
 
 	<xs:attribute default="1" name="agmqty" >
 		
 	</xs:attribute>
-	<xs:attribute default="1" name="bombqty">
-		
+	<xs:attribute default="1" name="bombqty3">
+		<xs:simpleType>
+			<xs:restriction base="qty" >
+				<xs:maxInclusive value="3" />
+				<xs:minInclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute default="1" name="bombqty1">
+		<xs:simpleType>
+			<xs:restriction base="qty" >
+				<xs:maxInclusive value="1" />
+				<xs:minInclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
 	</xs:attribute>
 	<xs:attribute default="1" name="aimqty" >
 		<xs:simpleType>
