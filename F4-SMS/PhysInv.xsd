@@ -84,6 +84,35 @@
 	</xs:complexType>
 	<xs:complexType name="WWP" >
 		<xs:choice minOccurs="0">
+			<xs:element name="TER-9A" type="TER" />
+			<xs:element name="TER-9Amod" type="TER" />
+			<xs:element name="LAU-88" type="LAU-88" />
+			<xs:element name="LAU-117" type="LAU-117" />
+			<xs:element name="LAU-118" type="LAU-118" />
+			<xs:element name="SUU-20" type="SUU-20" />
+			<xs:element name="Mk-81" type="bomb" />
+			<xs:element name="Mk-82" type="bomb" />
+			<xs:element name="Mk-83" type="bomb" />
+			<xs:element name="Mk-84" type="bomb" />
+			<xs:element name="Mk-106" type="bomb" />
+			<xs:element name="BDU-33" type="bomb" />
+			<xs:element name="BDU-38" type="bomb" />
+			<xs:element name="BDU-50" type="bomb" />
+			<xs:element name="BDU-56" type="bomb" />
+			<xs:element name="BLU-109" type="bomb" />
+			<xs:element name="GBU-10" type="bomb" />
+			<xs:element name="GBU-12" type="bomb" />
+			<xs:element name="GBU-24" type="bomb" />
+			<xs:element name="GBU-31" type="bomb" />
+			<xs:element name="GBU-32" type="bomb" />
+			<xs:element name="GBU-38" type="bomb" />
+			<xs:element name="CBU-87" type="bomb" />
+			<xs:element name="CBU-89" type="bomb" />
+			<xs:element name="CBU-97" type="bomb" />
+			<xs:element name="CBU-103" type="bomb" />
+			<xs:element name="CBU-104" type="bomb" />
+			<xs:element name="CBU-105" type="bomb" />
+			<xs:element name="B61" type="bomb" />
 			
 		</xs:choice>
 	</xs:complexType>
@@ -95,6 +124,8 @@
 	<xs:complexType name="_16S951">
 		<xs:choice minOccurs="0">
 			<xs:element name="TK-300" type="FUEL" />
+			<xs:element name="ALQ-131" type="ECM" />
+			<xs:element name="ALQ-184" type="ECM" />
 		</xs:choice>
 	</xs:complexType>
 	
@@ -103,14 +134,22 @@
 	</xs:complexType>
 	<xs:complexType name="FUEL">
 	</xs:complexType>
+	<xs:complexType name="ECM">
+	</xs:complexType>
 	<xs:complexType name="pod" >
 		<xs:attribute ref="type" />
 	</xs:complexType>
 	<xs:complexType name="ammo" >
 		<xs:attribute ref="ammoqty" use="required" />
 	</xs:complexType>
+	<xs:complexType name="bomb">
+		<xs:attribute ref="bombqty" />
+	</xs:complexType>
 
 	<xs:attribute default="1" name="agmqty" >
+		
+	</xs:attribute>
+	<xs:attribute default="1" name="bombqty">
 		
 	</xs:attribute>
 	<xs:attribute default="1" name="aimqty" >
