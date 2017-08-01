@@ -183,84 +183,85 @@
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AAM" >
-		<xs:attribute ref="aimqty" />
+		<xs:attribute default="1" name="qty" >
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="1" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="AGM1">
-		<xs:attribute ref="bombqty1" />
+		<xs:attribute name="qty" default="1">
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="1" />
+				</xs:restriction>
+			</xs:simpleType>
+			</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="AGM3" >
-		<xs:attribute ref="bombqty3" />
+		<xs:attribute name="qty" use="required">
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="3" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="FUEL">
 	</xs:complexType>
 	<xs:complexType name="ECM">
 	</xs:complexType>
 	<xs:complexType name="pod" >
-		<xs:attribute ref="type" />
+		<xs:attribute name="type">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ASQ-213" />
+					<xs:enumeration value="AAQ-13" />
+					<xs:enumeration value="AAQ-14" />
+					<xs:enumeration value="AAQ-28" />
+					<xs:enumeration value="AAQ-33" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ammo" >
-		<xs:attribute ref="ammoqty" use="required" />
+		<xs:attribute name="qty">
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="512" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="bomb">
-		<xs:attribute ref="bombqty1" />
+		<xs:attribute name="qty" default="1">
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="1" />
+				</xs:restriction>
+			</xs:simpleType>
+			</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="bomb3">
-		<xs:attribute ref="bombqty3" />
+		<xs:attribute name="qty" default="1">
+			<xs:simpleType>
+				<xs:restriction base="qty" >
+					<xs:maxInclusive value="3" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="FFAR">
-		<xs:attribute ref="Rqty" />
+		<xs:attribute default="4" name="qty" >
+			<xs:simpleType>
+				<xs:restriction base="qty">
+					<xs:maxInclusive value="4" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
-
-	<xs:attribute default="1" name="agmqty" >
-		
-	</xs:attribute>
-	<xs:attribute default="1" name="bombqty3">
-		<xs:simpleType>
-			<xs:restriction base="qty" >
-				<xs:maxInclusive value="3" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	<xs:attribute default="1" name="bombqty1">
-		<xs:simpleType>
-			<xs:restriction base="qty" >
-				<xs:maxInclusive value="1" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	<xs:attribute default="1" name="aimqty" >
-		<xs:simpleType>
-			<xs:restriction base="qty" >
-				<xs:maxInclusive value="1" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	<xs:attribute default="4" name="Rqty" >
-		<xs:simpleType>
-			<xs:restriction base="qty">
-				<xs:maxInclusive value="4" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	<xs:attribute name="ammoqty">
-		<xs:simpleType>
-			<xs:restriction base="qty" >
-				<xs:maxInclusive value="512" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-	<xs:attribute name="type">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="ASQ-213" />
-				<xs:enumeration value="AAQ-13" />
-				<xs:enumeration value="AAQ-14" />
-				<xs:enumeration value="AAQ-28" />
-				<xs:enumeration value="AAQ-33" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:attribute>
-
 	<xs:simpleType name="qty" >
 		<xs:restriction base="xs:int">
 			<xs:minInclusive value="0" />
