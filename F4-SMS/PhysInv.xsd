@@ -99,6 +99,9 @@
 			<xs:element name="BDU-38" type="bomb" />
 			<xs:element name="BDU-50" type="bomb" />
 			<xs:element name="BDU-56" type="bomb" />
+			<xs:element name="BDU-57" type="bomb" />
+			<xs:element name="BDU-59" type="bomb" />
+			<xs:element name="BDU-60" type="bomb" />
 			<xs:element name="BLU-109" type="bomb" />
 			<xs:element name="GBU-10" type="bomb" />
 			<xs:element name="GBU-12" type="bomb" />
@@ -137,15 +140,56 @@
 			<xs:element name="CBU-89" type="bomb3" />
 			<xs:element name="CBU-97" type="bomb3" />
 			<xs:element name="GBU-12" type="bomb3" />
+			<xs:element name="BDU-57" type="bomb" />
+			<xs:element name="BDU-59" type="bomb" />
+			<xs:element name="BDU-60" type="bomb" />
 		</xs:choice>
 	</xs:complexType>
 	<xs:complexType name="LAU-88">
 		<xs:choice minOccurs="0">
-			<xs:element name=""
+			<xs:element name="AGM-65A" type="AGM3" />
+			<xs:element name="AGM-65B" type="AGM3" />
+			<xs:element name="AGM-65D" type="AGM3" />
+			<xs:element name="AGM-65H" type="AGM3" />
 		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LAU-117">
+		<xs:choice minOccurs="0">
+			<xs:element name="AGM-65G" type="AGM1" />
+			<xs:element name="AGM-65A" type="AGM1" />
+			<xs:element name="AGM-65B" type="AGM1" />
+			<xs:element name="AGM-65D" type="AGM1" />
+			<xs:element name="AGM-65H" type="AGM1" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LAU-118">
+		<xs:choice minOccurs="0">
+			<xs:element name="AGM-88A" type="AGM1" />
+			<xs:element name="AGM-88B" type="AGM1" />
+			<xs:element name="AGM-88C" type="AGM1" />
+			<xs:element name="AGM-88D" type="AGM1" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="SUU-20" >
+		<xs:sequence>
+			<xs:sequence minOccurs="0">
+				<xs:element name="FFAR" type="FFAR" />
+			</xs:sequence>
+			<xs:choice minOccurs="0">
+				<xs:element name="Mk-106" type="bomb" />
+				<xs:element name="BDU-33" type="bomb" />
+				<xs:element name="BDU-50" type="bomb" />
+			</xs:choice>
+		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="AAM" >
 		<xs:attribute ref="aimqty" />
+	</xs:complexType>
+	<xs:complexType name="AGM1">
+		<xs:attribute ref="bombqty1" />
+	</xs:complexType>
+	<xs:complexType name="AGM3" >
+		<xs:attribute ref="bombqty3" />
 	</xs:complexType>
 	<xs:complexType name="FUEL">
 	</xs:complexType>
@@ -163,6 +207,9 @@
 	<xs:complexType name="bomb3">
 		<xs:attribute ref="bombqty3" />
 	</xs:complexType>
+	<xs:complexType name="FFAR">
+		<xs:attribute ref="Rqty" />
+	</xs:complexType>
 
 	<xs:attribute default="1" name="agmqty" >
 		
@@ -171,7 +218,6 @@
 		<xs:simpleType>
 			<xs:restriction base="qty" >
 				<xs:maxInclusive value="3" />
-				<xs:minInclusive value="0" />
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:attribute>
@@ -179,7 +225,6 @@
 		<xs:simpleType>
 			<xs:restriction base="qty" >
 				<xs:maxInclusive value="1" />
-				<xs:minInclusive value="0" />
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:attribute>
@@ -187,7 +232,13 @@
 		<xs:simpleType>
 			<xs:restriction base="qty" >
 				<xs:maxInclusive value="1" />
-				<xs:minInclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+	<xs:attribute default="4" name="Rqty" >
+		<xs:simpleType>
+			<xs:restriction base="qty">
+				<xs:maxInclusive value="4" />
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:attribute>
