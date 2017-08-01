@@ -448,6 +448,7 @@
 			this.buttonDTC.TabIndex = 30;
 			this.buttonDTC.Text = "DTC";
 			this.buttonDTC.UseVisualStyleBackColor = true;
+			this.buttonDTC.Click += new System.EventHandler(this.buttonDTC_Click);
 			// 
 			// checkBoxGunArmed
 			// 
@@ -765,6 +766,7 @@
 			this.buttonInventory.TabIndex = 60;
 			this.buttonInventory.Text = "Inventory";
 			this.buttonInventory.UseVisualStyleBackColor = true;
+			this.buttonInventory.Click += new System.EventHandler(this.buttonInventory_Click);
 			// 
 			// radioButtonOff
 			// 

@@ -321,5 +321,15 @@ namespace F4SMS
 		{
 			display.ButtonPress(20);
 		}
+
+		private void buttonInventory_Click(object sender, EventArgs e)
+		{
+			throw new NotImplementedException();
+		}
+
+		private void buttonDTC_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
