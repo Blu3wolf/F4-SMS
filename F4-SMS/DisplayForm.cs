@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml;
+using System.Xml.Schema;
 using System.Windows.Forms;
 
 namespace F4SMS
@@ -26,6 +28,8 @@ namespace F4SMS
         {
 			// Ini Com required for winforms designer support
             InitializeComponent();
+
+			sc = new XmlSchemaSet();
 
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
@@ -84,6 +88,8 @@ namespace F4SMS
 			};
 			display = new Display(this);
 		}
+
+		internal XmlSchemaSet sc;
 
 		internal Display display;
 
@@ -342,6 +348,8 @@ namespace F4SMS
 						using (MyStream)
 						{
 							// insert stream-reading code here... when you work out how
+							XmlReaderSettings settings = new XmlReaderSettings();
+							XmlReader.Create(MyStream, settings);
 						}
 					}
 				}
