@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace F4SMS
@@ -324,7 +325,31 @@ namespace F4SMS
 
 		private void buttonInventory_Click(object sender, EventArgs e)
 		{
-			throw new NotImplementedException();
+			Stream MyStream = null;
+			OpenFileDialog openInventoryDialog = new OpenFileDialog();
+
+			openInventoryDialog.InitialDirectory = Directory.GetCurrentDirectory();
+			openInventoryDialog.Filter = "INV files (*.inv)|*.inv|cfg files (*.cfg)|*.cfg|All files (*.*)|*.*";
+			openInventoryDialog.FilterIndex = 1;
+			openInventoryDialog.RestoreDirectory = true;
+
+			if (openInventoryDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					if ((MyStream = openInventoryDialog.OpenFile()) != null)
+					{
+						using (MyStream)
+						{
+							// insert stream-reading code here... when you work out how
+						}
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+				}
+			}
 		}
 
 		private void buttonDTC_Click(object sender, EventArgs e)

@@ -21,6 +21,7 @@ namespace F4SMS
 		{
 			winform = WinForm;
 			mMC = winform.MMC;
+			iNV = new PhysicalInventory();
 			mMC.SystemStartUpSwitches += SystemStartUp;
 
 			PageOFF OFFPage = new PageOFF(this);
@@ -44,6 +45,8 @@ namespace F4SMS
 
 		private MMC mMC;
 
+		private PhysicalInventory iNV;
+
 		private SMSPage[] Pages;
 
 		private SMSPage currPage;
@@ -52,7 +55,7 @@ namespace F4SMS
 
 		internal MMC MMC { get => mMC; set => mMC = value; }
 
-		
+		internal PhysicalInventory INV { get => iNV; }
 
 		private void SystemStartUp(object sender, SystemStartupEventArgs e)
 		{
