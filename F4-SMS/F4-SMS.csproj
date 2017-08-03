@@ -7,7 +7,7 @@
     <ProjectGuid>{B3F82243-371D-4D5D-B817-003BD3AF5176}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>F4_SMS</RootNamespace>
+    <RootNamespace>F4SMS</RootNamespace>
     <AssemblyName>F4-SMS</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIM120C.cs" />
+    <Compile Include="LAU129.cs" />
     <Compile Include="PageBIT.cs" />
     <Compile Include="PageAG.cs" />
     <Compile Include="PageChange.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="PageTEST.cs" />
     <Compile Include="Rotary.cs" />
     <Compile Include="SMSPage.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="Suspension.cs" />
     <Compile Include="UserInput.cs" />
     <Compile Include="PageOFF.cs" />
     <Compile Include="MMC.cs" />
@@ -107,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="DisplayForm.resx">
       <DependentUpon>DisplayForm.cs</DependentUpon>

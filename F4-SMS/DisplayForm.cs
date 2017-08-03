@@ -10,6 +10,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Schema;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace F4SMS
 {
@@ -29,7 +30,13 @@ namespace F4SMS
 			// Ini Com required for winforms designer support
             InitializeComponent();
 
-			sc = new XmlSchemaSet();
+			SchemaSet = new XmlSchemaSet();
+			Assembly myAssembly = Assembly.GetExecutingAssembly();
+			using (Stream InvSchemaStream = myAssembly.GetManifestResourceStream("F4SMS.PhysInv.xsd"))
+			{
+				XmlSchema schema = XmlSchema.Read(InvSchemaStream, null);
+				SchemaSet.Add(schema);
+			}
 
 			// Generate the array of OSB labels for this display
 			OSBLabels = new Label[]
@@ -89,12 +96,14 @@ namespace F4SMS
 			display = new Display(this);
 		}
 
-		internal XmlSchemaSet sc;
+		internal XmlSchemaSet SchemaSet;
 
 		internal Display display;
 
 		// this is the MMC object for this instance of the DisplayForm window
 		private MMC mMC;
+
+		private PhysicalInventory physInv;
 
 		private Label[] OSBLabels;
 
@@ -103,6 +112,8 @@ namespace F4SMS
 		private PictureBox[] displayImages;
 
 		internal MMC MMC { get => mMC; set => mMC = value; }
+
+		internal PhysicalInventory PhysInv { get => physInv; set => physInv = value; }
 
 		public void BlankDisplay()
 		{
@@ -331,33 +342,7 @@ namespace F4SMS
 
 		private void buttonInventory_Click(object sender, EventArgs e)
 		{
-			Stream MyStream = null;
-			OpenFileDialog openInventoryDialog = new OpenFileDialog();
-
-			openInventoryDialog.InitialDirectory = Directory.GetCurrentDirectory();
-			openInventoryDialog.Filter = "INV files (*.inv)|*.inv|cfg files (*.cfg)|*.cfg|All files (*.*)|*.*";
-			openInventoryDialog.FilterIndex = 1;
-			openInventoryDialog.RestoreDirectory = true;
-
-			if (openInventoryDialog.ShowDialog() == DialogResult.OK)
-			{
-				try
-				{
-					if ((MyStream = openInventoryDialog.OpenFile()) != null)
-					{
-						using (MyStream)
-						{
-							// insert stream-reading code here... when you work out how
-							XmlReaderSettings settings = new XmlReaderSettings();
-							XmlReader.Create(MyStream, settings);
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-				}
-			}
+			PhysInv.XmlLoadInv(SchemaSet);
 		}
 
 		private void buttonDTC_Click(object sender, EventArgs e)

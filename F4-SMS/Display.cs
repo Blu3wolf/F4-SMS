@@ -22,6 +22,7 @@ namespace F4SMS
 			winform = WinForm;
 			mMC = winform.MMC;
 			iNV = new PhysicalInventory();
+			winform.PhysInv = iNV;
 			mMC.SystemStartUpSwitches += SystemStartUp;
 
 			PageOFF OFFPage = new PageOFF(this);

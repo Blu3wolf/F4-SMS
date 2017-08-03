@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace F4SMS
+{
+	class AIM120C : Store
+	{
+		public override bool IsJettisonable()
+		{
+			return false;
+		}
+	}
+}
