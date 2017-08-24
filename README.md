@@ -26,6 +26,9 @@ The following SMS page displays provide controls and data for these functions:
 
 ![Figure 1](images/OFF-STBY.PNG)
 
+## Build Environment
+F4-SMS is built on Visual Studio 2017 Community Edition.
+
 ## Copyright and Licensing
 F4-SMS is copyright © 2017 Bill 'Blu3wolf' Teale. 
 
